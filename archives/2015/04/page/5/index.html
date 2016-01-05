@@ -124,6 +124,65 @@
           <a href="/archives/2015" class="archive-year">2015</a>
         </div>
     
+    <article id="post-LeetCode-num104" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/09/LeetCode-num104/">LeetCode-num104</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/04/09/LeetCode-num104/">
+    <time datetime="2015-04-09T02:48:49.000Z" itemprop="datePublished">2015-04-09</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Maximum Depth of Binary Tree</strong><br><img src="/img/20140316131029_BKF2R.thumb.700_0.jpeg" alt="my godness!"></p>
+<p>###Problem<br>Given a binary tree, find its maximum depth.</p>
+<p>The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for binary tree</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">maxDepth</span><span class="params">(TreeNode *root)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> depthLeft = maxDepth(root-&gt;left);</span><br><span class="line">		<span class="keyword">int</span> depthRight = maxDepth(root-&gt;right);</span><br><span class="line">		<span class="keyword">return</span> depthLeft &gt; depthRight ? (depthLeft + <span class="number">1</span>) : (depthRight + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>利用递归，实现较为简单。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/04/09/LeetCode-num104/" data-id="cij1aldia0087xxuaejzcodyv" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/04/09/LeetCode-num104/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/">Tree</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
     <article id="post-LeetCode-num107" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -168,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/09/LeetCode-num107/" data-id="cij1afley007tvhua703rfo31" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/09/LeetCode-num107/" data-id="cij1aldhi007txxua66zzgna2" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/09/LeetCode-num107/#ds-thread" class="article-comment-link">评论</a>
@@ -227,7 +286,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/08/LeetCode-num100/" data-id="cij1aflft008ovhuaqfyvu3e8" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/08/LeetCode-num100/" data-id="cij1aldit008oxxuagppj378b" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/08/LeetCode-num100/#ds-thread" class="article-comment-link">评论</a>
@@ -289,7 +348,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/08/LeetCode-num101/" data-id="cij1aflfq008kvhua5m8sow82" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/08/LeetCode-num101/" data-id="cij1aldip008kxxuahmux8x8d" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/08/LeetCode-num101/#ds-thread" class="article-comment-link">评论</a>
@@ -350,7 +409,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/08/LeetCode-num110/" data-id="cij1afleq007lvhua55ebc1hh" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/08/LeetCode-num110/" data-id="cij1aldh7007lxxuao6ilqswt" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/08/LeetCode-num110/#ds-thread" class="article-comment-link">评论</a>
@@ -417,67 +476,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/06/STL_vector和string使用reserve/" data-id="cij1aflaa003ivhuaao1psaqg" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/06/STL_vector和string使用reserve/" data-id="cij1aldbp003ixxuanwm2ws03" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/06/STL_vector和string使用reserve/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STL/">STL</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-容器是否为空检查策略" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/06/容器是否为空检查策略/">容器是否为空检查策略</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/04/06/容器是否为空检查策略/">
-    <time datetime="2015-04-06T11:32:48.000Z" itemprop="datePublished">2015-04-06</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://img4.duitang.com/uploads/blog/201407/08/20140708203946_crYUx.jpeg" alt="my godness!"><br><strong>当代码中需要检查某个容器是否为空时，调用empty，而不是检查size()是否为0.</strong><br>对于任一容器c，下面的代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(c.size() == <span class="number">0</span>)</span><br></pre></td></tr></table></figure></p>
-<p>本质上与<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(c.empty())</span><br></pre></td></tr></table></figure></p>
-<p>是等价的。既然如此，为何还要纠结使用那种形式呢？empty通常被实现为内联函数，并且它所做的仅仅是返回size是否为0.<br>其实理由很简单：empty对所有的标准容器都是常数时间的操作，而对一些list实现，size耗费线性时间。<br>那么问题又来了，到底什么使list如此讨厌呢？为什么它不提供常数时间的size呢？答案在于list所独有的splice函数。考虑如下代码：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span>&lt;<span class="keyword">int</span>&gt; list1;</span><br><span class="line"><span class="built_in">list</span>&lt;<span class="keyword">int</span>&gt; list2;</span><br><span class="line"></span><br><span class="line">list1.splice(</span><br><span class="line">	list1.end(),</span><br><span class="line">	list2,</span><br><span class="line">	find(list2.begin(), list2.end(), <span class="number">5</span>),          <span class="comment">// 寻找第一个含5的节点</span></span><br><span class="line">	find(list2.rbegin(), list2.rend(), <span class="number">10</span>).base() <span class="comment">// 需找最后一个含10的节点</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
-<p>代码中find(list2.begin(), list2.end(), 5), find(list2.rbegin(), list2.rend(), 10).base()所定义的范围不确定，也就是说不知道这个区间中元素的个数。所以size()操作是线性时间而不是常数时间。</p>
-<p>而作为常用的容器list为何不维护一个size，使得求其长度时是常数时间呢？试想如果list的size()是常数时间，那么类似splice这种连接操作也会因为维护长度而使其效率降低一个数量级。权衡考虑，作为list更为重要的是快速的连接操作。</p>
-<p>empty作为检查是否为空是常数的时间，所以这种情况下使用empty更高效。其他容器使用empty同样也不会使效率降低，因此不管发生什么调用empty而不是检查size()==0是否成立总是没错的。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/06/容器是否为空检查策略/" data-id="cij1afl8x0021vhuauypnxg39" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/04/06/容器是否为空检查策略/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STL/">STL</a></li></ul>
@@ -503,23 +505,6 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/05/LeetCode-num064/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/LeetCode/">LeetCode</a></p>
-              <p class="item-title"><a href="/2016/01/05/LeetCode-num064/" class="title">LeetCode num064</a></p>
-              <p class="item-date"><time datetime="2016-01-05T09:33:38.897Z" itemprop="datePublished">2016-01-05</time></p>
-            </div>
-          </li>
         
           <li>
             
@@ -586,6 +571,24 @@
               <p class="item-category"><a class="article-category-link" href="/categories/面试笔试/">面试笔试</a></p>
               <p class="item-title"><a href="/2015/06/07/百度面试题总结—01（算法）/" class="title">百度面试题总结—01（算法）</a></p>
               <p class="item-date"><time datetime="2015-06-07T02:39:21.000Z" itemprop="datePublished">2015-06-07</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/06/04/Lucene-简介/" class="thumbnail">
+  
+    <span style="background-image:url(/img/17131531_CQwW.jpg
+)" alt="Lucene01-简介" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/lucene/">lucene</a></p>
+              <p class="item-title"><a href="/2015/06/04/Lucene-简介/" class="title">Lucene01-简介</a></p>
+              <p class="item-date"><time datetime="2015-06-04T09:00:37.000Z" itemprop="datePublished">2015-06-04</time></p>
             </div>
           </li>
         

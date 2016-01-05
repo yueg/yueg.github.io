@@ -124,6 +124,65 @@
           <a href="/archives/2015" class="archive-year">2015</a>
         </div>
     
+    <article id="post-LeetCode-num020" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/02/LeetCode-num020/">LeetCode-num020</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/04/02/LeetCode-num020/">
+    <time datetime="2015-04-02T01:58:06.000Z" itemprop="datePublished">2015-04-02</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Valid Parentheses</strong></p>
+<p>###Problem<br>Given a string containing just the characters ‘(‘, ‘)’, ‘{‘, ‘}’, ‘[‘ and ‘]’, determine if the input string is valid.</p>
+<p>The brackets must close in the correct order, “()” and “()[]{}” are all valid but “(]” and “([)]” are not.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">string</span> s)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="built_in">stack</span>&lt;<span class="keyword">char</span>&gt; staStr;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (staStr.size() == <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				staStr.push(s[i]);</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (isMatch(staStr.top(), s[i]))</span><br><span class="line">			&#123;</span><br><span class="line">				staStr.pop();</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				staStr.push(s[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (staStr.size() == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">isMatch</span><span class="params">(<span class="keyword">char</span> ch1, <span class="keyword">char</span> ch2)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> ((ch1 == <span class="string">'('</span> &amp;&amp; ch2 == <span class="string">')'</span>) ||</span><br><span class="line">			(ch1 == <span class="string">'&#123;'</span> &amp;&amp; ch2 == <span class="string">'&#125;'</span>) ||</span><br><span class="line">			(ch1 == <span class="string">'['</span> &amp;&amp; ch2 == <span class="string">']'</span>))</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>思路：利用栈，与栈顶元素匹配出栈，否则压栈，循环结束如果栈为空则返回true，否则返回false。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/04/02/LeetCode-num020/" data-id="cij1aldne00dpxxuawwexrnbj" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/04/02/LeetCode-num020/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
     <article id="post-LeetCode-num038" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -168,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/02/LeetCode-num038/" data-id="cij1aflia00civhua5zamdj2y" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/02/LeetCode-num038/" data-id="cij1aldm300cixxua3kxhin2i" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/02/LeetCode-num038/#ds-thread" class="article-comment-link">评论</a>
@@ -229,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/02/LeetCode-num165/" data-id="cij1aflcb005bvhuail5sg9dj" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/02/LeetCode-num165/" data-id="cij1aldej005bxxuahkylt3g4" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/02/LeetCode-num165/#ds-thread" class="article-comment-link">评论</a>
@@ -258,23 +317,6 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/05/LeetCode-num064/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/LeetCode/">LeetCode</a></p>
-              <p class="item-title"><a href="/2016/01/05/LeetCode-num064/" class="title">LeetCode num064</a></p>
-              <p class="item-date"><time datetime="2016-01-05T09:33:38.897Z" itemprop="datePublished">2016-01-05</time></p>
-            </div>
-          </li>
         
           <li>
             
@@ -341,6 +383,24 @@
               <p class="item-category"><a class="article-category-link" href="/categories/面试笔试/">面试笔试</a></p>
               <p class="item-title"><a href="/2015/06/07/百度面试题总结—01（算法）/" class="title">百度面试题总结—01（算法）</a></p>
               <p class="item-date"><time datetime="2015-06-07T02:39:21.000Z" itemprop="datePublished">2015-06-07</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/06/04/Lucene-简介/" class="thumbnail">
+  
+    <span style="background-image:url(/img/17131531_CQwW.jpg
+)" alt="Lucene01-简介" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/lucene/">lucene</a></p>
+              <p class="item-title"><a href="/2015/06/04/Lucene-简介/" class="title">Lucene01-简介</a></p>
+              <p class="item-date"><time datetime="2015-06-04T09:00:37.000Z" itemprop="datePublished">2015-06-04</time></p>
             </div>
           </li>
         

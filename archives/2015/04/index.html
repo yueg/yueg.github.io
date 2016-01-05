@@ -178,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/27/C++基本知识积累/" data-id="cij1afll500fzvhuacf1g05yp" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/27/C++基本知识积累/" data-id="cij1aldqn00fzxxuadnxcr0c3" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/27/C++基本知识积累/#ds-thread" class="article-comment-link">评论</a>
@@ -241,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/27/MySQL索引算法原理解析/" data-id="cij1aflas003uvhuafso4i0y5" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/27/MySQL索引算法原理解析/" data-id="cij1aldc9003uxxuaeze016tr" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/27/MySQL索引算法原理解析/#ds-thread" class="article-comment-link">评论</a>
@@ -299,13 +299,73 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/20/聚类基本概念/" data-id="cij1afl7a0005vhuaf8phgil8" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/20/聚类基本概念/" data-id="cij1ald7s0005xxuar2kojf5q" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/20/聚类基本概念/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/聚类/">聚类</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
+    <article id="post-LeetCode-num064" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/18/LeetCode-num064/">LeetCode num064</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/04/18/LeetCode-num064/">
+    <time datetime="2015-04-18T13:19:24.000Z" itemprop="datePublished">2015-04-18</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Minimum Path Sum </strong></p>
+<p>###Problem<br>Given a m x n grid filled with non-negative numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.</p>
+<p><strong>Note:</strong> You can only move either down or right at any point in time.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">minPathSum</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; &amp;grid)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> row = grid.size();</span><br><span class="line">		<span class="keyword">if</span> (row == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> column = grid[<span class="number">0</span>].size();</span><br><span class="line">		<span class="keyword">if</span> (column == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; markMin = grid;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; column; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (i == <span class="number">0</span> &amp;&amp; j == <span class="number">0</span>) markMin[i][j] = grid[<span class="number">0</span>][<span class="number">0</span>];</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">0</span>) markMin[i][j] = markMin[i][j - <span class="number">1</span>] + grid[i][j];</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (j == <span class="number">0</span>) markMin[i][j] = markMin[i - <span class="number">1</span>][j] + grid[i][j];</span><br><span class="line">				<span class="keyword">else</span> markMin[i][j] = (markMin[i][j - <span class="number">1</span>] &lt; markMin[i - <span class="number">1</span>][j] ?</span><br><span class="line">					markMin[i][j - <span class="number">1</span>] : markMin[i - <span class="number">1</span>][j]) + grid[i][j];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> markMin[row - <span class="number">1</span>][column - <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>时间复杂度O(m*n)</li>
+<li>动态规划</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/04/18/LeetCode-num064/" data-id="cij1aldkj00amxxuaglwua8lw" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/04/18/LeetCode-num064/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
 
     </footer>
   </div>
@@ -361,7 +421,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/12/LeetCode-num117/" data-id="cij1aflea006xvhuaszfmgj9a" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/12/LeetCode-num117/" data-id="cij1aldgi006xxxua4k64ukwb" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/12/LeetCode-num117/#ds-thread" class="article-comment-link">评论</a>
@@ -425,71 +485,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/12/LeetCode-num116/" data-id="cij1aflef0071vhuahopauqtw" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/12/LeetCode-num116/" data-id="cij1aldgn0071xxua5fyzdzq3" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/12/LeetCode-num116/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/">Tree</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-LeetCode-num098" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/11/LeetCode-num098/">LeetCode-num098</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/04/11/LeetCode-num098/">
-    <time datetime="2015-04-11T13:55:08.000Z" itemprop="datePublished">2015-04-11</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Validate Binary Search Tree</strong><br><img src="http://pkuyg.com/img/20140316131029_BKF2R.thumb.700_0.jpeg" alt="What are you seeing?"></p>
-<p>###Problem<br>Given a binary tree, determine if it is a valid binary search tree (BST).</p>
-<p>Assume a BST is defined as follows:</p>
-<p>The left subtree of a node contains only nodes with keys less than the node’s key.<br>The right subtree of a node contains only nodes with keys greater than the node’s key.<br>Both the left and right subtrees must also be binary search trees.</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for binary tree</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">isValidBST</span><span class="params">(TreeNode *root)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		TreeNode *leftNode = root-&gt;left, *rightNode = root-&gt;right, *temp;</span><br><span class="line">		<span class="keyword">if</span> (leftNode != <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			temp = leftNode;</span><br><span class="line">			<span class="keyword">while</span> (temp-&gt;right != <span class="literal">NULL</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				temp = temp-&gt;right;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (temp-&gt;val &gt;= root-&gt;val) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (rightNode != <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			temp = rightNode;</span><br><span class="line">			<span class="keyword">while</span> (temp-&gt;left != <span class="literal">NULL</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				temp = temp-&gt;left;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (temp-&gt;val &lt;= root-&gt;val) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> isValidBST(leftNode) &amp;&amp; isValidBST(rightNode);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>利用递归；</li>
-<li>值相等时处理。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/11/LeetCode-num098/" data-id="cij1aflfx008svhuas3phox1a" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/04/11/LeetCode-num098/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/">Tree</a></li></ul>
@@ -515,23 +514,6 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/05/LeetCode-num064/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/LeetCode/">LeetCode</a></p>
-              <p class="item-title"><a href="/2016/01/05/LeetCode-num064/" class="title">LeetCode num064</a></p>
-              <p class="item-date"><time datetime="2016-01-05T09:33:38.897Z" itemprop="datePublished">2016-01-05</time></p>
-            </div>
-          </li>
         
           <li>
             
@@ -598,6 +580,24 @@
               <p class="item-category"><a class="article-category-link" href="/categories/面试笔试/">面试笔试</a></p>
               <p class="item-title"><a href="/2015/06/07/百度面试题总结—01（算法）/" class="title">百度面试题总结—01（算法）</a></p>
               <p class="item-date"><time datetime="2015-06-07T02:39:21.000Z" itemprop="datePublished">2015-06-07</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/06/04/Lucene-简介/" class="thumbnail">
+  
+    <span style="background-image:url(/img/17131531_CQwW.jpg
+)" alt="Lucene01-简介" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/lucene/">lucene</a></p>
+              <p class="item-title"><a href="/2015/06/04/Lucene-简介/" class="title">Lucene01-简介</a></p>
+              <p class="item-date"><time datetime="2015-06-04T09:00:37.000Z" itemprop="datePublished">2015-06-04</time></p>
             </div>
           </li>
         

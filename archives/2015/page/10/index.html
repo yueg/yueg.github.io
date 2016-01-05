@@ -124,6 +124,66 @@
           <a href="/archives/2015" class="archive-year">2015</a>
         </div>
     
+    <article id="post-LeetCode-num075" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/31/LeetCode-num075/">LeetCode num075</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/03/31/LeetCode-num075/">
+    <time datetime="2015-03-31T13:27:19.000Z" itemprop="datePublished">2015-03-31</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Sort Colors</strong></p>
+<p>###Problem<br>Given an array with n objects colored red, white or blue, sort them so that objects of the same color are adjacent, with the colors in the order red, white and blue.</p>
+<p>Here, we will use the integers 0, 1, and 2 to represent the color red, white, and blue respectively.</p>
+<p><strong>Note:</strong><br>You are not suppose to use the library’s sort function for this problem.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sortColors</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> n)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> numRed = <span class="number">0</span>, numWhite = <span class="number">0</span>, numBlue = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (A[i] == <span class="number">0</span>) numRed++;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (A[i] == <span class="number">1</span>) numWhite++;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (A[i] == <span class="number">2</span>) numBlue++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (i &lt; numRed) A[i] = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (i &lt; numRed + numWhite) A[i] = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> A[i] = <span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>题目很简单</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num075/" data-id="cij1aldjt009zxxuaudwnftwa" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num075/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
     <article id="post-LeetCode-num074" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -169,7 +229,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num074/" data-id="cij1aflgq00a4vhua4vrh1csx" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num074/" data-id="cij1aldjx00a4xxuaf6y59q29" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num074/#ds-thread" class="article-comment-link">评论</a>
@@ -228,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num073/" data-id="cij1aflgt00a9vhuab82eb4yn" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num073/" data-id="cij1aldk200a9xxuao7gyuzji" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num073/#ds-thread" class="article-comment-link">评论</a>
@@ -293,7 +353,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num063/" data-id="cij1aflha00arvhual7lo742z" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num063/" data-id="cij1aldkn00arxxuanw5vpsa8" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num063/#ds-thread" class="article-comment-link">评论</a>
@@ -356,7 +416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num062/" data-id="cij1aflhd00awvhuaworj98k4" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num062/" data-id="cij1aldkq00awxxuawc4ngzga" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num062/#ds-thread" class="article-comment-link">评论</a>
@@ -417,72 +477,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num059/" data-id="cij1aflhh00b1vhua9wshokwb" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num059/" data-id="cij1aldkw00b1xxua2k2q31bq" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num059/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-LeetCode-num057" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/31/LeetCode-num057/">LeetCode num057</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/03/31/LeetCode-num057/">
-    <time datetime="2015-03-31T12:17:22.000Z" itemprop="datePublished">2015-03-31</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Insert Interval</strong></p>
-<p>###Problem<br>Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).</p>
-<p>You may assume that the intervals were initially sorted according to their start times.</p>
-<p><strong>Example 1:</strong><br>Given intervals [1,3],[6,9], insert and merge [2,5] in as [1,5],[6,9].</p>
-<p><strong>Example 2:</strong><br>Given [1,2],[3,5],[6,7],[8,10],[12,16], insert and merge [4,9] in as [1,2],[3,10],[12,16].</p>
-<p>This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for an interval.</span><br><span class="line"> * struct Interval &#123;</span><br><span class="line"> *     int start;</span><br><span class="line"> *     int end;</span><br><span class="line"> *     Interval() : start(0), end(0) &#123;&#125;</span><br><span class="line"> *     Interval(int s, int e) : start(s), end(e) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">vector</span>&lt;Interval&gt; insert(<span class="built_in">vector</span>&lt;Interval&gt; &amp;intervals, Interval newInterval)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> startPosition = binarySearchStart(intervals, newInterval);</span><br><span class="line">		intervals.insert(intervals.begin() + startPosition, newInterval);</span><br><span class="line">		<span class="built_in">vector</span>&lt;Interval&gt; result = merge(intervals);</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">vector</span>&lt;Interval&gt; merge(<span class="built_in">vector</span>&lt;Interval&gt; &amp;intervals)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> size = intervals.size();</span><br><span class="line">		<span class="built_in">vector</span>&lt;Interval&gt; result;</span><br><span class="line">		<span class="keyword">if</span> (size &lt;= <span class="number">1</span>) <span class="keyword">return</span> intervals;</span><br><span class="line">		Interval temp = intervals[<span class="number">0</span>];</span><br><span class="line">		result.push_back(temp);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; size; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (intervals[i].start &lt;= temp.end)</span><br><span class="line">			&#123;</span><br><span class="line">				result.pop_back();</span><br><span class="line">				temp = mergeTwoInterger(temp, intervals[i]);</span><br><span class="line">				result.push_back(temp);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				temp = intervals[i];</span><br><span class="line">				result.push_back(temp);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function">Interval <span class="title">mergeTwoInterger</span><span class="params">(Interval &amp;interval1, Interval &amp;interval2)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		Interval result;</span><br><span class="line">		result.start = interval1.start &lt; interval2.start ? interval1.start : interval2.start;</span><br><span class="line">		result.end = interval1.end &gt; interval2.end ? interval1.end : interval2.end;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">binarySearchStart</span><span class="params">(<span class="built_in">vector</span>&lt;Interval&gt; &amp;intervals, Interval target)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (intervals.size() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> left = <span class="number">0</span>, right = intervals.size() - <span class="number">1</span>, middle;</span><br><span class="line">		<span class="keyword">int</span> start;</span><br><span class="line">		<span class="keyword">while</span> (left &lt;= right)</span><br><span class="line">		&#123;</span><br><span class="line">			middle = (left + right) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (intervals[middle].start == target.start)</span><br><span class="line">			&#123;</span><br><span class="line">				start = middle;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (intervals[middle].start &gt; target.start)</span><br><span class="line">			&#123;</span><br><span class="line">				right = middle - <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				left = middle + <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		start = intervals[middle].start &lt; target.start ? middle + <span class="number">1</span> : middle;</span><br><span class="line">		<span class="keyword">return</span> start;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>时间复杂度O(nlogn)</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num057/" data-id="cij1aflhm00bavhuaika83x5a" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num057/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
@@ -508,23 +506,6 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/05/LeetCode-num064/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/LeetCode/">LeetCode</a></p>
-              <p class="item-title"><a href="/2016/01/05/LeetCode-num064/" class="title">LeetCode num064</a></p>
-              <p class="item-date"><time datetime="2016-01-05T09:33:38.897Z" itemprop="datePublished">2016-01-05</time></p>
-            </div>
-          </li>
         
           <li>
             
@@ -591,6 +572,24 @@
               <p class="item-category"><a class="article-category-link" href="/categories/面试笔试/">面试笔试</a></p>
               <p class="item-title"><a href="/2015/06/07/百度面试题总结—01（算法）/" class="title">百度面试题总结—01（算法）</a></p>
               <p class="item-date"><time datetime="2015-06-07T02:39:21.000Z" itemprop="datePublished">2015-06-07</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/06/04/Lucene-简介/" class="thumbnail">
+  
+    <span style="background-image:url(/img/17131531_CQwW.jpg
+)" alt="Lucene01-简介" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/lucene/">lucene</a></p>
+              <p class="item-title"><a href="/2015/06/04/Lucene-简介/" class="title">Lucene01-简介</a></p>
+              <p class="item-date"><time datetime="2015-06-04T09:00:37.000Z" itemprop="datePublished">2015-06-04</time></p>
             </div>
           </li>
         

@@ -124,6 +124,63 @@
           <a href="/archives/2015" class="archive-year">2015</a>
         </div>
     
+    <article id="post-LeetCode-num014" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/03/LeetCode-num014/">LeetCode num014</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/02/03/LeetCode-num014/">
+    <time datetime="2015-02-03T10:15:14.000Z" itemprop="datePublished">2015-02-03</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###Problem<br><strong>Longest Common Prefix</strong><br>Write a function to find the longest common prefix string amongst an array of strings.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">longestCommonPrefix</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; &amp;strs)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j, mark = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span> (strs.size() == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; strs[<span class="number">0</span>][i] != <span class="string">'\0'</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (j = <span class="number">1</span>; j &lt; strs.size(); j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (strs[j][i] != strs[<span class="number">0</span>][i])</span><br><span class="line">				&#123;</span><br><span class="line">					mark = <span class="number">1</span>;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (mark == <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">string</span> str = strs[<span class="number">0</span>];</span><br><span class="line">		<span class="keyword">return</span> str.substr(<span class="number">0</span>, i);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>需熟悉C++的string类型内部函数</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/02/03/LeetCode-num014/" data-id="cij1aldnp00e4xxuaeduvf0xa" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/02/03/LeetCode-num014/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Strint/">Strint</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
     <article id="post-LeetCode-num009" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -166,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/24/LeetCode-num009/" data-id="cij1afljr00edvhua0kogoy89" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/24/LeetCode-num009/" data-id="cij1aldnx00edxxua5dg4bbww" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/01/24/LeetCode-num009/#ds-thread" class="article-comment-link">评论</a>
@@ -227,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num008/" data-id="cij1afljt00eivhuafgn70yym" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num008/" data-id="cij1aldo000eixxuatuta1ysn" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/01/23/LeetCode-num008/#ds-thread" class="article-comment-link">评论</a>
@@ -285,7 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num007/" data-id="cij1afljw00envhua60r8f800" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num007/" data-id="cij1aldo400enxxuaaav9rum5" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/01/23/LeetCode-num007/#ds-thread" class="article-comment-link">评论</a>
@@ -344,7 +401,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num006/" data-id="cij1afljz00ervhua98r26fpv" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num006/" data-id="cij1aldo800erxxuadjff2uco" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/01/23/LeetCode-num006/#ds-thread" class="article-comment-link">评论</a>
@@ -402,71 +459,13 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/21/LeetCode-num004/" data-id="cij1aflk900ezvhuayapq718l" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/21/LeetCode-num004/" data-id="cij1aldoq00ezxxuaeakq23pc" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/01/21/LeetCode-num004/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/median/">median</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-LeetCode-num003" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/19/LeetCode-num003/">LeetCode num003</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/01/19/LeetCode-num003/">
-    <time datetime="2015-01-19T12:42:19.000Z" itemprop="datePublished">2015-01-19</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###Problem<br><strong>Longest Substring Without Repeating Characters</strong><br>Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for “abcabcbb” is “abc”, which the length is 3. For “bbbbb” the longest substring is “b”, with the length of 1.</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt; vec;</span><br><span class="line">		<span class="keyword">int</span> max = <span class="number">0</span>, i, j;</span><br><span class="line">		vec.push_back(s[<span class="number">0</span>]);</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; s.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; vec.size(); j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (s[i] == vec[j])</span><br><span class="line">				&#123;</span><br><span class="line">					vec.erase(vec.begin(), vec.begin() + j + <span class="number">1</span>);</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			max = max &gt; (j + <span class="number">1</span>) ? max : (j + <span class="number">1</span>);</span><br><span class="line">			vec.push_back(s[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> max;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>vector类型操作不熟</li>
-<li>核心思想，记录字符，复杂度为O(n)</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/19/LeetCode-num003/" data-id="cij1aflkc00f4vhuaz9sykjue" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/01/19/LeetCode-num003/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li></ul>
 
     </footer>
   </div>
@@ -489,23 +488,6 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/05/LeetCode-num064/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/LeetCode/">LeetCode</a></p>
-              <p class="item-title"><a href="/2016/01/05/LeetCode-num064/" class="title">LeetCode num064</a></p>
-              <p class="item-date"><time datetime="2016-01-05T09:33:38.897Z" itemprop="datePublished">2016-01-05</time></p>
-            </div>
-          </li>
         
           <li>
             
@@ -572,6 +554,24 @@
               <p class="item-category"><a class="article-category-link" href="/categories/面试笔试/">面试笔试</a></p>
               <p class="item-title"><a href="/2015/06/07/百度面试题总结—01（算法）/" class="title">百度面试题总结—01（算法）</a></p>
               <p class="item-date"><time datetime="2015-06-07T02:39:21.000Z" itemprop="datePublished">2015-06-07</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/06/04/Lucene-简介/" class="thumbnail">
+  
+    <span style="background-image:url(/img/17131531_CQwW.jpg
+)" alt="Lucene01-简介" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/lucene/">lucene</a></p>
+              <p class="item-title"><a href="/2015/06/04/Lucene-简介/" class="title">Lucene01-简介</a></p>
+              <p class="item-date"><time datetime="2015-06-04T09:00:37.000Z" itemprop="datePublished">2015-06-04</time></p>
             </div>
           </li>
         
