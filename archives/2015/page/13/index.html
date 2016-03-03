@@ -90,7 +90,7 @@
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        45
+        48
         <span>标签</span>
       </div>
     </div>
@@ -123,68 +123,6 @@
           <i class="fa fa-calendar"></i>
           <a href="/archives/2015" class="archive-year">2015</a>
         </div>
-    
-    <article id="post-LeetCode-num033" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/30/LeetCode-num033/">LeetCode num033</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/03/30/LeetCode-num033/">
-    <time datetime="2015-03-30T11:46:35.000Z" itemprop="datePublished">2015-03-30</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Search in Rotated Sorted Array </strong></p>
-<p>###Problem<br>Suppose a sorted array is rotated at some pivot unknown to you beforehand.</p>
-<p>(i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2).</p>
-<p>You are given a target value to search. If found in the array return its index, otherwise return -1.</p>
-<p>You may assume no duplicate exists in the array.</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> n, <span class="keyword">int</span> target)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> minPosition = findMin(A, n);</span><br><span class="line">		<span class="keyword">if</span> (minPosition == <span class="number">0</span>) <span class="keyword">return</span> binarySearch(A, <span class="number">0</span>, n - <span class="number">1</span>, target);</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (A[<span class="number">0</span>] &lt;= target) <span class="keyword">return</span> binarySearch(A, <span class="number">0</span>, minPosition - <span class="number">1</span>, target);</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">return</span> binarySearch(A, minPosition, n - <span class="number">1</span>, target);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> left, <span class="keyword">int</span> right, <span class="keyword">int</span> target)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">while</span> (left &lt;= right)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> middle = (left + right) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (A[middle] == target) <span class="keyword">return</span> middle;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (A[middle] &gt; target) right = middle - <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> left = middle + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">findMin</span><span class="params">(<span class="keyword">int</span> num[], <span class="keyword">int</span> n)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> min = num[<span class="number">0</span>], left = <span class="number">0</span>, right = n - <span class="number">1</span>, middle, position = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span> (right &gt;= left)</span><br><span class="line">		&#123;</span><br><span class="line">			middle = (left + right) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (min &lt;= num[middle])</span><br><span class="line">			&#123;</span><br><span class="line">				left = middle + <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				min = num[middle];</span><br><span class="line">				position = middle;</span><br><span class="line">				right = middle - <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> position;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>技巧性比较强</li>
-<li>去哪儿网笔试题</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num033/" data-id="cij1apu2200cw0ouaae5n9hbu" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/03/30/LeetCode-num033/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
     
     <article id="post-LeetCode-num031" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -231,7 +169,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num031/" data-id="cij1apu2800d10ouagx33t2qk" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num031/" data-id="cilbp4fbe00df8xua6bw6lo60" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/30/LeetCode-num031/#ds-thread" class="article-comment-link">评论</a>
@@ -293,7 +231,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num011/" data-id="cij1apu3v00e80ouapuhx966s" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num011/" data-id="cilbp4fcb00em8xuaiozlikbz" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/30/LeetCode-num011/#ds-thread" class="article-comment-link">评论</a>
@@ -352,7 +290,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num118/" data-id="cij1aptvi006s0oua7x0n7vlb" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num118/" data-id="cilbp4f5y00768xuaahz8baen" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/30/LeetCode-num118/#ds-thread" class="article-comment-link">评论</a>
@@ -412,7 +350,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num119/" data-id="cij1aptve006n0ouav74ao4e7" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num119/" data-id="cilbp4f5v00718xuawf2qaw2p" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/30/LeetCode-num119/#ds-thread" class="article-comment-link">评论</a>
@@ -475,10 +413,69 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num120/" data-id="cij1aptvc006i0ouaaaqip8to" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num120/" data-id="cilbp4f5r006w8xuae608yrna" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/30/LeetCode-num120/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
+    <article id="post-LeetCode-num122" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/30/LeetCode-num122/">LeetCode num122</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/03/30/LeetCode-num122/">
+    <time datetime="2015-03-30T08:32:42.000Z" itemprop="datePublished">2015-03-30</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Best Time to Buy and Sell Stock II </strong></p>
+<p>###Problem<br>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+<p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;prices)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> size = prices.size();</span><br><span class="line">		<span class="keyword">if</span> (size == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> i, maxProfit = <span class="number">0</span>, markPurchase = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> max, purchasePrice;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; size; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			max = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">if</span> (prices[i] &gt; prices[i - <span class="number">1</span>] &amp;&amp; markPurchase == <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				purchasePrice = prices[i - <span class="number">1</span>];</span><br><span class="line">				markPurchase = <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (prices[i] &lt;= prices[i - <span class="number">1</span>] &amp;&amp; markPurchase == <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				max = prices[i - <span class="number">1</span>] - purchasePrice;</span><br><span class="line">				maxProfit += max;</span><br><span class="line">				markPurchase = <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (markPurchase == <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			maxProfit += prices[size - <span class="number">1</span>] - purchasePrice;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> maxProfit;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>题目相对较简单</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num122/" data-id="cilbp4f5l006m8xuahwvykyfr" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/03/30/LeetCode-num122/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
@@ -504,6 +501,24 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/03/word2vec/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/barneshutplot.jpg
+)" alt="了解word2vec" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/MLearning/">MLearning</a></p>
+              <p class="item-title"><a href="/2016/03/03/word2vec/" class="title">了解word2vec</a></p>
+              <p class="item-date"><time datetime="2016-03-03T02:53:02.000Z" itemprop="datePublished">2016-03-03</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -573,23 +588,6 @@
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/06/07/百度面试题总结—01（算法）/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/面试笔试/">面试笔试</a></p>
-              <p class="item-title"><a href="/2015/06/07/百度面试题总结—01（算法）/" class="title">百度面试题总结—01（算法）</a></p>
-              <p class="item-date"><time datetime="2015-06-07T02:39:21.000Z" itemprop="datePublished">2015-06-07</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -608,7 +606,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 14.17px;">C++</a> <a href="/tags/DL/" style="font-size: 10px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 
