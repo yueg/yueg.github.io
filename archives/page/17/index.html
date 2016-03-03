@@ -69,7 +69,7 @@
   
   <div id="header-sub" class="header-sub header-inner">
     <div class="outer">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
   
@@ -86,11 +86,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        122
+        125
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        44
+        45
         <span>标签</span>
       </div>
     </div>
@@ -123,6 +123,179 @@
           <i class="fa fa-calendar"></i>
           <a href="/archives/2015" class="archive-year">2015</a>
         </div>
+    
+    <article id="post-LeetCode-num028" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/03/LeetCode-num028/">LeetCode num028</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/02/03/LeetCode-num028/">
+    <time datetime="2015-02-03T10:21:43.000Z" itemprop="datePublished">2015-02-03</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###Problem<br><strong>Implement strStr()</strong><br>Implement strStr().</p>
+<p>Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.</p>
+<p>Update (2014-11-02):<br>The signature of the function had been updated to return the index instead of the pointer. If you still see your function signature returns a char * or String, please click the reload button  to reset your code definition.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">strStr</span><span class="params">(<span class="keyword">char</span> *haystack, <span class="keyword">char</span> *needle)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (needle[<span class="number">0</span>] == <span class="string">'\0'</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> i, j, mark = -<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>, j = <span class="number">0</span>; haystack[i] != <span class="string">'\0'</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (haystack[i] == needle[j])</span><br><span class="line">			&#123;</span><br><span class="line">				j++;</span><br><span class="line">				<span class="keyword">if</span> (mark == -<span class="number">1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					mark = i;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (needle[j] == <span class="string">'\0'</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">return</span> mark;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (mark != -<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				i = mark;</span><br><span class="line">			&#125;</span><br><span class="line">			mark = -<span class="number">1</span>;</span><br><span class="line">			j = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>注意匹配一半时的回滚位置。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/02/03/LeetCode-num028/" data-id="cij1apu2r00da0ouae7rnzwan" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/02/03/LeetCode-num028/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Strint/">Strint</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
+    <article id="post-LeetCode-num027" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/03/LeetCode-num027/">LeetCode num027</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/02/03/LeetCode-num027/">
+    <time datetime="2015-02-03T10:20:29.000Z" itemprop="datePublished">2015-02-03</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###Problem<br><strong>Remove Element</strong><br>Given an array and a value, remove all instances of that value in place and return the new length.</p>
+<p>The order of elements can be changed. It doesn’t matter what you leave beyond the new length.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> n, <span class="keyword">int</span> elem)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i, count = <span class="number">0</span>, temp;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (A[i] == elem)</span><br><span class="line">			&#123;</span><br><span class="line">				temp = A[i];</span><br><span class="line">				A[i] = A[n - <span class="number">1</span>];</span><br><span class="line">				i--;</span><br><span class="line">				n--;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> n;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/02/03/LeetCode-num027/" data-id="cij1apu2y00df0oua1yq2xemq" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/02/03/LeetCode-num027/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Integer/">Integer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
+    <article id="post-LeetCode-num026" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/03/LeetCode-num026/">LeetCode num026</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/02/03/LeetCode-num026/">
+    <time datetime="2015-02-03T10:18:15.000Z" itemprop="datePublished">2015-02-03</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###Problem<br><strong>Remove Duplicates from Sorted Array</strong><br>Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.</p>
+<p>Do not allocate extra space for another array, you must do this in place with constant memory.</p>
+<p>For example,<br>Given input array A = [1,1,2],</p>
+<p>Your function should return length = 2, and A is now [1,2].</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (n &lt;= <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> i, j;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">1</span>, j = <span class="number">1</span>; j &lt; n; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (A[j] != A[j - <span class="number">1</span>])</span><br><span class="line">			&#123;</span><br><span class="line">				A[i] = A[j];</span><br><span class="line">				i++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> i;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>题虽不难，需注意的问题还是很多的。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/02/03/LeetCode-num026/" data-id="cij1apu3300dk0ouaz6cvod79" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/02/03/LeetCode-num026/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Integer/">Integer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
     
     <article id="post-LeetCode-num014" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -164,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/03/LeetCode-num014/" data-id="cij1aodld00e4zzua4x4b1i6y" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/03/LeetCode-num014/" data-id="cij1apu3q00e40ouat2hgprzj" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/02/03/LeetCode-num014/#ds-thread" class="article-comment-link">评论</a>
@@ -223,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/24/LeetCode-num009/" data-id="cij1aodlj00edzzua6cyteuy1" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/24/LeetCode-num009/" data-id="cij1apu3y00ed0ouauj3afg7g" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/01/24/LeetCode-num009/#ds-thread" class="article-comment-link">评论</a>
@@ -284,188 +457,13 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num008/" data-id="cij1aodll00eizzua0d69h6cw" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num008/" data-id="cij1apu4200ei0ouakl3h3qq6" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/01/23/LeetCode-num008/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Integer/">Integer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Strint/">Strint</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-LeetCode-num007" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/23/LeetCode-num007/">LeetCode num007</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/01/23/LeetCode-num007/">
-    <time datetime="2015-01-23T07:49:48.000Z" itemprop="datePublished">2015-01-23</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###Problem<br><strong>Reverse Integer</strong><br>Reverse digits of an integer.</p>
-<p>Example1: x = 123, return 321<br>Example2: x = -123, return -321</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec;</span><br><span class="line">		<span class="keyword">int</span> temp, love, int_max = INT_MAX, int_min = INT_MIN;</span><br><span class="line">		<span class="keyword">while</span> (x != <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			temp = x % <span class="number">10</span>;</span><br><span class="line">			x = x / <span class="number">10</span>;</span><br><span class="line">			vec.push_back(temp);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; vec.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			love =  <span class="built_in">pow</span>(<span class="number">10</span>, (vec.size() - i - <span class="number">1</span>));</span><br><span class="line">			<span class="keyword">if</span> (vec.size() == <span class="number">10</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (vec[i] &gt; int_max / love || vec[i] &lt; int_min / love)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (vec[i] == int_max / love || vec[i] == int_min / love)</span><br><span class="line">				&#123;</span><br><span class="line">					int_max = int_max % love;</span><br><span class="line">					int_min = int_min % love;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			x += vec[i] * love;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> x;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment<br><strong>Have you thought about this?</strong><br>Here are some good questions to ask before coding. Bonus points for you if you have already thought through this!</p>
-<p>If the integer’s last digit is 0, what should the output be? ie, cases such as 10, 100.</p>
-<p>Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer, then the reverse of 1000000003 overflows. How should you handle such cases?</p>
-<p>For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num007/" data-id="cij1aodlp00enzzuawm3lzupi" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/01/23/LeetCode-num007/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Integer/">Integer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-LeetCode-num006" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/23/LeetCode-num006/">LeetCode num006</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/01/23/LeetCode-num006/">
-    <time datetime="2015-01-23T05:57:08.000Z" itemprop="datePublished">2015-01-23</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###Problem<br><strong>ZigZag Conversion</strong><br>The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">P   A   H   N</span><br><span class="line">A P L S I I G</span><br><span class="line">Y   I   R</span><br></pre></td></tr></table></figure></p>
-<p>And then read line by line: “PAHNAPLSIIGYIR”<br>Write the code that will take a string and make this conversion given a number of rows:<br>onvert(“PAYPALISHIRING”, 3) should return “PAHNAPLSIIGYIR”.</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">convert</span><span class="params">(<span class="built_in">string</span> s, <span class="keyword">int</span> nRows)</span> </span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (nRows == <span class="number">1</span>) <span class="keyword">return</span> s;</span><br><span class="line">		<span class="built_in">string</span> conv_s = s;</span><br><span class="line">		<span class="keyword">int</span> i, j = <span class="number">0</span>, k;</span><br><span class="line">		<span class="keyword">int</span> jump = <span class="number">2</span> * (nRows - <span class="number">1</span>), temp;</span><br><span class="line">		<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; nRows; k++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (i = k; i &lt; s.size();)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (k == <span class="number">0</span> || k == (nRows - <span class="number">1</span>))</span><br><span class="line">				&#123;</span><br><span class="line">					conv_s[j] = s[i];</span><br><span class="line">					i += jump;</span><br><span class="line">					j++;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					conv_s[j] = s[i];</span><br><span class="line">					temp = i + jump - <span class="number">2</span> * (i % jump);</span><br><span class="line">					<span class="keyword">if</span> (temp &lt; s.size())</span><br><span class="line">					&#123;</span><br><span class="line">						conv_s[++j] = s[i + jump - <span class="number">2</span> * (i % jump)];</span><br><span class="line">					&#125;</span><br><span class="line">					i += jump;</span><br><span class="line">					j++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		conv_s[j] = <span class="string">'\0'</span>;</span><br><span class="line">		<span class="keyword">return</span> conv_s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>开始时理解题意有误；</li>
-<li>出错原因：少了很多特殊情况判断。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num006/" data-id="cij1aodlw00erzzuafg06d5ys" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/01/23/LeetCode-num006/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-LeetCode-num004" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/21/LeetCode-num004/">LeetCode num004</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/01/21/LeetCode-num004/">
-    <time datetime="2015-01-20T16:07:31.000Z" itemprop="datePublished">2015-01-21</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###Problem<br><strong>Median of Two Sorted Arrays</strong><br>There are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> m, <span class="keyword">int</span> B[], <span class="keyword">int</span> n)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> beginA = <span class="number">0</span>, endA = m - <span class="number">1</span>, beginB = <span class="number">0</span>, endB = n - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">return</span> findMedian(A, beginA, endA, B, beginB, endB);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">double</span> <span class="title">findMedian</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> beginA, <span class="keyword">int</span> endA, <span class="keyword">int</span> B[], <span class="keyword">int</span> beginB, <span class="keyword">int</span> endB)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> ((endA - beginA + <span class="number">1</span>) &lt;= <span class="number">2</span> &amp;&amp; (endB - beginB + <span class="number">1</span>) &lt;= <span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> finalfindMedian(A, beginA, endA, B, beginB, endB);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> middleA = (beginA + endA) / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">int</span> middleB = (beginB + endB) / <span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span> ((endA - beginA + <span class="number">1</span>) &lt;= <span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> ((endB - beginB + <span class="number">1</span>) % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				beginB = middleB - <span class="number">1</span>;</span><br><span class="line">				endB = middleB + <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				beginB = middleB - <span class="number">1</span>;</span><br><span class="line">				endB = middleB + <span class="number">2</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> finalfindMedian(A, beginA, endA, B, beginB, endB);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> ((endB - beginB + <span class="number">1</span>) &lt;= <span class="number">2</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> ((endA - beginA + <span class="number">1</span>) % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				beginA = middleA - <span class="number">1</span>;</span><br><span class="line">				endA = middleA + <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				beginA = middleA - <span class="number">1</span>;</span><br><span class="line">				endA = middleA + <span class="number">2</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> finalfindMedian(B, beginB, endB, A, beginA, endA);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> medianA, medianB;</span><br><span class="line">		<span class="keyword">int</span> length;</span><br><span class="line">		medianA = A[middleA];</span><br><span class="line">		medianB = B[middleB];</span><br><span class="line">		<span class="keyword">if</span> (medianA &gt;= medianB)</span><br><span class="line">		&#123;</span><br><span class="line">			length = (endA - middleA) &lt; (middleB - beginB) ? (endA - middleA) : (middleB - beginB);</span><br><span class="line">			length = length &lt; (middleA - beginA) ? length : (middleA - beginA);</span><br><span class="line">			<span class="keyword">return</span> findMedian(A, beginA, endA - length, B, beginB + length, endB);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			length = (endB - middleB) &lt; (middleA - beginA) ? (endB - middleB) : (middleA - beginA);</span><br><span class="line">			length = length &lt; (middleB - beginB) ? length : (middleB - beginB);</span><br><span class="line">			<span class="keyword">return</span> findMedian(A, beginA + length, endA, B, beginB, endB - length);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">double</span> <span class="title">finalfindMedian</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> beginA, <span class="keyword">int</span> endA, <span class="keyword">int</span> B[], <span class="keyword">int</span> beginB, <span class="keyword">int</span> endB)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j, k = <span class="number">0</span>, temp;</span><br><span class="line">		<span class="keyword">int</span> num[<span class="number">10</span>];</span><br><span class="line">		<span class="keyword">int</span> count = endA - beginA + <span class="number">1</span> + endB - beginB + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (i = beginA; i &lt;= endA; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			num[k] = A[i];</span><br><span class="line">			k++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (i = beginB; i &lt;= endB; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			num[k] = B[i];</span><br><span class="line">			k++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (count == <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> (<span class="keyword">double</span>)num[<span class="number">0</span>];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; count; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (j = i; j &lt; count; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (num[j] &lt; num[i])</span><br><span class="line">				&#123;</span><br><span class="line">					temp = num[j];</span><br><span class="line">					num[j] = num[i];</span><br><span class="line">					num[i] = temp;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (count % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> (<span class="keyword">double</span>)(((<span class="keyword">double</span>)num[count / <span class="number">2</span> - <span class="number">1</span>] + (<span class="keyword">double</span>)num[count / <span class="number">2</span>]) / <span class="number">2</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> (<span class="keyword">double</span>)num[count / <span class="number">2</span>];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>代码有冗余</li>
-<li>复杂度达到要求</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/21/LeetCode-num004/" data-id="cij1aodmb00ezzzuam1caxkpl" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/01/21/LeetCode-num004/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/median/">median</a></li></ul>
 
     </footer>
   </div>
@@ -488,6 +486,23 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/01/12/贝叶斯方法/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+              <p class="item-title"><a href="/2016/01/12/贝叶斯方法/" class="title">贝叶斯方法</a></p>
+              <p class="item-date"><time datetime="2016-01-12T01:16:42.000Z" itemprop="datePublished">2016-01-12</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -557,24 +572,6 @@
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/06/04/Lucene-简介/" class="thumbnail">
-  
-    <span style="background-image:url(/img/17131531_CQwW.jpg
-)" alt="Lucene01-简介" class="thumbnail-image"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/lucene/">lucene</a></p>
-              <p class="item-title"><a href="/2015/06/04/Lucene-简介/" class="title">Lucene01-简介</a></p>
-              <p class="item-date"><time datetime="2015-06-04T09:00:37.000Z" itemprop="datePublished">2015-06-04</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -584,7 +581,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -593,7 +590,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 

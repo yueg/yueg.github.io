@@ -69,7 +69,7 @@
   
   <div id="header-sub" class="header-sub header-inner">
     <div class="outer">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
   
@@ -86,11 +86,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        122
+        125
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        44
+        45
         <span>标签</span>
       </div>
     </div>
@@ -115,6 +115,217 @@
 </aside>
       <section id="main">
   
+  
+    
+    
+      
+        <div class="archive-year-wrap">
+          <i class="fa fa-calendar"></i>
+          <a href="/archives/2015" class="archive-year">2015</a>
+        </div>
+    
+    <article id="post-Shell积累" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/12/Shell积累/">Shell积累</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/01/12/Shell积累/">
+    <time datetime="2015-01-12T05:07:55.000Z" itemprop="datePublished">2015-01-12</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##1.shift命令<br>shift参数将所有参数变量左移一个位置，使$2变为$1，$3变为$2，…依此类推，但$0不变。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$0</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$1</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$2</span></span><br><span class="line"><span class="built_in">shift</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$0</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$1</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$2</span></span><br></pre></td></tr></table></figure></p>
+<p>运行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh test.sh <span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">test.sh</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">test.sh</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure></p>
+<p>##2.输出到文件<br>shell编程输出分为两种，一种直接打印在控制台，另一种输出到文件中（即输出重定向），输出到文件中用“&gt;”字符输出。<br>“&gt;”后面直接跟文本文件名，如果不存在，自动创建；如果已经存在则覆盖；<br>“&gt;&gt;”追加到文件中。<br>输出符后面加”!”，将命令执行结果输出到文件；<br>输出符后面加”&amp;”，将所有显示信息输出到文件；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/01/12/Shell积累/" data-id="cij1aptqy00370ouabyeioj6b" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/01/12/Shell积累/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/积累/">积累</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
+    <article id="post-Shell学习（练习题解析）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/12/Shell学习（练习题解析）/">Shell学习（练习题解析）</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/01/12/Shell学习（练习题解析）/">
+    <time datetime="2015-01-12T02:20:56.000Z" itemprop="datePublished">2015-01-12</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>练习题网址<a href="http://wenku.baidu.com/link?url=YFtxMvdJ_0zf1FKxJcxzXl-QUCENPpz8NMjcRJfmJ4IKencrL11U8Qw45uriI4HH3B5ANnq1mJsHdmY-mol4Moz-RWZoy9MD5UbPSBjL_hK" target="_blank" rel="external">百度文库</a></p>
+<p>###1.编写一个shell脚本，完成功能<br>1）显示文字“Waiting for a while…”；<br>2）长格式显示当前目录下面的文件和目录，并输出定向到/home/yuegang02/file.txt文件；<br>3）定义一个变量，名为s，初始值“Hello”；<br>4）使该变量输出重定向到/home/yuegang02/string.txt。<br>代码：<br>1）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Waiting for a while ..."</span></span><br></pre></td></tr></table></figure></p>
+<p>2)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">ls -al &gt; /home/yuegang02/file.txt</span><br></pre></td></tr></table></figure></p>
+<p>3)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">s=Hello</span><br></pre></td></tr></table></figure></p>
+<p>4)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">s=Hello</span><br><span class="line"><span class="built_in">echo</span> s &gt; /home/yuegang02/string.txt</span><br></pre></td></tr></table></figure></p>
+<p>###2.批量复制操作<br>编写一个shell脚本，它把第二个位置参数及其以后的各个参数指定的文件复制到第一个位置参数指定的目录中。<br>代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/bin/bash</span></span><br><span class="line">dir=<span class="variable">$1</span></span><br><span class="line"><span class="keyword">while</span> [ <span class="variable">$2</span> ]</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    cp <span class="variable">$dir</span> <span class="variable">$2</span></span><br><span class="line">    <span class="built_in">shift</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
+<p>注意：<a href="http://yueg.gitcafe.com/2015/01/12/Shell%E7%A7%AF%E7%B4%AF/" target="_blank" rel="external">shift用法</a></p>
+<p>###3.移动文件，并显示目录内容<br>编写一个shell脚本，利用for循环将当前目录下的.c文件移动到指定的目录，并按文件大小显示出移动后指定的目录的内容。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/bin/bash</span></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> `ls *.c`</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> [ ! <span class="operator">-d</span> ./file_txt ] ;</span><br><span class="line">    <span class="keyword">then</span></span><br><span class="line">        mkdir ./file_txt</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    cp <span class="variable">$&#123;PWD&#125;</span>/<span class="variable">$name</span> ./file_txt</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/01/12/Shell学习（练习题解析）/" data-id="cij1aptr2003d0ouamacqdra0" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/01/12/Shell学习（练习题解析）/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/积累/">积累</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
+    <article id="post-Shell脚本基本语法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/11/Shell脚本基本语法/">Shell脚本基本语法</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/01/11/Shell脚本基本语法/">
+    <time datetime="2015-01-11T14:07:20.000Z" itemprop="datePublished">2015-01-11</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近闲来无事拿起了一本shell编程的书，翻了翻感觉应该是不会太难，果断地安装了虚拟机，安装了linux系统，开始了shell脚本语言的学习。</p>
+<p>##简介<br>shell脚本与Windows/Dos下的批处理相似，也就是各类命令预先放入到一个文件中，方便一次性执行一个程序文件，但是他比Windows下的批处理更强大，比用其他程序编程的效率更高，因为他使用的是linux/unix命令。</p>
+<p>##基本语法</p>
+<p>###1.输出<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> Hello,World!</span><br><span class="line"><span class="built_in">printf</span> Hello,World!</span><br></pre></td></tr></table></figure></p>
+<p>###2.赋值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">name=yueg</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$name</span></span><br><span class="line">x=<span class="number">1</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$x</span></span><br><span class="line">names=(yueg jingjing)</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$names</span></span><br><span class="line">names[<span class="number">0</span>]=yuegang</span><br><span class="line">names[<span class="number">1</span>]=jingjing</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$names</span></span><br></pre></td></tr></table></figure></p>
+<p>注意：</p>
+<ol>
+<li>以上是多种赋值方式的例子，特别说明的是赋值的“=”前后不能留有空格，否则系统会识别为多个错误命令；</li>
+<li>给数组赋值可以用（）的形式将每个分量用空格隔开，还可以单独分别赋值。</li>
+</ol>
+<p>###3.控制流（条件判断）</p>
+<ol>
+<li>if语句</li>
+<li>case语句</li>
+</ol>
+<p><strong>if语句：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="keyword">if</span> [<span class="number">1</span> <span class="operator">-lt</span> <span class="number">2</span>]</span><br><span class="line">    <span class="built_in">echo</span> yes</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> no</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></p>
+<p>控制流的条件判断语句中条件判断分为多种：</p>
+<ol>
+<li>数值判断</li>
+</ol>
+<p>等于：-eq<br>不等于：-ne<br>大于：-gt<br>大于等于：-ge<br>小于：-lt<br>小于等于：-le</p>
+<ol>
+<li>文件类别判断（不一一列出）</li>
+<li>字符串判断</li>
+</ol>
+<p>-z string 长度为0，结果为真<br>-n string 长度不为0，结果为真<br>string1 = string2 相等为真<br>string1 != string2 不相等为真</p>
+<p><strong>case语句</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="keyword">case</span> word <span class="keyword">in</span></span><br><span class="line">    pattern1)</span><br><span class="line">        list1</span><br><span class="line">        ;;</span><br><span class="line">    pattern2)</span><br><span class="line">        list2</span><br><span class="line">        ;;</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure></p>
+<p>注意：</p>
+<ol>
+<li>case语句中pattern可以用通配符“*”进行模糊匹配；</li>
+<li>注意每次匹配后的语法要求要有“;;”两个分号。</li>
+</ol>
+<p>###4.循环</p>
+<ol>
+<li>while</li>
+<li>until</li>
+<li>for</li>
+<li>select</li>
+<li>循环控制</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/01/11/Shell脚本基本语法/" data-id="cij1aptqu00320oua1zjve5ds" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/01/11/Shell脚本基本语法/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     
     
@@ -176,7 +387,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/31/最大子段和（不同解法）/" data-id="cij1aod69001dzzuaq33jrj2z" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/31/最大子段和（不同解法）/" data-id="cij1aptp5001d0ouagi2lj18m" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/31/最大子段和（不同解法）/#ds-thread" class="article-comment-link">评论</a>
@@ -237,7 +448,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/29/数据库SQL语句——alter用法/" data-id="cij1aod6y001wzzua6814kvkx" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/29/数据库SQL语句——alter用法/" data-id="cij1aptps001w0ouaoze1eoji" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/29/数据库SQL语句——alter用法/#ds-thread" class="article-comment-link">评论</a>
@@ -312,243 +523,13 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/28/数据库概念——数据模型/" data-id="cij1aod6e001hzzuagwikmvwq" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/28/数据库概念——数据模型/" data-id="cij1aptpb001h0ouarats3rvq" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/28/数据库概念——数据模型/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模型/">模型</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-数据库基本概念" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/28/数据库基本概念/">数据库基本概念</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2014/12/28/数据库基本概念/">
-    <time datetime="2014-12-28T06:06:07.000Z" itemprop="datePublished">2014-12-28</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/数据库/">数据库</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##四个基本概念</p>
-<p>###数据<br>数据是数据数据库中存储的基本对象，数据的定义：描述事物的符号记录。数据的种类：文本、图形、图像等。数据与其语义是不可分的。</p>
-<p>###数据库<br>数据库（database，简称DB）是长期在计算机内、有组织的、可共享的大量数据的集合。</p>
-<p>###数据库管理系统<br>位于用户和操作系统之间的一层数据管理<strong>软件</strong>，是一个基础软件，是一个大型复杂的软件系统。科学的组织和存储数据、高效的获取和维护数据。<br>数据库管理系统（DBMS）的主要功能：</p>
-<ol>
-<li>数据定义功能（DDL）；</li>
-<li>数据的组织、存储和管理；</li>
-<li>数据操纵功能（DML）；</li>
-<li>数据库的事务管理和运行管理；</li>
-<li>数据库的建立和维护功能；</li>
-<li>其他（DBMS与其他软件的系统的通信、两个DBMS系统的数据交换、异构数据库的互访和互操作）。</li>
-</ol>
-<p>###数据库系统<br>在计算机系统中引入数据库后的系统构成数据库系统。<br>数据库系统的构成：</p>
-<ol>
-<li>数据库</li>
-<li>数据库管理系统（及其开发工具）</li>
-<li>应用系统</li>
-<li>数据库管理员</li>
-</ol>
-<p>###数据库系统的特点</p>
-<ol>
-<li>数据结构化；</li>
-<li>数据的共享性高、冗余度低、易扩充；</li>
-<li>数据独立性高；</li>
-<li>数据由DBMS统一管理和控制。</li>
-</ol>
-<p>###数据独立性</p>
-<ol>
-<li>物理独立性：指用户的应用程序与存储在磁盘上的数据库中的数据是相互独立的。当数据的物理存储改变了，应用程序不用改变。</li>
-<li>逻辑独立性：指用户的应用程序与数据库的逻辑结构是相互独立的。数据的逻辑结构改变了，用户程序也可以不变。</li>
-<li><strong>数据独立性是有DBMS的二级映射功能保证的</strong>。</li>
-</ol>
-<p>###DBMS提供的数据控制功能</p>
-<ol>
-<li>数据的安全性保护；</li>
-<li>数据的完整心检查；</li>
-<li>并发控制；</li>
-<li>数据库恢复。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/28/数据库基本概念/" data-id="cij1aod6p001rzzuay9692qei" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2014/12/28/数据库基本概念/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/概念/">概念</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-数据库并发控制" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/27/数据库并发控制/">数据库并发控制</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2014/12/27/数据库并发控制/">
-    <time datetime="2014-12-27T07:08:24.000Z" itemprop="datePublished">2014-12-27</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/数据库/">数据库</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>当多个用户同时并发的存取数据库时可能产生多个事务同时存取同一数据的情况。如果对并发操作不加控制就可能破坏数据的一致性。<br>并发调度的核心问题：</p>
-<ol>
-<li>对并发操作进行正确的调度，有效控制；</li>
-<li>在保证一致性的前提下最大限度地提高并发度。<br>不同事务中各个步骤的执行顺序必须以某种方式进行规范，控制这些步骤的功能由DBMS的调度器部件完成。保证并发执行的事务能保持一致性的整个过程称为并发控制</li>
-</ol>
-<p>##事务调度<br>DBMS在处理用户提交事务时的策略，即事务调度。调度是一个或者多个事务的操作按时间排列的一个序列。表示事务在指令系统中执行的时间顺序。</p>
-<p>###串行调度<br>如果一个调度的动作顺序排列，顺序执行，没有混合，那么称这一调度为串行调度。</p>
-<p>###并行调度<br>如果一个调度的动作是事务之间可以相互混合，那么这一调度为并行调度。</p>
-<p>###事务调度的要求</p>
-<ol>
-<li>包含所有事务的操作指令；</li>
-<li>一个事务中指令的顺序保持不变；</li>
-<li>（串行调度）对于n个事务的事务组，可以有n!个有效调度；</li>
-<li>（并行调度）来自不同事务的指令可以交叉执行；</li>
-<li>（并行调度）当并行调度等价于某个串行调度时，则称它是正确的。</li>
-</ol>
-<p>###并行VS串行</p>
-<ol>
-<li>并行可能破坏数据库的一致性；</li>
-<li>串行效率较低；</li>
-<li>因为一个事务由不同的步骤组成的，所涉及的系统资源也不同，所以可以并发执行。并行充分发挥了系统的性能；</li>
-<li>串行会导致难以预测的时延，并行会减少平均响应时间。</li>
-</ol>
-<p>##并发操作事务一致性</p>
-<p>###并发操作带来数据不一致性</p>
-<ol>
-<li>丢失修改：两个事务同时修改同一数据，一个事务提交破坏了另外一个事务的提交的结果（覆盖了）；</li>
-<li>不可重复读：一个事务读取一个数据后，这个数据被另外一个事务更新，导致无法再次显现前一次读取的结果；</li>
-<li>读“脏”数据：一个事务对数据执行了更新操作，另一个事务读取了更新后的数据，而因为某种原因撤销了更新操作，使另一个事务读到了“脏”数据，或者读取到了某个事务的中间结果。</li>
-</ol>
-<p>###数据不一致性原因以及方法</p>
-<ol>
-<li>原因：产生三类不一致性的主要原因是并发操作破坏了事务的<strong>隔离性</strong>；</li>
-<li>并发控制就是要用正确的方式调度并发操作，使一个事务的执行不受其他事务的干扰，从而避免造成数据的不一致性；</li>
-<li>并发控制的主要技术是封锁、时间戳和有效确认。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/27/数据库并发控制/" data-id="cij1aod6l001mzzuap01fi4b8" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2014/12/27/数据库并发控制/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/并发/">并发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-经典算法分析——回溯" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/27/经典算法分析——回溯/">经典算法分析——回溯</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2014/12/27/经典算法分析——回溯/">
-    <time datetime="2014-12-27T05:31:12.000Z" itemprop="datePublished">2014-12-27</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/算法/">算法</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>有些问题，如搜索问题和优化问题，他们的解分布在一个解空间里，求解这些搜索问题的算法就是一种遍历搜索解空间的系统方法，所以解空间又叫做搜索空间。回溯算法将搜索空间看作一定的结构，通常为树形结构。算法从树根出发，尝试所有可达结点，当不能前进时就后退一步或若干步。下面由几个简单的例子来介绍回溯法：</p>
-<p>##8皇后问题<br>问题：在有8X8个方格的棋盘中放置8个皇后，使得任何两个皇后之间不能互相攻击，即在同一行、同一列以及在主对角线和副对角线的平行线上也不能有两个以上的皇后。<br>解答：</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/27/经典算法分析——回溯/" data-id="cij1aod4r000azzuadhyms7kr" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2014/12/27/经典算法分析——回溯/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/回溯/">回溯</a></li></ul>
 
     </footer>
   </div>
@@ -571,6 +552,23 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/01/12/贝叶斯方法/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+              <p class="item-title"><a href="/2016/01/12/贝叶斯方法/" class="title">贝叶斯方法</a></p>
+              <p class="item-date"><time datetime="2016-01-12T01:16:42.000Z" itemprop="datePublished">2016-01-12</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -640,24 +638,6 @@
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/06/04/Lucene-简介/" class="thumbnail">
-  
-    <span style="background-image:url(/img/17131531_CQwW.jpg
-)" alt="Lucene01-简介" class="thumbnail-image"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/lucene/">lucene</a></p>
-              <p class="item-title"><a href="/2015/06/04/Lucene-简介/" class="title">Lucene01-简介</a></p>
-              <p class="item-date"><time datetime="2015-06-04T09:00:37.000Z" itemprop="datePublished">2015-06-04</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -667,7 +647,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -676,7 +656,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 

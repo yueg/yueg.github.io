@@ -69,7 +69,7 @@
   
   <div id="header-sub" class="header-sub header-inner">
     <div class="outer">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
   
@@ -86,11 +86,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        122
+        125
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        44
+        45
         <span>标签</span>
       </div>
     </div>
@@ -123,6 +123,182 @@
           <i class="fa fa-calendar"></i>
           <a href="/archives/2015" class="archive-year">2015</a>
         </div>
+    
+    <article id="post-LeetCode-num102" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/09/LeetCode-num102/">LeetCode-num102</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/04/09/LeetCode-num102/">
+    <time datetime="2015-04-09T04:14:35.000Z" itemprop="datePublished">2015-04-09</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Binary Tree Level Order Traversal</strong><br><img src="/img/12828767204903.jpg" alt="my godness!"></p>
+<p>###Problem<br>Given a binary tree, return the level order traversal of its nodes’ values. (ie, from left to right, level by level).</p>
+<p>For example:<br>Given binary tree {3,9,20,#,#,15,7},<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="number">3</span></span><br><span class="line"> / \</span><br><span class="line"><span class="number">9</span>  <span class="number">20</span></span><br><span class="line">  /  \</span><br><span class="line"> <span class="number">15</span>   <span class="number">7</span></span><br></pre></td></tr></table></figure></p>
+<p>return its level order traversal as:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [<span class="number">3</span>],</span><br><span class="line">  [<span class="number">9</span>,<span class="number">20</span>],</span><br><span class="line">  [<span class="number">15</span>,<span class="number">7</span>]</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for binary tree</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; levelOrder(TreeNode *root)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; ret;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tempVec;</span><br><span class="line">		<span class="built_in">stack</span>&lt;TreeNode *&gt; tempStack;</span><br><span class="line">		<span class="built_in">stack</span>&lt;TreeNode *&gt; treeStack;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> ret;</span><br><span class="line">		treeStack.push(root);</span><br><span class="line">		<span class="keyword">while</span> (!treeStack.empty())</span><br><span class="line">		&#123;</span><br><span class="line">			tempVec.clear();</span><br><span class="line">			<span class="keyword">while</span> (!treeStack.empty())</span><br><span class="line">			&#123;</span><br><span class="line">				TreeNode * tempNode = treeStack.top();</span><br><span class="line">				tempVec.push_back(tempNode-&gt;val);</span><br><span class="line">				<span class="keyword">if</span> (tempNode-&gt;left != <span class="literal">NULL</span>) tempStack.push(tempNode-&gt;left);</span><br><span class="line">				<span class="keyword">if</span> (tempNode-&gt;right != <span class="literal">NULL</span>) tempStack.push(tempNode-&gt;right);</span><br><span class="line">				treeStack.pop();</span><br><span class="line">			&#125;</span><br><span class="line">			ret.push_back(tempVec);</span><br><span class="line">			<span class="keyword">while</span> (!tempStack.empty())</span><br><span class="line">			&#123;</span><br><span class="line">				treeStack.push(tempStack.top());</span><br><span class="line">				tempStack.pop();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> ret;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/04/09/LeetCode-num102/" data-id="cij1aptx7008g0ouaugkyo7oe" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/04/09/LeetCode-num102/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/">Tree</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
+    <article id="post-LeetCode-num112" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/09/LeetCode-num112/">LeetCode-num112</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/04/09/LeetCode-num112/">
+    <time datetime="2015-04-09T04:09:22.000Z" itemprop="datePublished">2015-04-09</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Path Sum</strong><br><img src="/img/37360-217397.jpg" alt="my godness!"></p>
+<p>###Problem<br>Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.</p>
+<p>For example:<br>Given the below binary tree and sum = 22,<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">      <span class="number">5</span></span><br><span class="line">     / \</span><br><span class="line">    <span class="number">4</span>   <span class="number">8</span></span><br><span class="line">   /   / \</span><br><span class="line">  <span class="number">11</span>  <span class="number">13</span>  <span class="number">4</span></span><br><span class="line"> /  \      \</span><br><span class="line"><span class="number">7</span>    <span class="number">2</span>      <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>return true, as there exist a root-to-leaf path 5-&gt;4-&gt;11-&gt;2 which sum is 22.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for binary tree</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution </span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">hasPathSum</span><span class="params">(TreeNode *root, <span class="keyword">int</span> sum)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">return</span> hero(root, sum);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">hero</span><span class="params">(TreeNode *root, <span class="keyword">int</span> sum)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="literal">NULL</span> &amp;&amp; sum == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="literal">NULL</span> &amp;&amp; sum != <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (root-&gt;left == <span class="literal">NULL</span> &amp;&amp; root-&gt;right != <span class="literal">NULL</span>) <span class="keyword">return</span> hero(root-&gt;right, sum - root-&gt;val);</span><br><span class="line">		<span class="keyword">if</span> (root-&gt;left != <span class="literal">NULL</span> &amp;&amp; root-&gt;right == <span class="literal">NULL</span>) <span class="keyword">return</span> hero(root-&gt;left, sum - root-&gt;val);</span><br><span class="line">		<span class="keyword">return</span> hero(root-&gt;left, sum - root-&gt;val) || hero(root-&gt;right, sum - root-&gt;val);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>变态的题当输入NULL，0时需要返回false，题中又不明确说明；</li>
+<li>我的理解能力太差，真心以为第一条中情况应该返回true。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/04/09/LeetCode-num112/" data-id="cij1aptvx007d0ouakr3zv4fd" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/04/09/LeetCode-num112/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/">Tree</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
+    <article id="post-LeetCode-num111" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/09/LeetCode-num111/">LeetCode-num111</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/04/09/LeetCode-num111/">
+    <time datetime="2015-04-09T03:00:15.000Z" itemprop="datePublished">2015-04-09</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Minimum Depth of Binary Tree</strong><br><img src="/img/703_694780_952022.jpg" alt="my godness"></p>
+<p>###Problem<br>Given a binary tree, find its minimum depth.</p>
+<p>The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Definition for binary tree</span><br><span class="line"> * struct TreeNode &#123;</span><br><span class="line"> *     int val;</span><br><span class="line"> *     TreeNode *left;</span><br><span class="line"> *     TreeNode *right;</span><br><span class="line"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) &#123;&#125;</span><br><span class="line"> * &#125;;</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">class</span> Solution </span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">minDepth</span><span class="params">(TreeNode *root)</span> </span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span> (root-&gt;left == <span class="literal">NULL</span>) <span class="keyword">return</span> minDepth(root-&gt;right) + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (root-&gt;right == <span class="literal">NULL</span>) <span class="keyword">return</span> minDepth(root-&gt;left) + <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">int</span> depthLeft = minDepth(root-&gt;left);</span><br><span class="line">		<span class="keyword">int</span> depthRight = minDepth(root-&gt;right);</span><br><span class="line">		<span class="keyword">return</span> depthLeft &lt; depthRight ? (depthLeft + <span class="number">1</span>) : (depthRight + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>有个小坑，但是我毫不犹豫的跳进去了，题中要求到叶结点的最短距离，而根结点不算做叶结点。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/04/09/LeetCode-num111/" data-id="cij1aptw0007h0ouaq3pocyil" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/04/09/LeetCode-num111/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/">Tree</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
     
     <article id="post-LeetCode-num104" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -166,7 +342,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/09/LeetCode-num104/" data-id="cij1aodes0087zzuaycpygaz4" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/09/LeetCode-num104/" data-id="cij1aptwv00870ouawlyzccpq" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/09/LeetCode-num104/#ds-thread" class="article-comment-link">评论</a>
@@ -227,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/09/LeetCode-num107/" data-id="cij1aode2007tzzuanjq5f2ol" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/09/LeetCode-num107/" data-id="cij1aptwb007t0oua297qtyda" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/09/LeetCode-num107/#ds-thread" class="article-comment-link">评论</a>
@@ -286,203 +462,13 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/08/LeetCode-num100/" data-id="cij1aodfd008ozzuarsl24vkl" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/08/LeetCode-num100/" data-id="cij1aptxd008o0ouaokz6pw1u" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/08/LeetCode-num100/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/">Tree</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-LeetCode-num101" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/08/LeetCode-num101/">LeetCode-num101</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/04/08/LeetCode-num101/">
-    <time datetime="2015-04-08T02:13:10.000Z" itemprop="datePublished">2015-04-08</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Symmetric Tree</strong><br><img src="/SymmetricTree.jpg" alt="Symmetric Tree"></p>
-<p>###Problem<br>Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).</p>
-<p>For example, this binary tree is symmetric:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="number">1</span></span><br><span class="line">   / \</span><br><span class="line">  <span class="number">2</span>   <span class="number">2</span></span><br><span class="line"> / \ / \</span><br><span class="line"><span class="number">3</span>  <span class="number">4</span> <span class="number">4</span>  <span class="number">3</span></span><br></pre></td></tr></table></figure>
-<p>But the following is not:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="number">1</span></span><br><span class="line"> / \</span><br><span class="line"><span class="number">2</span>   <span class="number">2</span></span><br><span class="line"> \   \</span><br><span class="line"> <span class="number">3</span>    <span class="number">3</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>Note:</strong><br>Bonus points if you could solve it both recursively and iteratively.</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> TreeNode</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode *left;</span><br><span class="line">    TreeNode *right;</span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) : val(x), left(<span class="literal">NULL</span>), right(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">isSymmetric</span><span class="params">(TreeNode *root)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="literal">NULL</span> || (root-&gt;left == <span class="literal">NULL</span> &amp;&amp; root-&gt;right == <span class="literal">NULL</span>)) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> ((root-&gt;left == <span class="literal">NULL</span> &amp;&amp; root-&gt;right != <span class="literal">NULL</span>) || (root-&gt;left != <span class="literal">NULL</span> &amp;&amp; root-&gt;right == <span class="literal">NULL</span>)) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		TreeNode *tree1 = root-&gt;left;</span><br><span class="line">		TreeNode *tree2 = root-&gt;right;</span><br><span class="line">		<span class="keyword">if</span> (tree1-&gt;val != tree2-&gt;val) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">return</span> isSymmOfTwoNode(root-&gt;left, root-&gt;right);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">isSymmOfTwoNode</span><span class="params">(TreeNode *node1, TreeNode *node2)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (node1-&gt;left == <span class="literal">NULL</span> &amp;&amp; node2-&gt;right == <span class="literal">NULL</span> &amp;&amp; node1-&gt;right == <span class="literal">NULL</span> &amp;&amp; node2-&gt;left == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (node1-&gt;left == <span class="literal">NULL</span> &amp;&amp; node2-&gt;right == <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (node1-&gt;right-&gt;val == node2-&gt;left-&gt;val) <span class="keyword">return</span> isSymmOfTwoNode(node1-&gt;right, node2-&gt;left);</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (node1-&gt;right == <span class="literal">NULL</span> &amp;&amp; node2-&gt;left == <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (node1-&gt;left-&gt;val == node2-&gt;right-&gt;val) <span class="keyword">return</span> isSymmOfTwoNode(node1-&gt;left, node2-&gt;right);</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (node1-&gt;left != <span class="literal">NULL</span> &amp;&amp; node2-&gt;right != <span class="literal">NULL</span> &amp;&amp; node1-&gt;right != <span class="literal">NULL</span> &amp;&amp; node2-&gt;left != <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (node1-&gt;right-&gt;val == node2-&gt;left-&gt;val &amp;&amp; node1-&gt;left-&gt;val == node2-&gt;right-&gt;val) </span><br><span class="line">				<span class="keyword">return</span> isSymmOfTwoNode(node1-&gt;right, node2-&gt;left) &amp;&amp; isSymmOfTwoNode(node1-&gt;left, node2-&gt;right);</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>利用递归，每次如果这一层成功，返回下一层递归结果</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/08/LeetCode-num101/" data-id="cij1aodf8008kzzua4d33c38y" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/04/08/LeetCode-num101/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/">Tree</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-LeetCode-num110" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/08/LeetCode-num110/">LeetCode-num110</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/04/08/LeetCode-num110/">
-    <time datetime="2015-04-08T01:32:19.000Z" itemprop="datePublished">2015-04-08</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Balanced Binary Tree</strong><br><img src="/BalancedTree.jpg" alt="Binary Tree"></p>
-<p>###Problem<br>Given a binary tree, determine if it is height-balanced.</p>
-<p>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> TreeNode &#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    TreeNode *left;</span><br><span class="line">    TreeNode *right;</span><br><span class="line">    TreeNode(<span class="keyword">int</span> x) : val(x), left(<span class="literal">NULL</span>), right(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">isBalanced</span><span class="params">(TreeNode *root)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		TreeNode *heightTree;</span><br><span class="line">		heightTree = treeHeight(root);</span><br><span class="line">		<span class="built_in">stack</span>&lt;TreeNode *&gt; nodeStack;</span><br><span class="line">		nodeStack.push(heightTree);</span><br><span class="line">		<span class="keyword">while</span> (!nodeStack.empty())</span><br><span class="line">		&#123;</span><br><span class="line">			TreeNode * temp = nodeStack.top();</span><br><span class="line">			nodeStack.pop();</span><br><span class="line">			<span class="keyword">if</span> (temp-&gt;left == <span class="literal">NULL</span> &amp;&amp; temp-&gt;right == <span class="literal">NULL</span>) <span class="keyword">continue</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (<span class="built_in">abs</span>(temp-&gt;left-&gt;val - temp-&gt;right-&gt;val) &gt; <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">				nodeStack.push(temp-&gt;left);</span><br><span class="line">				nodeStack.push(temp-&gt;right);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function">TreeNode * <span class="title">treeHeight</span><span class="params">(TreeNode *root)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		TreeNode *height;</span><br><span class="line">		<span class="keyword">if</span> (root == <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			height = <span class="keyword">new</span> TreeNode(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			TreeNode *tempLeft = treeHeight(root-&gt;left);</span><br><span class="line">			TreeNode *tempRight = treeHeight(root-&gt;right);</span><br><span class="line">			height = tempLeft-&gt;val &gt; tempRight-&gt;val ?</span><br><span class="line">				<span class="keyword">new</span> TreeNode(tempLeft-&gt;val + <span class="number">1</span>) : <span class="keyword">new</span> TreeNode(tempRight-&gt;val + <span class="number">1</span>);</span><br><span class="line">			height-&gt;left = tempLeft;</span><br><span class="line">			height-&gt;right = tempRight;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> height;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>对指针操作不熟练；</li>
-<li>树没有析构;</li>
-<li>可以每次求树的深度，但是重复多余的深度求解操作，不如这样简单。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/08/LeetCode-num110/" data-id="cij1aoddu007lzzuawyaahbsw" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/04/08/LeetCode-num110/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/">Tree</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-STL_vector和string使用reserve" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/06/STL_vector和string使用reserve/">STL_vector和string使用reserve来避免不必要的重新分配</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/04/06/STL_vector和string使用reserve/">
-    <time datetime="2015-04-06T14:33:56.000Z" itemprop="datePublished">2015-04-06</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://img4.duitang.com/uploads/item/201402/04/20140204000450_3KJKj.jpeg" alt="my godness!"><br><strong>使用reserve来避免不必要的重新分配</strong><br>关于STL容器，最了不起的一点是，它们会自动增长以便容纳下你放入其中的数据，只要没有超出它们的最大限制就可以。对于vector和string，增长过程是这样来实现的：每当需要更多空间时，就调用realloc类似的操作。这一类似的操作分为以下4部分：</p>
-<ol>
-<li>分配一块大小为当前容量的某个倍数的新内存。在大多数视线中，vector和string的容量每次以2的倍数增长；</li>
-<li>把容器的所有元素从旧的内存复制到新的内存中；</li>
-<li>析构掉旧内存中的对象；</li>
-<li>释放旧内存。</li>
-</ol>
-<p>每当这些步骤发生时，vector和string指针、迭代器、和引用都变得无效，所以有必要避免这些步骤。<br>reserve成员函数能使你把重新分配的次数减小到最低限度，从而避免了重新分配和指针、迭代器、引用失效带来的开销。但是，在解释reverse是怎么做到这一点之前，先简单概括一下4个相互关联，但有时又被混淆的成员函数。在标准容器中只有vector和string提供了所有这4个函数。</p>
-<ol>
-<li>size()告诉该容器有多少元素。它不会告诉你该容器为自己所包含的元素分配了多少内存；</li>
-<li>capacity()告诉你该容器利用已经分配的内存可以容纳多少个元素。这是容器所能容纳的元素总数，而非它还能容纳多少个元素；</li>
-<li>resize(Container::size_type n)强迫容器改变到n个元素的状态。在调用resize()后size将返回n，如果n比size要小，则容器尾部的元素将会被析构；如果n比size要大，则通过默认构造函数创建的新元素将被添加到容器的末尾。如果n比当前的容量要大，那么在添加元素之前，将先重新分配内存；</li>
-<li>reverse(Container::size_type n)强迫容器把它的容量变为至少是n，前提是n不小于当前的大小。如果n比当前容量小，则vector忽略该调用，什么也不做；而string则可能把自己的容量减小为size和n的最大值。<br>所以每次使用容器时，尽量尽早地使用reverse，把容器容量设为最大值。<br>如：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v;</span><br><span class="line">v.reverse(<span class="number">1000</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="number">1000</span>; ++i) v.push_back(i);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>如果有容量剩余，程序结束后再去释放内存。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/06/STL_vector和string使用reserve/" data-id="cij1aod8n003izzuahnazii8j" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/04/06/STL_vector和string使用reserve/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STL/">STL</a></li></ul>
 
     </footer>
   </div>
@@ -505,6 +491,23 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/01/12/贝叶斯方法/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+              <p class="item-title"><a href="/2016/01/12/贝叶斯方法/" class="title">贝叶斯方法</a></p>
+              <p class="item-date"><time datetime="2016-01-12T01:16:42.000Z" itemprop="datePublished">2016-01-12</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -574,24 +577,6 @@
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/06/04/Lucene-简介/" class="thumbnail">
-  
-    <span style="background-image:url(/img/17131531_CQwW.jpg
-)" alt="Lucene01-简介" class="thumbnail-image"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/lucene/">lucene</a></p>
-              <p class="item-title"><a href="/2015/06/04/Lucene-简介/" class="title">Lucene01-简介</a></p>
-              <p class="item-date"><time datetime="2015-06-04T09:00:37.000Z" itemprop="datePublished">2015-06-04</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -601,7 +586,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -610,7 +595,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 

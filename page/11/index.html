@@ -80,11 +80,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        122
+        125
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        44
+        45
         <span>标签</span>
       </div>
     </div>
@@ -108,6 +108,189 @@
   </div>
 </aside>
       <section id="main">
+  
+    <article id="post-LeetCode-num063" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/31/LeetCode-num063/">LeetCode num063</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/03/31/LeetCode-num063/">
+    <time datetime="2015-03-31T12:29:07.000Z" itemprop="datePublished">2015-03-31</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Unique Paths II </strong></p>
+<p>###Problem<br>Follow up for “Unique Paths”:</p>
+<p>Now consider if some obstacles are added to the grids. How many unique paths would there be?</p>
+<p>An obstacle and empty space is marked as 1 and 0 respectively in the grid.</p>
+<p>For example,<br>There is one obstacle in the middle of a 3x3 grid as illustrated below.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</span><br><span class="line">  [<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>],</span><br><span class="line">  [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>The total number of unique paths is 2.</p>
+<p><strong>Note:</strong> m and n will be at most 100.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">uniquePathsWithObstacles</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; &amp;obstacleGrid)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> row = obstacleGrid.size();</span><br><span class="line">		<span class="keyword">if</span> (row == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> column = obstacleGrid[<span class="number">0</span>].size();</span><br><span class="line">		<span class="keyword">if</span> (column == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; love;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; mark;</span><br><span class="line">		<span class="keyword">int</span> path;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; row; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			mark.push_back(love);</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; column; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (obstacleGrid[i][j] == <span class="number">1</span>) path = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">0</span> &amp;&amp; j == <span class="number">0</span>) path = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (i == <span class="number">0</span>) path = mark[i][j - <span class="number">1</span>];</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (j == <span class="number">0</span>) path = mark[i - <span class="number">1</span>][j];</span><br><span class="line">				<span class="keyword">else</span> path = mark[i - <span class="number">1</span>][j] + mark[i][j - <span class="number">1</span>];</span><br><span class="line">				mark[i].push_back(path);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> mark[mark.size() - <span class="number">1</span>][mark[mark.size() - <span class="number">1</span>].size() - <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>动态规划</li>
+<li>时间复杂度O(n^2)</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num063/" data-id="cij1aptz300ar0ouai1ds359k" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num063/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-LeetCode-num062" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/31/LeetCode-num062/">LeetCode num062</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/03/31/LeetCode-num062/">
+    <time datetime="2015-03-31T12:29:03.000Z" itemprop="datePublished">2015-03-31</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Unique Paths</strong></p>
+<p>###Problem<br>A robot is located at the top-left corner of a m x n grid (marked ‘Start’ in the diagram below).</p>
+<p>The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid (marked ‘Finish’ in the diagram below).</p>
+<p>How many possible unique paths are there?</p>
+<p><img src="/robot_maze.png" alt="Unique Paths" title="Example"></p>
+<p>Above is a 3 x 7 grid. How many possible unique paths are there?</p>
+<p><strong>Note:</strong> m and n will be at most 100.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">uniquePaths</span><span class="params">(<span class="keyword">int</span> m, <span class="keyword">int</span> n)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (m == <span class="number">0</span> || n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; mark;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; love;</span><br><span class="line">		<span class="keyword">int</span> path;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			mark.push_back(love);</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (i == <span class="number">0</span>)	path = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (j == <span class="number">0</span>) path = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">else</span> path = mark[i - <span class="number">1</span>][j] + mark[i][j - <span class="number">1</span>];</span><br><span class="line">				mark[i].push_back(path);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> mark[mark.size() - <span class="number">1</span>][mark[mark.size() - <span class="number">1</span>].size() - <span class="number">1</span>];</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>时间复杂度O(m*n)</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num062/" data-id="cij1aptz600aw0oualcamj8vf" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num062/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-LeetCode-num059" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/31/LeetCode-num059/">LeetCode-num059</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/03/31/LeetCode-num059/">
+    <time datetime="2015-03-31T12:24:35.000Z" itemprop="datePublished">2015-03-31</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Spiral Matrix II</strong></p>
+<p>###Problem<br>Given an integer n, generate a square matrix filled with elements from 1 to n2 in spiral order.</p>
+<p>For example,<br>Given n = 3,</p>
+<p>You should return the following matrix:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line"> [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ],</span><br><span class="line"> [ <span class="number">8</span>, <span class="number">9</span>, <span class="number">4</span> ],</span><br><span class="line"> [ <span class="number">7</span>, <span class="number">6</span>, <span class="number">5</span> ]</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; generateMatrix(<span class="keyword">int</span> n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; result;</span><br><span class="line">		<span class="keyword">int</span> direction = <span class="number">1</span>, plus = <span class="number">1</span>, length = n, number = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> row = <span class="number">0</span>, column =-<span class="number">1</span>;</span><br><span class="line">		result = generateEmptyMatrix(n);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span> * n - <span class="number">1</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; length; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				number++;</span><br><span class="line">				<span class="keyword">if</span> (direction == <span class="number">1</span> &amp;&amp; plus == <span class="number">1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					column++;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (direction == <span class="number">1</span> &amp;&amp; plus == <span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					column--;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (direction == <span class="number">0</span> &amp;&amp; plus == <span class="number">1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					row++;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (direction == <span class="number">0</span> &amp;&amp; plus == <span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					row--;</span><br><span class="line">				&#125;</span><br><span class="line">				result[row][column] = number;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				length--;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				plus = (plus + <span class="number">1</span>) % <span class="number">2</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			direction = (direction + <span class="number">1</span>) % <span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; generateEmptyMatrix(<span class="keyword">int</span> n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; result;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			vec.clear();</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				vec.push_back(<span class="number">0</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			result.push_back(vec);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>###Comment</p>
+<ol>
+<li>思路简单，实现复杂</li>
+<li>时间复杂度O(n)</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num059/" data-id="cij1aptzf00b10ouaeofxx0sp" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num059/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-LeetCode-num057" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -154,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num057/" data-id="cij1aodie00bazzuarn0uvf5m" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num057/" data-id="cij1aptzq00ba0ouabk9a3gma" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num057/#ds-thread" class="article-comment-link">评论</a>
@@ -212,7 +395,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num056/" data-id="cij1aodii00bfzzuacqb5yffw" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num056/" data-id="cij1aptzv00bf0ouae7i52p4d" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num056/#ds-thread" class="article-comment-link">评论</a>
@@ -272,185 +455,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num055/" data-id="cij1aodin00bkzzuao6gvscia" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num055/" data-id="cij1apu0100bk0oua0k1z5baa" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num055/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-LeetCode-num054" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/31/LeetCode-num054/">LeetCode num054</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/03/31/LeetCode-num054/">
-    <time datetime="2015-03-31T12:10:03.000Z" itemprop="datePublished">2015-03-31</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Spiral Matrix</strong></p>
-<p>###Problem<br>Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.</p>
-<p>For example,<br>Given the following matrix:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line"> [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ],</span><br><span class="line"> [ <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span> ],</span><br><span class="line"> [ <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span> ]</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
-<p>You should return [1,2,3,6,9,8,7,4,5].</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; spiralOrder(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; &amp;matrix)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">bool</span> deriction;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; result;</span><br><span class="line">		<span class="keyword">if</span> (matrix.size() == <span class="number">0</span>) <span class="keyword">return</span> result;</span><br><span class="line">		<span class="keyword">int</span> size = matrix.size() &lt; matrix[<span class="number">0</span>].size() ? matrix.size() : matrix[<span class="number">0</span>].size();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= size; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">1</span>) deriction = <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">else</span> deriction = <span class="literal">false</span>;</span><br><span class="line">			result = love(matrix, result, deriction);</span><br><span class="line">			matrix = delMatrix(matrix, deriction);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; love(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; &amp;matrix, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec, <span class="keyword">bool</span> deriction)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (deriction == <span class="literal">true</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; matrix[<span class="number">0</span>].size(); i++)</span><br><span class="line">			&#123;</span><br><span class="line">				vec.push_back(matrix[<span class="number">0</span>][i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; matrix.size(); i++)</span><br><span class="line">			&#123;</span><br><span class="line">				vec.push_back(matrix[i][matrix[<span class="number">0</span>].size() - <span class="number">1</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = matrix[<span class="number">0</span>].size() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">			&#123;</span><br><span class="line">				vec.push_back(matrix[matrix.size() - <span class="number">1</span>][i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = matrix.size() - <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">			&#123;</span><br><span class="line">				vec.push_back(matrix[i][<span class="number">0</span>]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> vec;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; delMatrix(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; &amp;matrix, <span class="keyword">bool</span> deriction)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (deriction == <span class="literal">true</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			matrix.erase(matrix.begin());</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; matrix.size(); i++)</span><br><span class="line">			&#123;</span><br><span class="line">				matrix[i].erase(matrix[i].end() - <span class="number">1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			matrix.erase(matrix.end() - <span class="number">1</span>);</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; matrix.size(); i++)</span><br><span class="line">			&#123;</span><br><span class="line">				matrix[i].erase(matrix[i].begin());</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> matrix;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>思路简单，实现复杂</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num054/" data-id="cij1aodir00bpzzua8ndu3ggc" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num054/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-LeetCode-num053" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/31/LeetCode-num053/">LeetCode num053</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/03/31/LeetCode-num053/">
-    <time datetime="2015-03-31T12:07:31.000Z" itemprop="datePublished">2015-03-31</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Maximum Subarray</strong></p>
-<p>###Problem<br>Find the contiguous subarray within an array (containing at least one number) which has the largest sum.</p>
-<p>For example, given the array [−2,1,−3,4,−1,2,1,−5,4],<br>the contiguous subarray [4,−1,2,1] has the largest sum = 6.</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> max = A[<span class="number">0</span>], sum = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			sum += A[i];</span><br><span class="line">			max = sum &gt; max ? sum : max;</span><br><span class="line">			<span class="keyword">if</span> (sum &lt; <span class="number">0</span>) sum = <span class="number">0</span>; <span class="keyword">if</span> (sum &lt; <span class="number">0</span>) sum = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> max;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>动态规划</li>
-<li>应用迭代</li>
-<li>时间复杂度O(n)</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num053/" data-id="cij1aodiw00buzzuaqg45t22t" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num053/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-LeetCode-num048" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/31/LeetCode-num048/">LeetCode num048</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/03/31/LeetCode-num048/">
-    <time datetime="2015-03-31T12:01:28.000Z" itemprop="datePublished">2015-03-31</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Rotate Image</strong></p>
-<p>###Problem<br>You are given an n x n 2D matrix representing an image.</p>
-<p>Rotate the image by 90 degrees (clockwise).</p>
-<p>Follow up:<br>Could you do this in-place?</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; &amp;matrix)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> size = matrix.size(), mark1, mark2;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size / <span class="number">2</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = i; j &lt; size - i - <span class="number">1</span>; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				mark1 = matrix[j][size - i - <span class="number">1</span>];</span><br><span class="line">				matrix[j][size - i - <span class="number">1</span>] = matrix[i][j];</span><br><span class="line">				mark2 = matrix[size - i - <span class="number">1</span>][size - j - <span class="number">1</span>];</span><br><span class="line">				matrix[size - i - <span class="number">1</span>][size - j - <span class="number">1</span>] = mark1;</span><br><span class="line">				mark1 = matrix[size - j - <span class="number">1</span>][i];</span><br><span class="line">				matrix[size - j - <span class="number">1</span>][i] = mark2;</span><br><span class="line">				matrix[i][j] = mark1;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>时间复杂度O(n)</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num048/" data-id="cij1aodj400c3zzua7jhz2kg7" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num048/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
@@ -476,6 +484,23 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/01/12/贝叶斯方法/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
+              <p class="item-title"><a href="/2016/01/12/贝叶斯方法/" class="title">贝叶斯方法</a></p>
+              <p class="item-date"><time datetime="2016-01-12T01:16:42.000Z" itemprop="datePublished">2016-01-12</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -545,24 +570,6 @@
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/06/04/Lucene-简介/" class="thumbnail">
-  
-    <span style="background-image:url(/img/17131531_CQwW.jpg
-)" alt="Lucene01-简介" class="thumbnail-image"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/lucene/">lucene</a></p>
-              <p class="item-title"><a href="/2015/06/04/Lucene-简介/" class="title">Lucene01-简介</a></p>
-              <p class="item-date"><time datetime="2015-06-04T09:00:37.000Z" itemprop="datePublished">2015-06-04</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -572,7 +579,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -581,7 +588,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 
