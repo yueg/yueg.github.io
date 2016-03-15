@@ -5,17 +5,17 @@
   
   <title>Deep-Learning-for-NLP-LSTM | Encoding Myself</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###Background提到LSTM，首先要了解的是“递归神经网络”，也就是不可思议的RNN(Recurrent Neural Network)，它是神经网络的一种。人工神经网络，与其他机器学习算法相比的优势很明显，简称神经网络，是仿照生物神经网络的结构和功能的数学模型。神经网络由大量的人工神经元联结进行计算，可以对外界信息抽象改变结构，是一种自适应系统。深度学习，就是一个多层的神经网络，而“递">
+  <meta name="description" content="Background提到LSTM，首先要了解的是“递归神经网络”，也就是不可思议的RNN(Recurrent Neural Network)，它是神经网络的一种。人工神经网络，与其他机器学习算法相比的优势很明显，简称神经网络，是仿照生物神经网络的结构和功能的数学模型。神经网络由大量的人工神经元联结进行计算，可以对外界信息抽象改变结构，是一种自适应系统。深度学习，就是一个多层的神经网络，而“递归神经">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Deep-Learning-for-NLP-LSTM">
 <meta property="og:url" content="http://www.pkuyg.com/2016/03/15/Deep-Learning-for-NLP-LSTM/index.html">
 <meta property="og:site_name" content="Encoding Myself">
-<meta property="og:description" content="###Background提到LSTM，首先要了解的是“递归神经网络”，也就是不可思议的RNN(Recurrent Neural Network)，它是神经网络的一种。人工神经网络，与其他机器学习算法相比的优势很明显，简称神经网络，是仿照生物神经网络的结构和功能的数学模型。神经网络由大量的人工神经元联结进行计算，可以对外界信息抽象改变结构，是一种自适应系统。深度学习，就是一个多层的神经网络，而“递">
+<meta property="og:description" content="Background提到LSTM，首先要了解的是“递归神经网络”，也就是不可思议的RNN(Recurrent Neural Network)，它是神经网络的一种。人工神经网络，与其他机器学习算法相比的优势很明显，简称神经网络，是仿照生物神经网络的结构和功能的数学模型。神经网络由大量的人工神经元联结进行计算，可以对外界信息抽象改变结构，是一种自适应系统。深度学习，就是一个多层的神经网络，而“递归神经">
 <meta property="og:image" content="http://7xptv4.com1.z0.glb.clouddn.com/rnn-structure.png">
-<meta property="og:updated_time" content="2016-03-15T04:55:41.368Z">
+<meta property="og:updated_time" content="2016-03-15T06:06:39.812Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Deep-Learning-for-NLP-LSTM">
-<meta name="twitter:description" content="###Background提到LSTM，首先要了解的是“递归神经网络”，也就是不可思议的RNN(Recurrent Neural Network)，它是神经网络的一种。人工神经网络，与其他机器学习算法相比的优势很明显，简称神经网络，是仿照生物神经网络的结构和功能的数学模型。神经网络由大量的人工神经元联结进行计算，可以对外界信息抽象改变结构，是一种自适应系统。深度学习，就是一个多层的神经网络，而“递">
+<meta name="twitter:description" content="Background提到LSTM，首先要了解的是“递归神经网络”，也就是不可思议的RNN(Recurrent Neural Network)，它是神经网络的一种。人工神经网络，与其他机器学习算法相比的优势很明显，简称神经网络，是仿照生物神经网络的结构和功能的数学模型。神经网络由大量的人工神经元联结进行计算，可以对外界信息抽象改变结构，是一种自适应系统。深度学习，就是一个多层的神经网络，而“递归神经">
   
   
     <link rel="icon" href="/favicon.png">
@@ -139,13 +139,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###Background<br>提到LSTM，首先要了解的是“递归神经网络”，也就是不可思议的RNN(Recurrent Neural Network)，它是神经网络的一种。人工神经网络，与其他机器学习算法相比的优势很明显，简称神经网络，是仿照生物神经网络的结构和功能的数学模型。神经网络由大量的人工神经元联结进行计算，可以对外界信息抽象改变结构，是一种自适应系统。深度学习，就是一个多层的神经网络，而“递归神经网络”就是一个深度学习的算法。RNN与其他神经网络的不同在于，它比普通的feed-forward网络多了一层循环</p>
+        <h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>提到LSTM，首先要了解的是“递归神经网络”，也就是不可思议的RNN(Recurrent Neural Network)，它是神经网络的一种。人工神经网络，与其他机器学习算法相比的优势很明显，简称神经网络，是仿照生物神经网络的结构和功能的数学模型。神经网络由大量的人工神经元联结进行计算，可以对外界信息抽象改变结构，是一种自适应系统。深度学习，就是一个多层的神经网络，而“递归神经网络”就是一个深度学习的算法。RNN与其他神经网络的不同在于，它比普通的feed-forward网络多了一层循环</p>
 <p><img src="http://7xptv4.com1.z0.glb.clouddn.com/rnn-structure.png" alt="rnn-structure"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2016/03/15/Deep-Learning-for-NLP-LSTM/" data-id="cilt08cnq00fx5cuaacmlyc9v" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2016/03/15/Deep-Learning-for-NLP-LSTM/" data-id="cilt0nnbn00fx8auao6hjbks0" class="article-share-link">分享到</a>
       
         <div class="share">
 	<!-- JiaThis Button BEGIN -->
