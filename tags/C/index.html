@@ -80,11 +80,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        125
+        122
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        48
+        47
         <span>标签</span>
       </div>
     </div>
@@ -149,10 +149,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="http://ask.julyedu.com/question/456" target="_blank" rel="external">查看原题</a></p>
-<p>###1.解释下面ptr不同含义<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span>* ptr = &amp;value;</span><br><span class="line">    <span class="comment">//ptr是一个指向double类型的指针，ptr的值可以改变，ptr所指向的value的值也可以改变 </span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span>* ptr = &amp;value</span><br><span class="line">    <span class="comment">//ptr是一个指向const double类型的指针，ptr的值可以改变，ptr所指向的value的值不可以改变</span></span><br><span class="line"><span class="keyword">double</span>* <span class="keyword">const</span> ptr=&amp;value</span><br><span class="line">    <span class="comment">//ptr是一个指向double类型的指针，ptr的值不可以改变，ptr所指向的value的值可以改变</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span>* <span class="keyword">const</span> ptr=&amp;value</span><br><span class="line">    <span class="comment">//ptr是一个指向const double类型的指针，ptr的值不可以改变，ptr所指向的value的值也不可以改变</span></span><br></pre></td></tr></table></figure></p>
-<p>###2.去掉const属性<br>例：  const double value = 0.0f;  double* ptr = NULL;怎么才能让ptr指向value？<br>强制类型转换，去掉const属性，如<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ptr = &lt;<span class="keyword">const_cast</span> <span class="keyword">double</span> *&gt;(&amp;value)</span><br></pre></td></tr></table></figure></p>
-<p>###3.动态链接库与静态链接库的区别<br>静态链接库是.lib格式的文件，一般在工程的设置界面加入工程中，程序编译时会把lib文件的代码加入你的程序中因此会增加代码大小，你的程序一运行lib代码强制被装入你程序的运行空间，不能手动移除lib代码。动态链接库是程序运行时动态装入内存的模块，格式*.dll，在程序运行时可以随意加载和移除，节省内存空间。在大型的软件项目中一般要实现很多功能，如果把所有单独的功能写成一个个lib文件的话，程序运行的时候要占用很大的内存空间，导致运行缓慢；但是如果将功能写成dll文件，就可以在用到该功能的时候调用功能对应的dll文件，不用这个功能时将dll文件移除内存，这样可以节省内存空间。</p>
-<p>###4.指针与引用的区别<br><strong>相同点：</strong>都是地址的概念，指针指向一块内存，它的内容是所指内存的地址，引用是某块内存的别名。<br><strong>不同点：</strong></p>
+<h3 id="1-_u89E3_u91CA_u4E0B_u9762ptr_u4E0D_u540C_u542B_u4E49"><a href="#1-_u89E3_u91CA_u4E0B_u9762ptr_u4E0D_u540C_u542B_u4E49" class="headerlink" title="1.解释下面ptr不同含义"></a>1.解释下面ptr不同含义</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span>* ptr = &amp;value;</span><br><span class="line">    <span class="comment">//ptr是一个指向double类型的指针，ptr的值可以改变，ptr所指向的value的值也可以改变 </span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span>* ptr = &amp;value</span><br><span class="line">    <span class="comment">//ptr是一个指向const double类型的指针，ptr的值可以改变，ptr所指向的value的值不可以改变</span></span><br><span class="line"><span class="keyword">double</span>* <span class="keyword">const</span> ptr=&amp;value</span><br><span class="line">    <span class="comment">//ptr是一个指向double类型的指针，ptr的值不可以改变，ptr所指向的value的值可以改变</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">double</span>* <span class="keyword">const</span> ptr=&amp;value</span><br><span class="line">    <span class="comment">//ptr是一个指向const double类型的指针，ptr的值不可以改变，ptr所指向的value的值也不可以改变</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-_u53BB_u6389const_u5C5E_u6027"><a href="#2-_u53BB_u6389const_u5C5E_u6027" class="headerlink" title="2.去掉const属性"></a>2.去掉const属性</h3><p>例：  const double value = 0.0f;  double* ptr = NULL;怎么才能让ptr指向value？<br>强制类型转换，去掉const属性，如<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ptr = &lt;<span class="keyword">const_cast</span> <span class="keyword">double</span> *&gt;(&amp;value)</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-_u52A8_u6001_u94FE_u63A5_u5E93_u4E0E_u9759_u6001_u94FE_u63A5_u5E93_u7684_u533A_u522B"><a href="#3-_u52A8_u6001_u94FE_u63A5_u5E93_u4E0E_u9759_u6001_u94FE_u63A5_u5E93_u7684_u533A_u522B" class="headerlink" title="3.动态链接库与静态链接库的区别"></a>3.动态链接库与静态链接库的区别</h3><p>静态链接库是.lib格式的文件，一般在工程的设置界面加入工程中，程序编译时会把lib文件的代码加入你的程序中因此会增加代码大小，你的程序一运行lib代码强制被装入你程序的运行空间，不能手动移除lib代码。动态链接库是程序运行时动态装入内存的模块，格式*.dll，在程序运行时可以随意加载和移除，节省内存空间。在大型的软件项目中一般要实现很多功能，如果把所有单独的功能写成一个个lib文件的话，程序运行的时候要占用很大的内存空间，导致运行缓慢；但是如果将功能写成dll文件，就可以在用到该功能的时候调用功能对应的dll文件，不用这个功能时将dll文件移除内存，这样可以节省内存空间。</p>
+<h3 id="4-_u6307_u9488_u4E0E_u5F15_u7528_u7684_u533A_u522B"><a href="#4-_u6307_u9488_u4E0E_u5F15_u7528_u7684_u533A_u522B" class="headerlink" title="4.指针与引用的区别"></a>4.指针与引用的区别</h3><p><strong>相同点：</strong>都是地址的概念，指针指向一块内存，它的内容是所指内存的地址，引用是某块内存的别名。<br><strong>不同点：</strong></p>
 <ul>
 <li>指针是一个实体，而引用是一个别名；</li>
 <li>指针使用时需要加（*）；</li>
@@ -163,8 +163,7 @@
 <li>自增含义不同；</li>
 <li>内存分配上来看：程序为指针分配内存区域，不为引用分配内存区域。</li>
 </ul>
-<p>###5.c++对象模型与虚表</p>
-<ul>
+<h3 id="5-c++_u5BF9_u8C61_u6A21_u578B_u4E0E_u865A_u8868"><a href="#5-c++_u5BF9_u8C61_u6A21_u578B_u4E0E_u865A_u8868" class="headerlink" title="5.c++对象模型与虚表"></a>5.c++对象模型与虚表</h3><ul>
 <li>C++中对象模型：语言中直接支持”面向对象程序设计“的部分，对于各种支持的低层实现机制；</li>
 <li>在C++中有两种成员数据：static、nonstatic，三种成员函数：static、nonstatic和virtual；</li>
 <li>虚函数：虚函数就是C++语言中，那些被virtual关键字修饰的成员函数。虚函数的作用就是实现多态，多态是将接口与实现进行分离，通俗来讲，就是实现以共同的方法，但因个体差异而采用不同策略。</li>
@@ -173,66 +172,13 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/06/07/百度面试题总结—02（语言知识）/" data-id="cilbp4ezw000x8xuatmr5qptq" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/06/07/百度面试题总结—02（语言知识）/" data-id="cilszr8lb000mxzua64wl7kgw" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/06/07/百度面试题总结—02（语言知识）/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试笔试/">面试笔试</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-Deep-Learning-for-NLP-LSTM" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/27/Deep-Learning-for-NLP-LSTM/">C++基本知识积累</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/04/27/Deep-Learning-for-NLP-LSTM/">
-    <time datetime="2015-04-27T12:53:02.000Z" itemprop="datePublished">2015-04-27</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###Background<br>提到LSTM，首先要了解的是“递归神经网络”，也就是不可思议的RNN(Recurrent Neural Network)，它是神经网络的一种。人工神经网络，与其他机器学习算法相比的优势很明显，简称神经网络，是仿照生物神经网络的结构和功能的数学模型。神经网络由大量的人工神经元联结进行计算，可以对外界信息抽象改变结构，是一种自适应系统。深度学习，就是一个多层的神经网络，而“递归神经网络”就是一个深度学习的算法。RNN与其他神经网络的不同在于，它比普通的feed-forward网络多了一层循环</p>
-<p><img src="http://7xptv4.com1.z0.glb.clouddn.com/rnn-structure.png" alt="rnn-structure"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/27/Deep-Learning-for-NLP-LSTM/" data-id="cilbp4fe900g98xua8r6itw4z" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/04/27/Deep-Learning-for-NLP-LSTM/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
 
     </footer>
   </div>
@@ -274,16 +220,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="/img/u=3000920238,7327944&amp;fm=21&amp;gp=0.jpg" alt="image"></p>
-<p>###const与#define</p>
-<ol>
+<h3 id="const_u4E0E_23define"><a href="#const_u4E0E_23define" class="headerlink" title="const与#define"></a>const与#define</h3><ol>
 <li>编译器处理方式不同：define宏是在预处理阶段展开，const常量是编译运行阶段使用；</li>
 <li>类型和安全检查不同：define宏没有类型，不做任何类型检查，仅仅是展开，const常量有具体类型，在编译阶段会执行类型检查；</li>
 <li>存储方式不同：define宏是展开，有多少地方使用，就展开多少次，不会分配内存，const常量会在内存中分配（可以是堆中，也可以是栈中）；</li>
 <li>const可以节省空间；</li>
 <li>const可以提高运行效率。</li>
 </ol>
-<p>###vector内存满时增长方式<br>一般成倍指数增长</p>
-<p>###static<br><strong>静态全局变量</strong><br>在全局变量前，加上关键字static，该变量就定义称为一个静态全局变量，静态全局变量有以下特点：</p>
+<h3 id="vector_u5185_u5B58_u6EE1_u65F6_u589E_u957F_u65B9_u5F0F"><a href="#vector_u5185_u5B58_u6EE1_u65F6_u589E_u957F_u65B9_u5F0F" class="headerlink" title="vector内存满时增长方式"></a>vector内存满时增长方式</h3><p>一般成倍指数增长</p>
+<h3 id="static"><a href="#static" class="headerlink" title="static"></a>static</h3><p><strong>静态全局变量</strong><br>在全局变量前，加上关键字static，该变量就定义称为一个静态全局变量，静态全局变量有以下特点：</p>
 <ol>
 <li>该变量在全局数据区分配内存；</li>
 <li>未经初始化的静态全局变量会被程序自动初始化为0；</li>
@@ -297,7 +242,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/27/C++基本知识积累/" data-id="cilbp4fee00gg8xuaqjvk6j73" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/27/C++基本知识积累/" data-id="cilszr8xn00g6xzuaizi12x6j" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/27/C++基本知识积累/#ds-thread" class="article-comment-link">评论</a>
@@ -314,7 +259,7 @@
   
     
     
-    <article id="post-STL_vector和string使用reserve" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-STL-vector和string使用reserve" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -322,14 +267,14 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/06/STL_vector和string使用reserve/">STL_vector和string使用reserve来避免不必要的重新分配</a>
+      <a class="article-title" href="/2015/04/06/STL-vector和string使用reserve/">STL-vector和string使用reserve来避免不必要的重新分配</a>
     </h1>
   
 
         <div class="article-meta">
           <div class="article-date">
   <i class="fa fa-calendar"></i>
-  <a href="/2015/04/06/STL_vector和string使用reserve/">
+  <a href="/2015/04/06/STL-vector和string使用reserve/">
     <time datetime="2015-04-06T14:33:56.000Z" itemprop="datePublished">2015-04-06</time>
   </a>
 </div>
@@ -364,10 +309,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/06/STL_vector和string使用reserve/" data-id="cilbp4f2q003w8xua3h0m6e3t" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/06/STL-vector和string使用reserve/" data-id="cilszr8nt003lxzuau4vs3owr" class="article-share-link">分享到</a>
       
       
-        <a href="http://www.pkuyg.com/2015/04/06/STL_vector和string使用reserve/#ds-thread" class="article-comment-link">评论</a>
+        <a href="http://www.pkuyg.com/2015/04/06/STL-vector和string使用reserve/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/STL/">STL</a></li></ul>
@@ -421,7 +366,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/06/容器是否为空检查策略/" data-id="cilbp4f1500288xuaf4gjom9a" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/06/容器是否为空检查策略/" data-id="cilszr8mb001rxzuaemlf13eg" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/06/容器是否为空检查策略/#ds-thread" class="article-comment-link">评论</a>
@@ -469,9 +414,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="/STL01.jpg" alt="STL"></p>
-<p>###容器<br>STL中有迭代器（iterator）、算法（algorithm）、和函数对象（function object），但是对于大多数C++程序员来说，最值得注意的还是容器。容器相对于数组功能更强大、更灵活。它可以动态增长（缩减），可以自己管理内存，可以记住自己包含多少对象。<strong>为很多更复杂的问题设计出了更优雅的解决方案。</strong></p>
-<p>###容器分类</p>
-<ol>
+<h3 id="u5BB9_u5668"><a href="#u5BB9_u5668" class="headerlink" title="容器"></a>容器</h3><p>STL中有迭代器（iterator）、算法（algorithm）、和函数对象（function object），但是对于大多数C++程序员来说，最值得注意的还是容器。容器相对于数组功能更强大、更灵活。它可以动态增长（缩减），可以自己管理内存，可以记住自己包含多少对象。<strong>为很多更复杂的问题设计出了更优雅的解决方案。</strong></p>
+<h3 id="u5BB9_u5668_u5206_u7C7B"><a href="#u5BB9_u5668_u5206_u7C7B" class="headerlink" title="容器分类"></a>容器分类</h3><ol>
 <li>标准STL序列容器：vector、string、deque和list。</li>
 <li>标准STL关联容器：set、nultiset、map和multimap。</li>
 <li>非标准序列容器：slist和rope。</li>
@@ -479,13 +423,13 @@
 <li>vector<char>作为string的替代。</char></li>
 <li>vector作为关联容器的替代。</li>
 </ol>
-<p>###如何选择合适的容器<br>vector、list和deque为程序员提供了不同的复杂性，使用时要对此做出权衡。vector是默认应使用的序列类型；当需要频繁的在序列中间做插入和删除时，应使用list；当大多数的插入和删除操作发生在序列的头部和尾部时，deque是应考虑的数据结构。<br>如果从算法复杂性上考虑，以上是对的，但是需要考虑的因素还很多。<br>连续内存容器把他的元素存放在一块或多块内存中，每块内存有多个元素。当有新元素插入或者已有元素删除时，同一内存块中的其他元素要向前或向后移动，以便为新元素让出空间，或者补全被删除元素所留下的空隙。这种移动会影响到效率和异常安全性。标准连续内存容器有vector、string和deque。非标准的rope也是一个连续内存容器。<br>基于节点的容器在每一个内存块中只存放一个元素。容器中元素的插入和删除只影响到指向结点的指针，而部影响节点本身的内容，所以当有插入或删除操作时，元素不用移动。表示链表的容器有list和slist。</p>
-<p>###总结<br>对于容器，STL给了多种选择。在选择一个容器之前要，充分考虑问题情境与各个容器的特点，选择适合的容器，切忌削足适履。生活中也是，适合自己的才是最好的，不要看着别人做什么，你就要做什么，那是不成熟的表现。</p>
+<h3 id="u5982_u4F55_u9009_u62E9_u5408_u9002_u7684_u5BB9_u5668"><a href="#u5982_u4F55_u9009_u62E9_u5408_u9002_u7684_u5BB9_u5668" class="headerlink" title="如何选择合适的容器"></a>如何选择合适的容器</h3><p>vector、list和deque为程序员提供了不同的复杂性，使用时要对此做出权衡。vector是默认应使用的序列类型；当需要频繁的在序列中间做插入和删除时，应使用list；当大多数的插入和删除操作发生在序列的头部和尾部时，deque是应考虑的数据结构。<br>如果从算法复杂性上考虑，以上是对的，但是需要考虑的因素还很多。<br>连续内存容器把他的元素存放在一块或多块内存中，每块内存有多个元素。当有新元素插入或者已有元素删除时，同一内存块中的其他元素要向前或向后移动，以便为新元素让出空间，或者补全被删除元素所留下的空隙。这种移动会影响到效率和异常安全性。标准连续内存容器有vector、string和deque。非标准的rope也是一个连续内存容器。<br>基于节点的容器在每一个内存块中只存放一个元素。容器中元素的插入和删除只影响到指向结点的指针，而部影响节点本身的内容，所以当有插入或删除操作时，元素不用移动。表示链表的容器有list和slist。</p>
+<h3 id="u603B_u7ED3"><a href="#u603B_u7ED3" class="headerlink" title="总结"></a>总结</h3><p>对于容器，STL给了多种选择。在选择一个容器之前要，充分考虑问题情境与各个容器的特点，选择适合的容器，切忌削足适履。生活中也是，适合自己的才是最好的，不要看着别人做什么，你就要做什么，那是不成熟的表现。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/06/STL-容器/" data-id="cilbp4f2w00408xua8cwu6cg3" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/06/STL-容器/" data-id="cilszr8nm003hxzuam965xd3j" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/06/STL-容器/#ds-thread" class="article-comment-link">评论</a>
@@ -514,7 +458,42 @@
           <li>
             
             <div class="item-thumbnail">
-              <a href="/2016/03/03/word2vec/" class="thumbnail">
+              <a href="/2016/03/15/Java-Entity/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Java-Entity/" class="title">Java_Entity</a></p>
+              <p class="item-date"><time datetime="2016-03-15T05:02:21.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/rnn-structure.png
+)" alt="Deep-Learning-for-NLP-LSTM" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="title">Deep-Learning-for-NLP-LSTM</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:55:12.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/了解word2vec/" class="thumbnail">
   
     <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/barneshutplot.jpg
 )" alt="了解word2vec" class="thumbnail-image"></span>
@@ -524,42 +503,8 @@
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/MLearning/">MLearning</a></p>
-              <p class="item-title"><a href="/2016/03/03/word2vec/" class="title">了解word2vec</a></p>
-              <p class="item-date"><time datetime="2016-03-03T02:53:02.000Z" itemprop="datePublished">2016-03-03</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/12/贝叶斯方法/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
-              <p class="item-title"><a href="/2016/01/12/贝叶斯方法/" class="title">贝叶斯方法</a></p>
-              <p class="item-date"><time datetime="2016-01-12T01:16:42.000Z" itemprop="datePublished">2016-01-12</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/11/23/Mechine-Learning-01/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"></p>
-              <p class="item-title"><a href="/2015/11/23/Mechine-Learning-01/" class="title">Mechine-Learning-01</a></p>
-              <p class="item-date"><time datetime="2015-11-23T05:50:17.000Z" itemprop="datePublished">2015-11-23</time></p>
+              <p class="item-title"><a href="/2016/03/15/了解word2vec/" class="title">了解word2vec</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:52:45.000Z" itemprop="datePublished">2016-03-15</time></p>
             </div>
           </li>
         
@@ -606,7 +551,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -615,7 +560,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 14.17px;">C++</a> <a href="/tags/DL/" style="font-size: 10px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 10.83px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 

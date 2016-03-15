@@ -6,21 +6,21 @@
   <title>LeetCode num074 | Encoding Myself</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Search a 2D Matrix
-###ProblemWrite an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
-Integers in each row are sorted from left to right.The">
+ProblemWrite an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+Integers in each row are sorted from left to right.The fi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode num074">
 <meta property="og:url" content="http://www.pkuyg.com/2015/03/31/LeetCode-num074/index.html">
 <meta property="og:site_name" content="Encoding Myself">
 <meta property="og:description" content="Search a 2D Matrix
-###ProblemWrite an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
-Integers in each row are sorted from left to right.The">
-<meta property="og:updated_time" content="2016-01-05T09:33:38.897Z">
+ProblemWrite an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+Integers in each row are sorted from left to right.The fi">
+<meta property="og:updated_time" content="2016-03-15T05:18:05.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode num074">
 <meta name="twitter:description" content="Search a 2D Matrix
-###ProblemWrite an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
-Integers in each row are sorted from left to right.The">
+ProblemWrite an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
+Integers in each row are sorted from left to right.The fi">
   
   
     <link rel="icon" href="/favicon.png">
@@ -87,11 +87,11 @@ Integers in each row are sorted from left to right.The">
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        125
+        122
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        48
+        47
         <span>标签</span>
       </div>
     </div>
@@ -145,13 +145,12 @@ Integers in each row are sorted from left to right.The">
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>Search a 2D Matrix</strong></p>
-<p>###Problem<br>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:</p>
 <p>Integers in each row are sorted from left to right.<br>The first integer of each row is greater than the last integer of the previous row.<br>For example,</p>
 <p>Consider the following matrix:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [<span class="number">1</span>,   <span class="number">3</span>,  <span class="number">5</span>,  <span class="number">7</span>],</span><br><span class="line">  [<span class="number">10</span>, <span class="number">11</span>, <span class="number">16</span>, <span class="number">20</span>],</span><br><span class="line">  [<span class="number">23</span>, <span class="number">30</span>, <span class="number">34</span>, <span class="number">50</span>]</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
 <p>Given target = 3, return true.</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">searchMatrix</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; &amp;matrix, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (matrix.size() == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (matrix[<span class="number">0</span>].size() == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">int</span> row = matrix.size(), column = matrix[<span class="number">0</span>].size(), vertical, horizon;</span><br><span class="line">		<span class="keyword">int</span> top = <span class="number">0</span>, bottom = row - <span class="number">1</span>, left = <span class="number">0</span>, right = column - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (top &lt;= bottom)</span><br><span class="line">		&#123;</span><br><span class="line">			vertical = (top + bottom) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (target == matrix[vertical][<span class="number">0</span>]) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (target &lt; matrix[vertical][<span class="number">0</span>]) bottom = vertical - <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> top = vertical + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (target &lt; matrix[vertical][<span class="number">0</span>] &amp;&amp; vertical == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (target &lt; matrix[vertical][<span class="number">0</span>]) vertical--;</span><br><span class="line">		<span class="keyword">while</span> (left &lt;= right)</span><br><span class="line">		&#123;</span><br><span class="line">			horizon = (left + right) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (target == matrix[vertical][horizon]) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (target &lt; matrix[vertical][horizon]) right = horizon - <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> left = horizon + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">searchMatrix</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; &amp;matrix, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (matrix.size() == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (matrix[<span class="number">0</span>].size() == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">int</span> row = matrix.size(), column = matrix[<span class="number">0</span>].size(), vertical, horizon;</span><br><span class="line">		<span class="keyword">int</span> top = <span class="number">0</span>, bottom = row - <span class="number">1</span>, left = <span class="number">0</span>, right = column - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span> (top &lt;= bottom)</span><br><span class="line">		&#123;</span><br><span class="line">			vertical = (top + bottom) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (target == matrix[vertical][<span class="number">0</span>]) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (target &lt; matrix[vertical][<span class="number">0</span>]) bottom = vertical - <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> top = vertical + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (target &lt; matrix[vertical][<span class="number">0</span>] &amp;&amp; vertical == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">if</span> (target &lt; matrix[vertical][<span class="number">0</span>]) vertical--;</span><br><span class="line">		<span class="keyword">while</span> (left &lt;= right)</span><br><span class="line">		&#123;</span><br><span class="line">			horizon = (left + right) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (target == matrix[vertical][horizon]) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (target &lt; matrix[vertical][horizon]) right = horizon - <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">else</span> left = horizon + <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><ol>
 <li>行列分别二分查找</li>
 <li>时间复杂度O((logn)^2)</li>
 </ol>
@@ -159,7 +158,7 @@ Integers in each row are sorted from left to right.The">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num074/" data-id="cilbp4f8t00ai8xuaudzqi0w9" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num074/" data-id="cilszr8t800a2xzuakn38veuh" class="article-share-link">分享到</a>
       
         <div class="share">
 	<!-- JiaThis Button BEGIN -->
@@ -227,7 +226,42 @@ Integers in each row are sorted from left to right.The">
           <li>
             
             <div class="item-thumbnail">
-              <a href="/2016/03/03/word2vec/" class="thumbnail">
+              <a href="/2016/03/15/Java-Entity/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Java-Entity/" class="title">Java_Entity</a></p>
+              <p class="item-date"><time datetime="2016-03-15T05:02:21.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/rnn-structure.png
+)" alt="Deep-Learning-for-NLP-LSTM" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="title">Deep-Learning-for-NLP-LSTM</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:55:12.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/了解word2vec/" class="thumbnail">
   
     <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/barneshutplot.jpg
 )" alt="了解word2vec" class="thumbnail-image"></span>
@@ -237,42 +271,8 @@ Integers in each row are sorted from left to right.The">
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/MLearning/">MLearning</a></p>
-              <p class="item-title"><a href="/2016/03/03/word2vec/" class="title">了解word2vec</a></p>
-              <p class="item-date"><time datetime="2016-03-03T02:53:02.000Z" itemprop="datePublished">2016-03-03</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/12/贝叶斯方法/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
-              <p class="item-title"><a href="/2016/01/12/贝叶斯方法/" class="title">贝叶斯方法</a></p>
-              <p class="item-date"><time datetime="2016-01-12T01:16:42.000Z" itemprop="datePublished">2016-01-12</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/11/23/Mechine-Learning-01/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"></p>
-              <p class="item-title"><a href="/2015/11/23/Mechine-Learning-01/" class="title">Mechine-Learning-01</a></p>
-              <p class="item-date"><time datetime="2015-11-23T05:50:17.000Z" itemprop="datePublished">2015-11-23</time></p>
+              <p class="item-title"><a href="/2016/03/15/了解word2vec/" class="title">了解word2vec</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:52:45.000Z" itemprop="datePublished">2016-03-15</time></p>
             </div>
           </li>
         
@@ -319,7 +319,7 @@ Integers in each row are sorted from left to right.The">
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -328,7 +328,7 @@ Integers in each row are sorted from left to right.The">
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 14.17px;">C++</a> <a href="/tags/DL/" style="font-size: 10px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 10.83px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 

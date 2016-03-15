@@ -69,7 +69,7 @@
   
   <div id="header-sub" class="header-sub header-inner">
     <div class="outer">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
   
@@ -86,11 +86,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        125
+        122
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        48
+        47
         <span>标签</span>
       </div>
     </div>
@@ -124,7 +124,7 @@
           <a href="/archives/2015" class="archive-year">2015</a>
         </div>
     
-    <article id="post-LeetCode-num120" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-LeetCode-num121" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -132,15 +132,15 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/30/LeetCode-num120/">LeetCode num120</a>
+      <a class="article-title" href="/2015/03/30/LeetCode-num121/">LeetCode num121</a>
     </h1>
   
 
         <div class="article-meta">
           <div class="article-date">
   <i class="fa fa-calendar"></i>
-  <a href="/2015/03/30/LeetCode-num120/">
-    <time datetime="2015-03-30T11:31:48.000Z" itemprop="datePublished">2015-03-30</time>
+  <a href="/2015/03/30/LeetCode-num121/">
+    <time datetime="2015-03-30T08:32:42.000Z" itemprop="datePublished">2015-03-30</time>
   </a>
 </div>
           
@@ -154,26 +154,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>Triangle</strong></p>
-<p>###Problem<br>Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.</p>
-<p>For example, given the following triangle</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">     [<span class="number">2</span>],</span><br><span class="line">    [<span class="number">3</span>,<span class="number">4</span>],</span><br><span class="line">   [<span class="number">6</span>,<span class="number">5</span>,<span class="number">7</span>],</span><br><span class="line">  [<span class="number">4</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">3</span>]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p>The minimum path sum from top to bottom is 11 (i.e., 2 + 3 + 5 + 1 = 11).</p>
-<p><strong>Note:</strong><br>Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">minimumTotal</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; &amp;triangle)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (triangle.size() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; mark;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; distance;</span><br><span class="line">		<span class="keyword">int</span> d, min, sizeMark;</span><br><span class="line">		distance.push_back(triangle[<span class="number">0</span>][<span class="number">0</span>]);</span><br><span class="line">		mark.push_back(distance);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; triangle.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> size = triangle[i].size();</span><br><span class="line">			distance.clear();</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; size; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (j == <span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					d = mark[i - <span class="number">1</span>][j] + triangle[i][j];</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (j == size - <span class="number">1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					d = mark[i - <span class="number">1</span>][j - <span class="number">1</span>] + triangle[i][j];</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					d = (mark[i - <span class="number">1</span>][j - <span class="number">1</span>] + triangle[i][j]) &lt; (mark[i - <span class="number">1</span>][j] + triangle[i][j]) ?</span><br><span class="line">						(mark[i - <span class="number">1</span>][j - <span class="number">1</span>] + triangle[i][j]) : (mark[i - <span class="number">1</span>][j] + triangle[i][j]);</span><br><span class="line">				&#125;</span><br><span class="line">				distance.push_back(d);</span><br><span class="line">			&#125;</span><br><span class="line">			mark.push_back(distance);</span><br><span class="line">		&#125;</span><br><span class="line">		sizeMark = mark.size();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mark[sizeMark - <span class="number">1</span>].size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (i == <span class="number">0</span>) min = mark[sizeMark - <span class="number">1</span>][i];</span><br><span class="line">			<span class="keyword">else</span> min = min &lt; mark[sizeMark - <span class="number">1</span>][i] ? min : mark[sizeMark - <span class="number">1</span>][i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> min;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+        <p><strong>Best Time to Buy and Sell Stock</strong></p>
+<p>###Problem<br>Say you have an array for which the ith element is the price of a given stock on day i.<br>If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>
+<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;prices)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (prices.size() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> i, minPrice = prices[<span class="number">0</span>], maxProfile = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; prices.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			maxProfile = prices[i] - minPrice &gt; maxProfile ?</span><br><span class="line">				prices[i] - minPrice : maxProfile;</span><br><span class="line">			minPrice = prices[i] &lt; minPrice ? prices[i] : minPrice;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> maxProfile;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>###Comment</p>
 <ol>
-<li>之前做过</li>
-<li>难度不大</li>
+<li>题目相对简单</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num120/" data-id="cilbp4f5r006w8xuae608yrna" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num121/" data-id="cilszr8qg0066xzuafxmf6c1s" class="article-share-link">分享到</a>
       
       
-        <a href="http://www.pkuyg.com/2015/03/30/LeetCode-num120/#ds-thread" class="article-comment-link">评论</a>
+        <a href="http://www.pkuyg.com/2015/03/30/LeetCode-num121/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
@@ -218,79 +213,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><strong>Best Time to Buy and Sell Stock II </strong></p>
-<p>###Problem<br>Say you have an array for which the ith element is the price of a given stock on day i.</p>
+<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Say you have an array for which the ith element is the price of a given stock on day i.</p>
 <p>Design an algorithm to find the maximum profit. You may complete as many transactions as you like (ie, buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (ie, you must sell the stock before you buy again).</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;prices)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> size = prices.size();</span><br><span class="line">		<span class="keyword">if</span> (size == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> i, maxProfit = <span class="number">0</span>, markPurchase = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> max, purchasePrice;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; size; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			max = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">if</span> (prices[i] &gt; prices[i - <span class="number">1</span>] &amp;&amp; markPurchase == <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				purchasePrice = prices[i - <span class="number">1</span>];</span><br><span class="line">				markPurchase = <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (prices[i] &lt;= prices[i - <span class="number">1</span>] &amp;&amp; markPurchase == <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				max = prices[i - <span class="number">1</span>] - purchasePrice;</span><br><span class="line">				maxProfit += max;</span><br><span class="line">				markPurchase = <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (markPurchase == <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			maxProfit += prices[size - <span class="number">1</span>] - purchasePrice;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> maxProfit;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;prices)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> size = prices.size();</span><br><span class="line">		<span class="keyword">if</span> (size == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> i, maxProfit = <span class="number">0</span>, markPurchase = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> max, purchasePrice;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; size; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			max = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">if</span> (prices[i] &gt; prices[i - <span class="number">1</span>] &amp;&amp; markPurchase == <span class="number">0</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				purchasePrice = prices[i - <span class="number">1</span>];</span><br><span class="line">				markPurchase = <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (prices[i] &lt;= prices[i - <span class="number">1</span>] &amp;&amp; markPurchase == <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				max = prices[i - <span class="number">1</span>] - purchasePrice;</span><br><span class="line">				maxProfit += max;</span><br><span class="line">				markPurchase = <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (markPurchase == <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			maxProfit += prices[size - <span class="number">1</span>] - purchasePrice;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> maxProfit;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><ol>
 <li>题目相对较简单</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num122/" data-id="cilbp4f5l006m8xuahwvykyfr" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num122/" data-id="cilszr8qb0061xzuakpjyad7v" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/30/LeetCode-num122/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-LeetCode-num121" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/30/LeetCode-num121/">LeetCode num121</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/03/30/LeetCode-num121/">
-    <time datetime="2015-03-30T08:32:42.000Z" itemprop="datePublished">2015-03-30</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Best Time to Buy and Sell Stock</strong></p>
-<p>###Problem<br>Say you have an array for which the ith element is the price of a given stock on day i.<br>If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.</p>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;prices)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (prices.size() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> i, minPrice = prices[<span class="number">0</span>], maxProfile = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; prices.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			maxProfile = prices[i] - minPrice &gt; maxProfile ?</span><br><span class="line">				prices[i] - minPrice : maxProfile;</span><br><span class="line">			minPrice = prices[i] &lt; minPrice ? prices[i] : minPrice;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> maxProfile;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
-<li>题目相对简单</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/30/LeetCode-num121/" data-id="cilbp4f5n006r8xuaf5523usb" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/03/30/LeetCode-num121/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
@@ -354,7 +290,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/30/Docker与大数据/" data-id="cilbp4fe700g68xua3g3dhtg6" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/30/Docker与大数据/" data-id="cilszr8xf00fuxzua3el9iip8" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/30/Docker与大数据/#ds-thread" class="article-comment-link">评论</a>
@@ -402,14 +338,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>有一种夸张的说法是Docker将是现有虚拟技术的终结者，当然这种说法可能有些夸大其词了。Docker是面向应用的，旨在构建一个PaaS平台，而现有虚拟技术主要提供一个灵活的计算机资源池，构建一个IaaS平台。Docker有如下特性：</p>
-<p>###面向应用<br>一个软件系统包含很多部分，包含二进制文件、库文件、配置文件和依赖性，这就导致了软件安装的复杂性，而Docker把这种互相的依赖集中在容器内部，而与宿主机在一定程度上相互隔离，使开发与维护相互分离，简化了产品的上线流程。这大概也是众多厂商热情拥抱这项新技术的原因。Google、Amazon、Microsoft、VMware都纷纷加入Docker和Container所掀起的新时代云端虚拟化行列。</p>
-<p>###Linux Containers（LXU）技术<br>Docker与虚拟机同属于虚拟化技术，现在市面上的虚拟机多数是对主机的硬件虚拟化，不管是安装在操作系统之上的workstation，还是直接安装在硬件上的ESX或者ESXI，这些产品基于vSphere或Hyper-V这些技术，目的构建一个与宿主机相互隔离的系统。而Docker技术是利用container技术，使应用直接安装到容器上，而容器相对于宿主机仅仅只是一个或几个进程，将容器与宿主机器的系统隔离，方便开发与运维。Container 技术是一种在 操作系统内的 Kernel 层所打造虚拟运行环境，所以 Container 彼此之间共享了 Host OS 的 Kernel，但通过namespace 区分来达到隔离每个容器的目的。现在Docker容器不仅支持Linux系统，而且得到了Windows和MAC OS的支持。</p>
-<p>###高效性<br>启动一个虚拟机可能会花费掉几分钟时间，而Docker的在1秒之内即可成功启动。这是因为启动一个虚拟机相当于启动一个完整的操作系统，而启动一个Docker相当于启动一个进程。同时也使简化了开发、运维流程，加快了开发人员开发速度。</p>
+<h3 id="u9762_u5411_u5E94_u7528"><a href="#u9762_u5411_u5E94_u7528" class="headerlink" title="面向应用"></a>面向应用</h3><p>一个软件系统包含很多部分，包含二进制文件、库文件、配置文件和依赖性，这就导致了软件安装的复杂性，而Docker把这种互相的依赖集中在容器内部，而与宿主机在一定程度上相互隔离，使开发与维护相互分离，简化了产品的上线流程。这大概也是众多厂商热情拥抱这项新技术的原因。Google、Amazon、Microsoft、VMware都纷纷加入Docker和Container所掀起的新时代云端虚拟化行列。</p>
+<h3 id="Linux_Containers_uFF08LXU_uFF09_u6280_u672F"><a href="#Linux_Containers_uFF08LXU_uFF09_u6280_u672F" class="headerlink" title="Linux Containers（LXU）技术"></a>Linux Containers（LXU）技术</h3><p>Docker与虚拟机同属于虚拟化技术，现在市面上的虚拟机多数是对主机的硬件虚拟化，不管是安装在操作系统之上的workstation，还是直接安装在硬件上的ESX或者ESXI，这些产品基于vSphere或Hyper-V这些技术，目的构建一个与宿主机相互隔离的系统。而Docker技术是利用container技术，使应用直接安装到容器上，而容器相对于宿主机仅仅只是一个或几个进程，将容器与宿主机器的系统隔离，方便开发与运维。Container 技术是一种在 操作系统内的 Kernel 层所打造虚拟运行环境，所以 Container 彼此之间共享了 Host OS 的 Kernel，但通过namespace 区分来达到隔离每个容器的目的。现在Docker容器不仅支持Linux系统，而且得到了Windows和MAC OS的支持。</p>
+<h3 id="u9AD8_u6548_u6027"><a href="#u9AD8_u6548_u6027" class="headerlink" title="高效性"></a>高效性</h3><p>启动一个虚拟机可能会花费掉几分钟时间，而Docker的在1秒之内即可成功启动。这是因为启动一个虚拟机相当于启动一个完整的操作系统，而启动一个Docker相当于启动一个进程。同时也使简化了开发、运维流程，加快了开发人员开发速度。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/30/Docker与虚拟机的区别/" data-id="cilbp4fe400g28xuadu1bm5hv" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/30/Docker与虚拟机的区别/" data-id="cilszr8xd00fqxzuaxitddysv" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/30/Docker与虚拟机的区别/#ds-thread" class="article-comment-link">评论</a>
@@ -456,11 +392,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###Problem<br><strong>3Sum Closest</strong><br>Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
+        <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p><strong>3Sum Closest</strong><br>Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">For example, given array S = &#123;-<span class="number">1</span> <span class="number">2</span> <span class="number">1</span> -<span class="number">4</span>&#125;, and target = <span class="number">1</span>.</span><br><span class="line"></span><br><span class="line">The sum that is closest to the target is <span class="number">2</span>. (-<span class="number">1</span> + <span class="number">2</span> + <span class="number">1</span> = <span class="number">2</span>).</span><br></pre></td></tr></table></figure>
-<p>###Solution<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">threeSumClosest</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;num, <span class="keyword">int</span> target)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		sort(num.begin(), num.end());</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>, min, temp, first;</span><br><span class="line">		min = num[<span class="number">0</span>] + num[<span class="number">1</span>] + num[<span class="number">2</span>] - target;</span><br><span class="line">		<span class="keyword">while</span> (num.size() &gt;= <span class="number">3</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			first = num[<span class="number">0</span>];</span><br><span class="line">			num.erase(num.begin());</span><br><span class="line">			temp = twoSumClosest(num, target - first);</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">abs</span>(temp + first - target) &lt; <span class="built_in">abs</span>(min))</span><br><span class="line">			&#123;</span><br><span class="line">				min = temp + first - target;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> min + target;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">twoSumClosest</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; num, <span class="keyword">int</span> target)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j, minBig, minSmall, markBig = <span class="number">0</span>, markSmall = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>, j = num.size() - <span class="number">1</span>; i &lt; j;)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (num[i] + num[j] == target)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> target;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (num[i] + num[j] &gt; target)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (markBig == <span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					minBig = num[i] + num[j];</span><br><span class="line">					markBig = <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					minBig = minBig &lt; (num[i] + num[j]) ? minBig : (num[i] + num[j]);</span><br><span class="line">				&#125;</span><br><span class="line">				j--;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (markSmall == <span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					minSmall = num[i] + num[j];</span><br><span class="line">					markSmall = <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					minSmall = minSmall &gt; (num[i] + num[j]) ? minSmall : (num[i] + num[j]);</span><br><span class="line">				&#125;</span><br><span class="line">				i++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (markSmall == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> minBig;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (markBig == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> minSmall;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> (target - minSmall) &lt; (minBig - target) ? minSmall : minBig;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>###Comment</p>
-<ol>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">threeSumClosest</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;num, <span class="keyword">int</span> target)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		sort(num.begin(), num.end());</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>, min, temp, first;</span><br><span class="line">		min = num[<span class="number">0</span>] + num[<span class="number">1</span>] + num[<span class="number">2</span>] - target;</span><br><span class="line">		<span class="keyword">while</span> (num.size() &gt;= <span class="number">3</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			first = num[<span class="number">0</span>];</span><br><span class="line">			num.erase(num.begin());</span><br><span class="line">			temp = twoSumClosest(num, target - first);</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">abs</span>(temp + first - target) &lt; <span class="built_in">abs</span>(min))</span><br><span class="line">			&#123;</span><br><span class="line">				min = temp + first - target;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> min + target;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">twoSumClosest</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; num, <span class="keyword">int</span> target)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j, minBig, minSmall, markBig = <span class="number">0</span>, markSmall = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>, j = num.size() - <span class="number">1</span>; i &lt; j;)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (num[i] + num[j] == target)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> target;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (num[i] + num[j] &gt; target)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (markBig == <span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					minBig = num[i] + num[j];</span><br><span class="line">					markBig = <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					minBig = minBig &lt; (num[i] + num[j]) ? minBig : (num[i] + num[j]);</span><br><span class="line">				&#125;</span><br><span class="line">				j--;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (markSmall == <span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					minSmall = num[i] + num[j];</span><br><span class="line">					markSmall = <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					minSmall = minSmall &gt; (num[i] + num[j]) ? minSmall : (num[i] + num[j]);</span><br><span class="line">				&#125;</span><br><span class="line">				i++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (markSmall == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> minBig;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (markBig == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> minSmall;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> (target - minSmall) &lt; (minBig - target) ? minSmall : minBig;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><ol>
 <li>写代码要细致；</li>
 <li>不要迁就代码，尽量不要黏贴别的代码进行改；</li>
 <li>要有勇气放弃代码，从头写；</li>
@@ -470,10 +405,69 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num016/" data-id="cilbp4fc000e78xua3dru4ayt" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num016/" data-id="cilszr8vw00drxzuaphcs3kt1" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/02/09/LeetCode-num016/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Integer/">Integer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sum/">Sum</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    
+    
+    <article id="post-LeetCode-num015" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/09/LeetCode-num015/">LeetCode num015</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/02/09/LeetCode-num015/">
+    <time datetime="2015-02-09T07:43:57.000Z" itemprop="datePublished">2015-02-09</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p><strong>3Sum</strong><br>Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.</p>
+<p><strong>Note:</strong><br>Elements in a triplet (a,b,c) must be in non-descending order. (ie, a ≤ b ≤ c)<br>The solution set must not contain duplicate triplets.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">For example, given array S = &#123;-<span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">2</span> -<span class="number">1</span> -<span class="number">4</span>&#125;,</span><br><span class="line"></span><br><span class="line">A solution <span class="built_in">set</span> is:</span><br><span class="line">(-<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">(-<span class="number">1</span>, -<span class="number">1</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; threeSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;num) &#123;</span><br><span class="line">		sort(num.begin(), num.end());</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; result, get;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; fine;</span><br><span class="line">		<span class="keyword">int</span> target;</span><br><span class="line">		<span class="keyword">int</span> i, j, k, mark;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; num.size() &gt;= <span class="number">3</span>; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			target = <span class="number">0</span> - num[<span class="number">0</span>];</span><br><span class="line">			<span class="keyword">if</span> (i &gt;= <span class="number">1</span> &amp;&amp; target == mark)</span><br><span class="line">			&#123;</span><br><span class="line">				num.erase(num.begin());</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			mark = target;</span><br><span class="line">			num.erase(num.begin());</span><br><span class="line">			get = twoSum(num, target);</span><br><span class="line">			<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; get.size(); k++)</span><br><span class="line">			&#123;</span><br><span class="line">				fine = get[k];</span><br><span class="line">				result.push_back(fine);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; twoSum(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;num, <span class="keyword">int</span> target)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; fine;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; result;</span><br><span class="line">		<span class="keyword">int</span> sum, count1 = <span class="number">0</span>, count2 = <span class="number">0</span>, mark1, mark2;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it1 = num.begin(), it2 = num.end() - <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span> (it1 = num.begin(), it2 = num.end() - <span class="number">1</span>; it1 &lt; it2;)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (count1 &gt;= <span class="number">1</span> &amp;&amp; *it1 == mark1)</span><br><span class="line">			&#123;</span><br><span class="line">				it1++;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (count2 &gt;= <span class="number">1</span> &amp;&amp; *it2 == mark2)</span><br><span class="line">			&#123;</span><br><span class="line">				it2--;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			sum = *it1 + *it2;</span><br><span class="line">			<span class="keyword">if</span> (sum == target)</span><br><span class="line">			&#123;</span><br><span class="line">				fine.push_back(<span class="number">0</span> - target);</span><br><span class="line">				fine.push_back(*it1);</span><br><span class="line">				fine.push_back(*it2);</span><br><span class="line">				result.push_back(fine);</span><br><span class="line">				fine.clear();</span><br><span class="line">				mark1 = *it1;</span><br><span class="line">				mark2 = *it2;</span><br><span class="line">				it1++;</span><br><span class="line">				it2--;</span><br><span class="line">				count1++;</span><br><span class="line">				count2++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (sum &lt; target)</span><br><span class="line">			&#123;</span><br><span class="line">				mark1 = *it1;</span><br><span class="line">				it1++;</span><br><span class="line">				count1++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				mark2 = *it2;</span><br><span class="line">				it2--;</span><br><span class="line">				count2++;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><ol>
+<li>代码不够简洁；</li>
+<li>类似两个数的和；</li>
+<li>复杂度能够到O(n^2)。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num015/" data-id="cilszr8vz00dxxzuau5e0w2d9" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/02/09/LeetCode-num015/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Integer/">Integer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sum/">Sum</a></li></ul>
@@ -503,7 +497,42 @@
           <li>
             
             <div class="item-thumbnail">
-              <a href="/2016/03/03/word2vec/" class="thumbnail">
+              <a href="/2016/03/15/Java-Entity/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Java-Entity/" class="title">Java_Entity</a></p>
+              <p class="item-date"><time datetime="2016-03-15T05:02:21.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/rnn-structure.png
+)" alt="Deep-Learning-for-NLP-LSTM" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="title">Deep-Learning-for-NLP-LSTM</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:55:12.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/了解word2vec/" class="thumbnail">
   
     <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/barneshutplot.jpg
 )" alt="了解word2vec" class="thumbnail-image"></span>
@@ -513,42 +542,8 @@
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/MLearning/">MLearning</a></p>
-              <p class="item-title"><a href="/2016/03/03/word2vec/" class="title">了解word2vec</a></p>
-              <p class="item-date"><time datetime="2016-03-03T02:53:02.000Z" itemprop="datePublished">2016-03-03</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/12/贝叶斯方法/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
-              <p class="item-title"><a href="/2016/01/12/贝叶斯方法/" class="title">贝叶斯方法</a></p>
-              <p class="item-date"><time datetime="2016-01-12T01:16:42.000Z" itemprop="datePublished">2016-01-12</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/11/23/Mechine-Learning-01/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"></p>
-              <p class="item-title"><a href="/2015/11/23/Mechine-Learning-01/" class="title">Mechine-Learning-01</a></p>
-              <p class="item-date"><time datetime="2015-11-23T05:50:17.000Z" itemprop="datePublished">2015-11-23</time></p>
+              <p class="item-title"><a href="/2016/03/15/了解word2vec/" class="title">了解word2vec</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:52:45.000Z" itemprop="datePublished">2016-03-15</time></p>
             </div>
           </li>
         
@@ -595,7 +590,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -604,7 +599,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 14.17px;">C++</a> <a href="/tags/DL/" style="font-size: 10px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 10.83px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 

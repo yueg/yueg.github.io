@@ -80,11 +80,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        125
+        122
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        48
+        47
         <span>标签</span>
       </div>
     </div>
@@ -148,35 +148,31 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##数据模型的概念<br>在数据库中用数据模型这个工具来抽象、表示和处理现实世界中的数据和信息。<br>通俗的讲数据模型就是<strong>现实世界的模拟</strong>。<br>数据模型应满足如下要求：</p>
+        <h2 id="u6570_u636E_u6A21_u578B_u7684_u6982_u5FF5"><a href="#u6570_u636E_u6A21_u578B_u7684_u6982_u5FF5" class="headerlink" title="数据模型的概念"></a>数据模型的概念</h2><p>在数据库中用数据模型这个工具来抽象、表示和处理现实世界中的数据和信息。<br>通俗的讲数据模型就是<strong>现实世界的模拟</strong>。<br>数据模型应满足如下要求：</p>
 <ol>
 <li>能比较真实的模拟现实世界；</li>
 <li>容易为人所理解；</li>
 <li>便于在计算机上实现。</li>
 </ol>
-<p>##数据模型的分类</p>
-<p>###1.概念模型<br>概念模型也称为信息模型，是按用户的观点来对数据和信息建模，用于对数据库的设计。</p>
-<p>###2.逻辑模型<br>逻辑模型主要包括网状模型、层次模型、关系模型、面向对象模型等，按计算机系统的观点对数据建模，用于DBMS实现。</p>
-<p>###3.物理模型<br>物理模型是对数据最底层的抽象，描述数据在系统内部的表示方法和存取方法，在磁盘盒磁带上的存储方式和存取方式。</p>
-<p>##客观世界中的抽象过程</p>
-<ol>
+<h2 id="u6570_u636E_u6A21_u578B_u7684_u5206_u7C7B"><a href="#u6570_u636E_u6A21_u578B_u7684_u5206_u7C7B" class="headerlink" title="数据模型的分类"></a>数据模型的分类</h2><h3 id="1-_u6982_u5FF5_u6A21_u578B"><a href="#1-_u6982_u5FF5_u6A21_u578B" class="headerlink" title="1.概念模型"></a>1.概念模型</h3><p>概念模型也称为信息模型，是按用户的观点来对数据和信息建模，用于对数据库的设计。</p>
+<h3 id="2-_u903B_u8F91_u6A21_u578B"><a href="#2-_u903B_u8F91_u6A21_u578B" class="headerlink" title="2.逻辑模型"></a>2.逻辑模型</h3><p>逻辑模型主要包括网状模型、层次模型、关系模型、面向对象模型等，按计算机系统的观点对数据建模，用于DBMS实现。</p>
+<h3 id="3-_u7269_u7406_u6A21_u578B"><a href="#3-_u7269_u7406_u6A21_u578B" class="headerlink" title="3.物理模型"></a>3.物理模型</h3><p>物理模型是对数据最底层的抽象，描述数据在系统内部的表示方法和存取方法，在磁盘盒磁带上的存储方式和存取方式。</p>
+<h2 id="u5BA2_u89C2_u4E16_u754C_u4E2D_u7684_u62BD_u8C61_u8FC7_u7A0B"><a href="#u5BA2_u89C2_u4E16_u754C_u4E2D_u7684_u62BD_u8C61_u8FC7_u7A0B" class="headerlink" title="客观世界中的抽象过程"></a>客观世界中的抽象过程</h2><ol>
 <li>现实世界到概念模型</li>
 <li>概念模型到逻辑模型</li>
 </ol>
-<p>##数据模型的组成成分</p>
-<ol>
+<h2 id="u6570_u636E_u6A21_u578B_u7684_u7EC4_u6210_u6210_u5206"><a href="#u6570_u636E_u6A21_u578B_u7684_u7EC4_u6210_u6210_u5206" class="headerlink" title="数据模型的组成成分"></a>数据模型的组成成分</h2><ol>
 <li>数据结构：描述数据库的组成对象，以及对象之间的联系（建表、DDL），是对<strong>系统静态特性</strong>的描述；</li>
 <li>数据操作：对数据库中各种对象的实例允许执行的操作及有关的操作规则（DML），是对<strong>系统动态特性</strong>的描述；</li>
 <li>完整性约束：一套完整性规则的集合。</li>
 </ol>
-<p>##关系数据模型的优缺点</p>
-<p>###1.优点<br>建立在严格的数据概念的基础上；概念单一；关系模型的存取路径对用户透明。</p>
-<p>###2.缺点<br>存取路径对用户透明导致了查询效率往往不如非关系数据模型；<br>为提高性能，必须对查询优化，增加了开发DBMS的难度。</p>
+<h2 id="u5173_u7CFB_u6570_u636E_u6A21_u578B_u7684_u4F18_u7F3A_u70B9"><a href="#u5173_u7CFB_u6570_u636E_u6A21_u578B_u7684_u4F18_u7F3A_u70B9" class="headerlink" title="关系数据模型的优缺点"></a>关系数据模型的优缺点</h2><h3 id="1-_u4F18_u70B9"><a href="#1-_u4F18_u70B9" class="headerlink" title="1.优点"></a>1.优点</h3><p>建立在严格的数据概念的基础上；概念单一；关系模型的存取路径对用户透明。</p>
+<h3 id="2-_u7F3A_u70B9"><a href="#2-_u7F3A_u70B9" class="headerlink" title="2.缺点"></a>2.缺点</h3><p>存取路径对用户透明导致了查询效率往往不如非关系数据模型；<br>为提高性能，必须对查询优化，增加了开发DBMS的难度。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/28/数据库概念——数据模型/" data-id="cilbp4f0l001o8xuai4ewfpyh" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/28/数据库概念——数据模型/" data-id="cilszr8lt0017xzuammn1516d" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/28/数据库概念——数据模型/#ds-thread" class="article-comment-link">评论</a>
@@ -205,7 +201,42 @@
           <li>
             
             <div class="item-thumbnail">
-              <a href="/2016/03/03/word2vec/" class="thumbnail">
+              <a href="/2016/03/15/Java-Entity/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Java-Entity/" class="title">Java_Entity</a></p>
+              <p class="item-date"><time datetime="2016-03-15T05:02:21.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/rnn-structure.png
+)" alt="Deep-Learning-for-NLP-LSTM" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="title">Deep-Learning-for-NLP-LSTM</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:55:12.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/了解word2vec/" class="thumbnail">
   
     <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/barneshutplot.jpg
 )" alt="了解word2vec" class="thumbnail-image"></span>
@@ -215,42 +246,8 @@
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/MLearning/">MLearning</a></p>
-              <p class="item-title"><a href="/2016/03/03/word2vec/" class="title">了解word2vec</a></p>
-              <p class="item-date"><time datetime="2016-03-03T02:53:02.000Z" itemprop="datePublished">2016-03-03</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/12/贝叶斯方法/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
-              <p class="item-title"><a href="/2016/01/12/贝叶斯方法/" class="title">贝叶斯方法</a></p>
-              <p class="item-date"><time datetime="2016-01-12T01:16:42.000Z" itemprop="datePublished">2016-01-12</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/11/23/Mechine-Learning-01/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"></p>
-              <p class="item-title"><a href="/2015/11/23/Mechine-Learning-01/" class="title">Mechine-Learning-01</a></p>
-              <p class="item-date"><time datetime="2015-11-23T05:50:17.000Z" itemprop="datePublished">2015-11-23</time></p>
+              <p class="item-title"><a href="/2016/03/15/了解word2vec/" class="title">了解word2vec</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:52:45.000Z" itemprop="datePublished">2016-03-15</time></p>
             </div>
           </li>
         
@@ -297,7 +294,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -306,7 +303,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 14.17px;">C++</a> <a href="/tags/DL/" style="font-size: 10px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 10.83px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 

@@ -69,7 +69,7 @@
   
   <div id="header-sub" class="header-sub header-inner">
     <div class="outer">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
   
@@ -86,11 +86,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        125
+        122
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        48
+        47
         <span>标签</span>
       </div>
     </div>
@@ -124,252 +124,6 @@
           <a href="/archives/2014" class="archive-year">2014</a>
         </div>
     
-    <article id="post-LINUX：文件创建删除" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/04/LINUX：文件创建删除/">LINUX：文件创建删除</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2014/12/04/LINUX：文件创建删除/">
-    <time datetime="2014-12-03T16:21:11.000Z" itemprop="datePublished">2014-12-04</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天一起来复习LINUX文件处理命令，包括目录创建、文件创建、文件删除、文件复制黏贴、文件重命名等</p>
-<p>##目录创建</p>
-<ol>
-<li><p>命令格式</p>
-<p> mkdir [选项] 目录名称</p>
-</li>
-</ol>
-<ol>
-<li><p>命令功能</p>
-<p> 创建一个指定文件名的文件夹或者目录，注意要创建的目录，其父目录必须有些权限，目录不能与同目录下的其他文件或者文件夹同名。</p>
-</li>
-<li><p>命令参数</p>
-<p> -m, –mode   模式，设置文件夹权限；</p>
-<p> -p, –parents 创建全路径的所有目录；</p>
-<p> -v, –verbose 每次创建新目录都显示信息。</p>
-</li>
-<li><p>命令实例</p>
-</li>
-</ol>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir test&#10;$ mkdir -m 777 test&#10;$ mkdir -p test1/test2&#10;$ mkdir -v test</span><br></pre></td></tr></table></figure>
-<p>##新建文件</p>
-<ol>
-<li><p>命令格式</p>
-<p> touch [选项] 文件名</p>
-</li>
-<li><p>命令参数</p>
-<p> -a 更改存储时间</p>
-<p> -c 不建立任何文档</p>
-<p> -d 指定的日期时间，而非现在的时间</p>
-<p> -f 负责BSD版本的兼容问题</p>
-<p> -m 只改update时间</p>
-<p> -r 把指定文档的时间，设成参考文档的时间</p>
-<p> -t 使用指定的日期时间</p>
-</li>
-<li><p>命令实例</p>
-</li>
-</ol>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch log2013.log&#10;$ touch -c log2014.log&#10;&#10;$ touch -r log.log log2013.log&#10;$ touch -t 201211142234.50 log.log</span><br></pre></td></tr></table></figure>
-<p>##复制文件</p>
-<ol>
-<li><p>命令格式</p>
-<p> cp [选项] 源文件 目地</p>
-</li>
-<li><p>命令功能</p>
-<p> 将源文件复制到目标文件，批量复制源文件到目标文件。</p>
-</li>
-<li><p>命令参数</p>
-<p> -a 为每个已经存在的目标文件备份</p>
-<p> -b 在递归处理时复制特殊内容</p>
-<p> -f 如果目标文件不存在，则将其移除并重试</p>
-<p> -i 覆盖前询问</p>
-<p> -l 连接文件而不复制</p>
-<p> -n 不覆盖已有文件</p>
-<p> -L 跟随符号链接</p>
-<p> -P 不跟随符号链接</p>
-</li>
-</ol>
-<p>##移动文件</p>
-<ol>
-<li><p>命令格式</p>
-<p> mv [选项] 源文件 目地</p>
-</li>
-<li><p>命令功能</p>
-<p> 将源文件移动到指定的目标文件</p>
-</li>
-<li><p>命令参数</p>
-<p> -b 若需覆盖文件，覆盖前询问</p>
-<p> -f 强制覆盖文件</p>
-<p> -i 若目标文件存在，先询问</p>
-<p> -u 若目标文件存在，切souce比较新，才会更新</p>
-<p> -t 移动多个文件</p>
-</li>
-</ol>
-<p>##文件重命名<br>常用mv（如上文介绍）和 rename命令，下面介绍rename</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/04/LINUX：文件创建删除/" data-id="cilbp4fe200fz8xuaij6itkp7" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2014/12/04/LINUX：文件创建删除/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LINUX/">LINUX</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-每天复习一个PHP函数（一）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/02/每天复习一个PHP函数（一）/">每天复习一个PHP函数（一）：array_merge()</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2014/12/02/每天复习一个PHP函数（一）/">
-    <time datetime="2014-12-02T13:31:25.000Z" itemprop="datePublished">2014-12-02</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>PHP是一门强大的语言，其优点很多，其中之一就是有很强大的PHP内置函数，减少开发代价。从今天开始，每天复习一个PHP函数，这即是对我自己PHP的检验，也是和读者们交流的一个平台。</p>
-<p>###array_merge($arr1, $arr2, …)<br>或许大家都知道这一函数，就是把多个数组合并成一个新数组的函数，返回合并后的新数组。这样一个解释很通俗易懂，但是这个解释并不能表达出这个函数之中暗藏的玄机。</p>
-<p>array_merge()函数分两种情况</p>
-<ol>
-<li>多个数组的key值都是数字下标时，合并后，所有下标重排；</li>
-<li>多个数组的key值都是字符串下标时，遇到相同key值，后者替换前者；</li>
-<li>混合下标时，分别遵循各自的方式处理，相对位置不变。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/02/每天复习一个PHP函数（一）/" data-id="cilbp4f0b001e8xua946uk8ah" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2014/12/02/每天复习一个PHP函数（一）/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
-    <article id="post-LINUX：文件查看命令" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/02/LINUX：文件查看命令/">LINUX：文件查看命令</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2014/12/02/LINUX：文件查看命令/">
-    <time datetime="2014-12-02T13:30:57.000Z" itemprop="datePublished">2014-12-02</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>linux 有很多个查看文件内容的命令，学习时可能感觉这些命令没有太大用处，但是真正在开发中，就会发现这些命令还是有其用武之地的。在开发时，可别什么文件上来就vim、vi啊，笔者刚刚工作时就犯过这个错误。</p>
-<p>##tail命令<br>这些命令中，tail是我在开发时用到最毒的一个命令，在查看文件时常常用到比如<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail php.log</span><br></pre></td></tr></table></figure></p>
-<p>或者用tail查看log实时信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail <span class="operator">-f</span> php.log</span><br></pre></td></tr></table></figure></p>
-<p>由上面例子可以看出tail命令的用处，tail命令是用来查看文件后几行数据，默认是10行数据。</p>
-<p>-n：后面跟number，表示输出后number行数据（number前若有“+”，则从文件开头数到number行开始打印，“—”，则相反，从文件尾部数number行）；</p>
-<p>-f：实时刷新显示文件最后若干行数据，通常查看日志文件时使用；</p>
-<p>-r：同“-n”一起用，逆序输出。</p>
-<p>以上几种用法我觉得在工作中就够用了，剩下的三个命令用法同tail类似。</p>
-<p>##其他<br>head：从头读取数据；</p>
-<p>cat： 正常读取数据；</p>
-<p>nl：  带行号读取数据。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/02/LINUX：文件查看命令/" data-id="cilbp4fdz00fv8xuae88b7c87" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2014/12/02/LINUX：文件查看命令/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LINUX/">LINUX</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
-    
     <article id="post-初学MemCache" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -400,19 +154,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##MemCache 简介</p>
-<p>MemCache是一套分布式高速缓存系统，是一套开放源代码软件，以BSD licence发布。</p>
+        <h2 id="MemCache__u7B80_u4ECB"><a href="#MemCache__u7B80_u4ECB" class="headerlink" title="MemCache 简介"></a>MemCache 简介</h2><p>MemCache是一套分布式高速缓存系统，是一套开放源代码软件，以BSD licence发布。</p>
 <p>MemCache是一套高性能<strong>分布式</strong>的内存对象缓存系统，通过在<strong>内存</strong>里维护一个巨大的hash表，他能够用来存储各种格式的数据，如图像、视频、文件以及数据库检索等结果。</p>
 <p>简言之，就是我们常说的把常用的数据load到内存里，然后在内存中读取，从而减少I/O操作，大大提高数据读取速度。</p>
 <p>MemCache是danga.com的一个项目，现在很多大型网站都这个缓存项目来构建自己大负载的网站，来分担数据压力。它可以应对任意多个连接，它的工作机制是在内存中开辟一块空间，然后建立一个HashTable。详细了解可以访问[官方网网]<a href="http://www.danga.com/memcached。" target="_blank" rel="external">http://www.danga.com/memcached。</a></p>
-<p>##MemCache安装</p>
-<p>###1. 服务器端安装<br>在服务器上安装MemCache，一般在linux上。</p>
+<h2 id="MemCache_u5B89_u88C5"><a href="#MemCache_u5B89_u88C5" class="headerlink" title="MemCache安装"></a>MemCache安装</h2><p>###1. 服务器端安装<br>在服务器上安装MemCache，一般在linux上。</p>
 <p>###2. 客户端安装<br>在客户端安装MemCache支持,笔者主要关注了php的MemCache扩展安装。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/02/初学MemCache/" data-id="cilbp4f18002d8xua6t9wakpe" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/02/初学MemCache/" data-id="cilszr8mj001wxzuant27d2ej" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/02/初学MemCache/#ds-thread" class="article-comment-link">评论</a>
@@ -460,29 +212,26 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>作为一名开发人员，很惭愧的说，我只会PHP，而且还半吊子。这算是我记的学习笔记了吧。</p>
-<p>##单例模式（简介）<br>单例模式，简言之，就是一个对象只负责一个任务。<br>使用单例模式的好处就是可以节约资源，增大访问速度。比如说数据库的连接，我们只需要实例化一次，不需要每次都去new了，这样极大的降低了资源的耗费。</p>
-<p>##1. 单例类</p>
-<ol>
+<h2 id="u5355_u4F8B_u6A21_u5F0F_uFF08_u7B80_u4ECB_uFF09"><a href="#u5355_u4F8B_u6A21_u5F0F_uFF08_u7B80_u4ECB_uFF09" class="headerlink" title="单例模式（简介）"></a>单例模式（简介）</h2><p>单例模式，简言之，就是一个对象只负责一个任务。<br>使用单例模式的好处就是可以节约资源，增大访问速度。比如说数据库的连接，我们只需要实例化一次，不需要每次都去new了，这样极大的降低了资源的耗费。</p>
+<h2 id="1-__u5355_u4F8B_u7C7B"><a href="#1-__u5355_u4F8B_u7C7B" class="headerlink" title="1. 单例类"></a>1. 单例类</h2><ol>
 <li>构造函数设置为private或者protected，单例类不能在其他类中实例化；</li>
 <li>拥有一个保存类的实例静态成员变量；</li>
 <li>拥有一个公共静态成员方法，一般为getInstance()方法；</li>
 <li>备注：写死__clone()方法，使单例对象不被克隆。</li>
 </ol>
-<p>##2. 为什么使用单例模式</p>
-<ol>
+<h2 id="2-__u4E3A_u4EC0_u4E48_u4F7F_u7528_u5355_u4F8B_u6A21_u5F0F"><a href="#2-__u4E3A_u4EC0_u4E48_u4F7F_u7528_u5355_u4F8B_u6A21_u5F0F" class="headerlink" title="2. 为什么使用单例模式"></a>2. 为什么使用单例模式</h2><ol>
 <li>防止大量的数据库操作，new对象损耗资源；</li>
 <li>可以用单例类控制全局信息；</li>
 <li>方便调试，大量的操作都集中在一个类中。</li>
 </ol>
-<p>##3. 代码参考</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class TestSingleInstance &#123;</span><br><span class="line">    //定义静态实例成员</span><br><span class="line">    private static <span class="variable">$singleton</span>;</span><br><span class="line">    </span><br><span class="line">    //重写构造函数</span><br><span class="line">    private <span class="keyword">function</span> <span class="function"><span class="title">__construct</span></span>() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //重写克隆函数</span><br><span class="line">    private <span class="keyword">function</span> __<span class="built_in">clone</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //获取单例对象方法，返回单例对象</span><br><span class="line">    public static <span class="keyword">function</span> <span class="function"><span class="title">getInstance</span></span>() &#123;</span><br><span class="line">        <span class="keyword">if</span>(self::<span class="variable">$singleton</span> == null) &#123;</span><br><span class="line">            self::<span class="variable">$singleton</span> = new TestSingleInstance();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> self::<span class="variable">$singleton</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //功能方法</span><br><span class="line">    public funtion <span class="function"><span class="title">method</span></span>()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-__u4EE3_u7801_u53C2_u8003"><a href="#3-__u4EE3_u7801_u53C2_u8003" class="headerlink" title="3. 代码参考"></a>3. 代码参考</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class TestSingleInstance &#123;</span><br><span class="line">    //定义静态实例成员</span><br><span class="line">    private static <span class="variable">$singleton</span>;</span><br><span class="line">    </span><br><span class="line">    //重写构造函数</span><br><span class="line">    private <span class="keyword">function</span> <span class="function"><span class="title">__construct</span></span>() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //重写克隆函数</span><br><span class="line">    private <span class="keyword">function</span> __<span class="built_in">clone</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //获取单例对象方法，返回单例对象</span><br><span class="line">    public static <span class="keyword">function</span> <span class="function"><span class="title">getInstance</span></span>() &#123;</span><br><span class="line">        <span class="keyword">if</span>(self::<span class="variable">$singleton</span> == null) &#123;</span><br><span class="line">            self::<span class="variable">$singleton</span> = new TestSingleInstance();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> self::<span class="variable">$singleton</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //功能方法</span><br><span class="line">    public funtion <span class="function"><span class="title">method</span></span>()&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>调用时：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$TestSingle</span> = TestSingleInstance::getInstance()-&gt;method();</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/02/PHP单例模式/" data-id="cilbp4f3000448xua7u9myih5" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/02/PHP单例模式/" data-id="cilszr8nz003pxzuahjlatbzw" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/02/PHP单例模式/#ds-thread" class="article-comment-link">评论</a>
@@ -515,7 +264,42 @@
           <li>
             
             <div class="item-thumbnail">
-              <a href="/2016/03/03/word2vec/" class="thumbnail">
+              <a href="/2016/03/15/Java-Entity/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Java-Entity/" class="title">Java_Entity</a></p>
+              <p class="item-date"><time datetime="2016-03-15T05:02:21.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/rnn-structure.png
+)" alt="Deep-Learning-for-NLP-LSTM" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="title">Deep-Learning-for-NLP-LSTM</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:55:12.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/了解word2vec/" class="thumbnail">
   
     <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/barneshutplot.jpg
 )" alt="了解word2vec" class="thumbnail-image"></span>
@@ -525,42 +309,8 @@
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/MLearning/">MLearning</a></p>
-              <p class="item-title"><a href="/2016/03/03/word2vec/" class="title">了解word2vec</a></p>
-              <p class="item-date"><time datetime="2016-03-03T02:53:02.000Z" itemprop="datePublished">2016-03-03</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/12/贝叶斯方法/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
-              <p class="item-title"><a href="/2016/01/12/贝叶斯方法/" class="title">贝叶斯方法</a></p>
-              <p class="item-date"><time datetime="2016-01-12T01:16:42.000Z" itemprop="datePublished">2016-01-12</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/11/23/Mechine-Learning-01/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"></p>
-              <p class="item-title"><a href="/2015/11/23/Mechine-Learning-01/" class="title">Mechine-Learning-01</a></p>
-              <p class="item-date"><time datetime="2015-11-23T05:50:17.000Z" itemprop="datePublished">2015-11-23</time></p>
+              <p class="item-title"><a href="/2016/03/15/了解word2vec/" class="title">了解word2vec</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:52:45.000Z" itemprop="datePublished">2016-03-15</time></p>
             </div>
           </li>
         
@@ -607,7 +357,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -616,7 +366,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 14.17px;">C++</a> <a href="/tags/DL/" style="font-size: 10px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 10.83px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 

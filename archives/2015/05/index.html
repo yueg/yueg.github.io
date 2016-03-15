@@ -69,7 +69,7 @@
   
   <div id="header-sub" class="header-sub header-inner">
     <div class="outer">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
   
@@ -86,11 +86,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        125
+        122
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        48
+        47
         <span>标签</span>
       </div>
     </div>
@@ -154,8 +154,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###一、设计模式七大原则</p>
-<ol>
+        <h3 id="u4E00_u3001_u8BBE_u8BA1_u6A21_u5F0F_u4E03_u5927_u539F_u5219"><a href="#u4E00_u3001_u8BBE_u8BA1_u6A21_u5F0F_u4E03_u5927_u539F_u5219" class="headerlink" title="一、设计模式七大原则"></a>一、设计模式七大原则</h3><ol>
 <li>单一职责原则：不要存在多于一个导致变更的原因。通俗的说，即一个类只负责一项职责。</li>
 <li>开-闭原则：“对可变性封装”，对扩展开放，对修改闭合。</li>
 <li>里氏替换原则：一个软件实体，如果使用的是一个基类的话，一定适用于其子类，而且根本不能察觉出基类对象和子类对象的区别。<strong>在软件中如果能够使用 基类对象，那么一定能够使用其子类对象。</strong></li>
@@ -164,7 +163,7 @@
 <li>组合/聚合复用原则：要尽量使用组合/聚合，尽量不要使用继承。继承不灵活，紧耦合。</li>
 <li>迪米特法则：一个对象应该对其他对象有尽可能少的了解。“<strong>不要跟陌生人说话</strong>”。</li>
 </ol>
-<p>###二、创建型模式<br><strong>1.简单工厂模式（★★★）</strong></p>
+<h3 id="u4E8C_u3001_u521B_u5EFA_u578B_u6A21_u5F0F"><a href="#u4E8C_u3001_u521B_u5EFA_u578B_u6A21_u5F0F" class="headerlink" title="二、创建型模式"></a>二、创建型模式</h3><p><strong>1.简单工厂模式（★★★）</strong></p>
 <p>定义一个工厂类，它可以根据参数的不同返回不同类的实例，被创建的实例通常都具有共同的父类。因为在简单工厂模式中用于创建实例的方法是<strong>静态</strong>方法，因此简单工厂模式又被称为静态工厂方法。<br><img src="/img/20150531134414.png" alt="简单工厂模式"></p>
 <p><strong>2.工厂方法模式（★★★★★）</strong></p>
 <p>简单工厂模式虽然简单，但存在一个很严重的问题。当系统中需要引入新产品时，由于静态工厂方法传入的参数的不同来创建不同的产品，这必定要修改工厂类的源代码，这将违背<strong>“开闭原则”</strong>，如何实现增加新产品而不影响已有代码？————工厂方法模式。<br><img src="/img/f7246b600c33874419954204510fd9f9d72aa072.jpg" alt="工厂方法模式"><br>优点：良好的封装性，扩展性好，屏蔽产品类，典型的解耦框架。</p>
@@ -179,7 +178,7 @@
 <p>客户请求一个原型<strong>克隆</strong>自身。<br>1）深克隆：成员对象克隆<br>2）浅克隆：成员对象不克隆<br><img src="/img/Prototype.gif" alt="原型模式" title="原型模式"></p>
 <p><strong>7.创建型模式小结</strong></p>
 <p><img src="/img/20150531162007.png" alt="Summary" title="Summary"></p>
-<p>###三、结构型模式<br><strong>1.适配器模式（★★★★）</strong></p>
+<h3 id="u4E09_u3001_u7ED3_u6784_u578B_u6A21_u5F0F"><a href="#u4E09_u3001_u7ED3_u6784_u578B_u6A21_u5F0F" class="headerlink" title="三、结构型模式"></a>三、结构型模式</h3><p><strong>1.适配器模式（★★★★）</strong></p>
 <p>在不改变原有实现的基础上，将原先不兼容的接口转换成兼容的接口。<br><img src="/img/28d72539768137e189e5ce653676844d.png" alt="适配器模式" title="适配器模式"></p>
 <p><strong>2.桥接模式（★★★）</strong></p>
 <p>将抽象部分与与它的实现部分分离，使它们都可以独立地变化。个人理解这个模式很简单，就是把共有的属性单独提取出来当作一个类来管理，实现复用。将乘法变成加法。<br><img src="/img/2012070516130466.png" alt="桥接模式" title="桥接模式"></p>
@@ -194,7 +193,7 @@
 <p><strong>7.代理模式（★★★★）</strong></p>
 <p>增加一层间接层作为代理以控制对这个对象的访问。<br>想象访问某些网站应用的代理服务，经过一层代理，虽然你没有与外部网站有直接访问，但是效果和直接访问是一样的，当然效率可能变慢，代价更高。这个问题想深入探讨，应该找<strong>顾少男</strong>，你们懂的。<br>但是有点是，这个对象的细节没有直接暴露，可以用代理控制对对象的访问（访问网站的例子，账号没钱了，访问不了）。还有一点，也是与适配器模式不同的地方，代理模式提供了一个与Subject的接口相同的接口（访问网站的例子，要访问的网站没有做任何改动，只是控制是否能够访问）。<img src="/img/u=1912997501,2778296443&amp;fm=21&amp;gp=0.jpg" alt="代理模式" title="代理模式"></p>
 <p><strong>8.结构型模式小结</strong><br><img src="/img/20150531204206.png" alt="小结" title="小结"></p>
-<p>###四、行为型模式<br><strong>1.解释器模式（★）</strong></p>
+<h3 id="u56DB_u3001_u884C_u4E3A_u578B_u6A21_u5F0F"><a href="#u56DB_u3001_u884C_u4E3A_u578B_u6A21_u5F0F" class="headerlink" title="四、行为型模式"></a>四、行为型模式</h3><p><strong>1.解释器模式（★）</strong></p>
 <p>给定一个语言，定义它的问他的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子。如加减法的解释器，只要输入一个加法/减法表达式，它就能够计算出表达式结果。<br>输入”1 + 2 - 3 + 4”， 直接输出3（解释器是<strong>任珉</strong>做的）。<br><img src="/img/clip_image008_2.gif" alt="解释器模式" title="解释器模式"></p>
 <p><strong>2.模板方法模式（★★★）</strong></p>
 <p>解决复用问题，如C++的STL库中的模板，各个类的方法很类似，其内部方法有很多函数名称也是相同的。但是其内部实现原理可能是不相同的，比如vector和list都有size()函数，但是vector是有字段记录size值，而list每调用size()都需从头遍历一遍，所以二者的size()函数表面上看起来相同，其实实现的时间复杂度分别为O(1)和O(n)。<br>回到模板方法模式，也是一样，我们能够写一个Template，在其中编码了那些高层的 策略、规则、流程。需要针对具体问题进行精化时，我们通过继承来扩展 这个Template中的一些细节。<br>还有一个例子是数据库中DBMS——Oracle和MS SQL Server，这个课件上有讲，你们可以看课件。<br><img src="/img/u=3115674129,3312655318&amp;fm=21&amp;gp=0.jpg" alt="模板方法模式" title="模板方法模式"></p>
@@ -216,12 +215,12 @@
 <p>允许一个对象在其内部状态改变时改变它的行为。对象看起来似乎修改了它的类。对于客户端而言，无须关心对象状态的转换以及对象所处的当前状态，无论对于何种状态的对象，客户端都可以一致处理。<br><img src="/img/20.State_01.jpg" alt="状态模式" title="状态模式"></p>
 <p><strong>10.访问者模式（★）</strong></p>
 <p>可以在不改变各元素的类的前提下定义作用于这些元素的新操作。<br>想必大家都去过医院，虽然没有人喜欢去医院（爱岗敬业的医务工作人员除外，微笑）。在医生开具处方单（药单）后，很多医院都存在如下处理流程：划价人员拿到处方单之后根据药品名称和数量计算总价，药房工作人员根据药品名称和数量准备药品，我们可以将处方单看成一个药品信息的集合，里面包含了一种或多种不同类型的药品信息，不同类型的工作人员（如划价人员和药房工作人员）在操作同一个药品信息集合时将提供不同的处理方式，而且可能还会增加新类型的工作人员来操作处方单。<br>在软件开发中，有时候我们也需要处理像处方单这样的集合对象结构，在该对象结构中存储了多个不同类型的对象信息，而且对同一对象结构中的元素的操作方式并不唯一，可能需要提供多种不同的处理方式，还有可能增加新的处理方式。在设计模式中，有一种模式可以满足上述要求，其模式动机就是以不同的方式操作复杂对象结构，该模式就是我们本章将要介绍的访问者模式。<br><img src="/img/jklkjljt.jpg" alt="访问者模式" title="访问者模式"></p>
-<p>###五、备注<br>如有不懂可以问<strong>5104首席架构师朱项宁高工</strong>。</p>
+<h3 id="u4E94_u3001_u5907_u6CE8"><a href="#u4E94_u3001_u5907_u6CE8" class="headerlink" title="五、备注"></a>五、备注</h3><p>如有不懂可以问<strong>5104首席架构师朱项宁高工</strong>。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/05/31/设计模式总结/" data-id="cilbp4ez900078xua1281q11g" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/05/31/设计模式总结/" data-id="cilszr8kk0000xzua73om6h8a" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/05/31/设计模式总结/#ds-thread" class="article-comment-link">评论</a>
@@ -250,7 +249,42 @@
           <li>
             
             <div class="item-thumbnail">
-              <a href="/2016/03/03/word2vec/" class="thumbnail">
+              <a href="/2016/03/15/Java-Entity/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Java-Entity/" class="title">Java_Entity</a></p>
+              <p class="item-date"><time datetime="2016-03-15T05:02:21.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/rnn-structure.png
+)" alt="Deep-Learning-for-NLP-LSTM" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="title">Deep-Learning-for-NLP-LSTM</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:55:12.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/了解word2vec/" class="thumbnail">
   
     <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/barneshutplot.jpg
 )" alt="了解word2vec" class="thumbnail-image"></span>
@@ -260,42 +294,8 @@
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/MLearning/">MLearning</a></p>
-              <p class="item-title"><a href="/2016/03/03/word2vec/" class="title">了解word2vec</a></p>
-              <p class="item-date"><time datetime="2016-03-03T02:53:02.000Z" itemprop="datePublished">2016-03-03</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/12/贝叶斯方法/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
-              <p class="item-title"><a href="/2016/01/12/贝叶斯方法/" class="title">贝叶斯方法</a></p>
-              <p class="item-date"><time datetime="2016-01-12T01:16:42.000Z" itemprop="datePublished">2016-01-12</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/11/23/Mechine-Learning-01/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"></p>
-              <p class="item-title"><a href="/2015/11/23/Mechine-Learning-01/" class="title">Mechine-Learning-01</a></p>
-              <p class="item-date"><time datetime="2015-11-23T05:50:17.000Z" itemprop="datePublished">2015-11-23</time></p>
+              <p class="item-title"><a href="/2016/03/15/了解word2vec/" class="title">了解word2vec</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:52:45.000Z" itemprop="datePublished">2016-03-15</time></p>
             </div>
           </li>
         
@@ -342,7 +342,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -351,7 +351,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 14.17px;">C++</a> <a href="/tags/DL/" style="font-size: 10px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 10.83px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 

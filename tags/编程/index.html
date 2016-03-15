@@ -80,11 +80,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        125
+        122
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        48
+        47
         <span>标签</span>
       </div>
     </div>
@@ -148,15 +148,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##1.shift命令<br>shift参数将所有参数变量左移一个位置，使$2变为$1，$3变为$2，…依此类推，但$0不变。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$0</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$1</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$2</span></span><br><span class="line"><span class="built_in">shift</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$0</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$1</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$2</span></span><br></pre></td></tr></table></figure></p>
+        <h2 id="1-shift_u547D_u4EE4"><a href="#1-shift_u547D_u4EE4" class="headerlink" title="1.shift命令"></a>1.shift命令</h2><p>shift参数将所有参数变量左移一个位置，使$2变为$1，$3变为$2，…依此类推，但$0不变。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$0</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$1</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$2</span></span><br><span class="line"><span class="built_in">shift</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$0</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$1</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$2</span></span><br></pre></td></tr></table></figure></p>
 <p>运行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh test.sh <span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br></pre></td></tr></table></figure></p>
 <p>结果：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">test.sh</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line">test.sh</span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure></p>
-<p>##2.输出到文件<br>shell编程输出分为两种，一种直接打印在控制台，另一种输出到文件中（即输出重定向），输出到文件中用“&gt;”字符输出。<br>“&gt;”后面直接跟文本文件名，如果不存在，自动创建；如果已经存在则覆盖；<br>“&gt;&gt;”追加到文件中。<br>输出符后面加”!”，将命令执行结果输出到文件；<br>输出符后面加”&amp;”，将所有显示信息输出到文件；</p>
+<h2 id="2-_u8F93_u51FA_u5230_u6587_u4EF6"><a href="#2-_u8F93_u51FA_u5230_u6587_u4EF6" class="headerlink" title="2.输出到文件"></a>2.输出到文件</h2><p>shell编程输出分为两种，一种直接打印在控制台，另一种输出到文件中（即输出重定向），输出到文件中用“&gt;”字符输出。<br>“&gt;”后面直接跟文本文件名，如果不存在，自动创建；如果已经存在则覆盖；<br>“&gt;&gt;”追加到文件中。<br>输出符后面加”!”，将命令执行结果输出到文件；<br>输出符后面加”&amp;”，将所有显示信息输出到文件；</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/12/Shell积累/" data-id="cilbp4f29003l8xuahzvo9e69" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/12/Shell积累/" data-id="cilszr8ne0036xzuajii98xp2" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/01/12/Shell积累/#ds-thread" class="article-comment-link">评论</a>
@@ -204,18 +204,18 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>练习题网址<a href="http://wenku.baidu.com/link?url=YFtxMvdJ_0zf1FKxJcxzXl-QUCENPpz8NMjcRJfmJ4IKencrL11U8Qw45uriI4HH3B5ANnq1mJsHdmY-mol4Moz-RWZoy9MD5UbPSBjL_hK" target="_blank" rel="external">百度文库</a></p>
-<p>###1.编写一个shell脚本，完成功能<br>1）显示文字“Waiting for a while…”；<br>2）长格式显示当前目录下面的文件和目录，并输出定向到/home/yuegang02/file.txt文件；<br>3）定义一个变量，名为s，初始值“Hello”；<br>4）使该变量输出重定向到/home/yuegang02/string.txt。<br>代码：<br>1）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Waiting for a while ..."</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="1-_u7F16_u5199_u4E00_u4E2Ashell_u811A_u672C_uFF0C_u5B8C_u6210_u529F_u80FD"><a href="#1-_u7F16_u5199_u4E00_u4E2Ashell_u811A_u672C_uFF0C_u5B8C_u6210_u529F_u80FD" class="headerlink" title="1.编写一个shell脚本，完成功能"></a>1.编写一个shell脚本，完成功能</h3><p>1）显示文字“Waiting for a while…”；<br>2）长格式显示当前目录下面的文件和目录，并输出定向到/home/yuegang02/file.txt文件；<br>3）定义一个变量，名为s，初始值“Hello”；<br>4）使该变量输出重定向到/home/yuegang02/string.txt。<br>代码：<br>1）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Waiting for a while ..."</span></span><br></pre></td></tr></table></figure></p>
 <p>2)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">ls -al &gt; /home/yuegang02/file.txt</span><br></pre></td></tr></table></figure></p>
 <p>3)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">s=Hello</span><br></pre></td></tr></table></figure></p>
 <p>4)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">s=Hello</span><br><span class="line"><span class="built_in">echo</span> s &gt; /home/yuegang02/string.txt</span><br></pre></td></tr></table></figure></p>
-<p>###2.批量复制操作<br>编写一个shell脚本，它把第二个位置参数及其以后的各个参数指定的文件复制到第一个位置参数指定的目录中。<br>代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/bin/bash</span></span><br><span class="line">dir=<span class="variable">$1</span></span><br><span class="line"><span class="keyword">while</span> [ <span class="variable">$2</span> ]</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    cp <span class="variable">$dir</span> <span class="variable">$2</span></span><br><span class="line">    <span class="built_in">shift</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="2-_u6279_u91CF_u590D_u5236_u64CD_u4F5C"><a href="#2-_u6279_u91CF_u590D_u5236_u64CD_u4F5C" class="headerlink" title="2.批量复制操作"></a>2.批量复制操作</h3><p>编写一个shell脚本，它把第二个位置参数及其以后的各个参数指定的文件复制到第一个位置参数指定的目录中。<br>代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/bin/bash</span></span><br><span class="line">dir=<span class="variable">$1</span></span><br><span class="line"><span class="keyword">while</span> [ <span class="variable">$2</span> ]</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    cp <span class="variable">$dir</span> <span class="variable">$2</span></span><br><span class="line">    <span class="built_in">shift</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
 <p>注意：<a href="http://yueg.gitcafe.com/2015/01/12/Shell%E7%A7%AF%E7%B4%AF/" target="_blank" rel="external">shift用法</a></p>
-<p>###3.移动文件，并显示目录内容<br>编写一个shell脚本，利用for循环将当前目录下的.c文件移动到指定的目录，并按文件大小显示出移动后指定的目录的内容。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/bin/bash</span></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> `ls *.c`</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> [ ! <span class="operator">-d</span> ./file_txt ] ;</span><br><span class="line">    <span class="keyword">then</span></span><br><span class="line">        mkdir ./file_txt</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    cp <span class="variable">$&#123;PWD&#125;</span>/<span class="variable">$name</span> ./file_txt</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="3-_u79FB_u52A8_u6587_u4EF6_uFF0C_u5E76_u663E_u793A_u76EE_u5F55_u5185_u5BB9"><a href="#3-_u79FB_u52A8_u6587_u4EF6_uFF0C_u5E76_u663E_u793A_u76EE_u5F55_u5185_u5BB9" class="headerlink" title="3.移动文件，并显示目录内容"></a>3.移动文件，并显示目录内容</h3><p>编写一个shell脚本，利用for循环将当前目录下的.c文件移动到指定的目录，并按文件大小显示出移动后指定的目录的内容。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#/bin/bash</span></span><br><span class="line"><span class="keyword">for</span> name <span class="keyword">in</span> `ls *.c`</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">    <span class="keyword">if</span> [ ! <span class="operator">-d</span> ./file_txt ] ;</span><br><span class="line">    <span class="keyword">then</span></span><br><span class="line">        mkdir ./file_txt</span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">    cp <span class="variable">$&#123;PWD&#125;</span>/<span class="variable">$name</span> ./file_txt</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/12/Shell学习（练习题解析）/" data-id="cilbp4f2j003r8xuah2upo6ey" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/12/Shell学习（练习题解析）/" data-id="cilszr8nh003cxzua473x8u8q" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/01/12/Shell学习（练习题解析）/#ds-thread" class="article-comment-link">评论</a>
@@ -263,17 +263,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近闲来无事拿起了一本shell编程的书，翻了翻感觉应该是不会太难，果断地安装了虚拟机，安装了linux系统，开始了shell脚本语言的学习。</p>
-<p>##简介<br>shell脚本与Windows/Dos下的批处理相似，也就是各类命令预先放入到一个文件中，方便一次性执行一个程序文件，但是他比Windows下的批处理更强大，比用其他程序编程的效率更高，因为他使用的是linux/unix命令。</p>
-<p>##基本语法</p>
-<p>###1.输出<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> Hello,World!</span><br><span class="line"><span class="built_in">printf</span> Hello,World!</span><br></pre></td></tr></table></figure></p>
-<p>###2.赋值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">name=yueg</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$name</span></span><br><span class="line">x=<span class="number">1</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$x</span></span><br><span class="line">names=(yueg jingjing)</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$names</span></span><br><span class="line">names[<span class="number">0</span>]=yuegang</span><br><span class="line">names[<span class="number">1</span>]=jingjing</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$names</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h2><p>shell脚本与Windows/Dos下的批处理相似，也就是各类命令预先放入到一个文件中，方便一次性执行一个程序文件，但是他比Windows下的批处理更强大，比用其他程序编程的效率更高，因为他使用的是linux/unix命令。</p>
+<h2 id="u57FA_u672C_u8BED_u6CD5"><a href="#u57FA_u672C_u8BED_u6CD5" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="1-_u8F93_u51FA"><a href="#1-_u8F93_u51FA" class="headerlink" title="1.输出"></a>1.输出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> Hello,World!</span><br><span class="line"><span class="built_in">printf</span> Hello,World!</span><br></pre></td></tr></table></figure>
+<h3 id="2-_u8D4B_u503C"><a href="#2-_u8D4B_u503C" class="headerlink" title="2.赋值"></a>2.赋值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">name=yueg</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$name</span></span><br><span class="line">x=<span class="number">1</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$x</span></span><br><span class="line">names=(yueg jingjing)</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$names</span></span><br><span class="line">names[<span class="number">0</span>]=yuegang</span><br><span class="line">names[<span class="number">1</span>]=jingjing</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$names</span></span><br></pre></td></tr></table></figure>
 <p>注意：</p>
 <ol>
 <li>以上是多种赋值方式的例子，特别说明的是赋值的“=”前后不能留有空格，否则系统会识别为多个错误命令；</li>
 <li>给数组赋值可以用（）的形式将每个分量用空格隔开，还可以单独分别赋值。</li>
 </ol>
-<p>###3.控制流（条件判断）</p>
-<ol>
+<h3 id="3-_u63A7_u5236_u6D41_uFF08_u6761_u4EF6_u5224_u65AD_uFF09"><a href="#3-_u63A7_u5236_u6D41_uFF08_u6761_u4EF6_u5224_u65AD_uFF09" class="headerlink" title="3.控制流（条件判断）"></a>3.控制流（条件判断）</h3><ol>
 <li>if语句</li>
 <li>case语句</li>
 </ol>
@@ -294,8 +292,7 @@
 <li>case语句中pattern可以用通配符“*”进行模糊匹配；</li>
 <li>注意每次匹配后的语法要求要有“;;”两个分号。</li>
 </ol>
-<p>###4.循环</p>
-<ol>
+<h3 id="4-_u5FAA_u73AF"><a href="#4-_u5FAA_u73AF" class="headerlink" title="4.循环"></a>4.循环</h3><ol>
 <li>while</li>
 <li>until</li>
 <li>for</li>
@@ -306,7 +303,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/11/Shell脚本基本语法/" data-id="cilbp4f24003g8xuakwfbqsqe" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/11/Shell脚本基本语法/" data-id="cilszr8nb0031xzua411iqqmw" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/01/11/Shell脚本基本语法/#ds-thread" class="article-comment-link">评论</a>
@@ -328,65 +325,6 @@
           <i class="fa fa-calendar"></i>
           <a href="/archives/2014" class="archive-year">2014</a>
         </div>
-    
-    <article id="post-每天复习一个PHP函数（一）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/02/每天复习一个PHP函数（一）/">每天复习一个PHP函数（一）：array_merge()</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2014/12/02/每天复习一个PHP函数（一）/">
-    <time datetime="2014-12-02T13:31:25.000Z" itemprop="datePublished">2014-12-02</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>PHP是一门强大的语言，其优点很多，其中之一就是有很强大的PHP内置函数，减少开发代价。从今天开始，每天复习一个PHP函数，这即是对我自己PHP的检验，也是和读者们交流的一个平台。</p>
-<p>###array_merge($arr1, $arr2, …)<br>或许大家都知道这一函数，就是把多个数组合并成一个新数组的函数，返回合并后的新数组。这样一个解释很通俗易懂，但是这个解释并不能表达出这个函数之中暗藏的玄机。</p>
-<p>array_merge()函数分两种情况</p>
-<ol>
-<li>多个数组的key值都是数字下标时，合并后，所有下标重排；</li>
-<li>多个数组的key值都是字符串下标时，遇到相同key值，后者替换前者；</li>
-<li>混合下标时，分别遵循各自的方式处理，相对位置不变。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/02/每天复习一个PHP函数（一）/" data-id="cilbp4f0b001e8xua946uk8ah" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2014/12/02/每天复习一个PHP函数（一）/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    
     
     <article id="post-初学MemCache" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -418,19 +356,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##MemCache 简介</p>
-<p>MemCache是一套分布式高速缓存系统，是一套开放源代码软件，以BSD licence发布。</p>
+        <h2 id="MemCache__u7B80_u4ECB"><a href="#MemCache__u7B80_u4ECB" class="headerlink" title="MemCache 简介"></a>MemCache 简介</h2><p>MemCache是一套分布式高速缓存系统，是一套开放源代码软件，以BSD licence发布。</p>
 <p>MemCache是一套高性能<strong>分布式</strong>的内存对象缓存系统，通过在<strong>内存</strong>里维护一个巨大的hash表，他能够用来存储各种格式的数据，如图像、视频、文件以及数据库检索等结果。</p>
 <p>简言之，就是我们常说的把常用的数据load到内存里，然后在内存中读取，从而减少I/O操作，大大提高数据读取速度。</p>
 <p>MemCache是danga.com的一个项目，现在很多大型网站都这个缓存项目来构建自己大负载的网站，来分担数据压力。它可以应对任意多个连接，它的工作机制是在内存中开辟一块空间，然后建立一个HashTable。详细了解可以访问[官方网网]<a href="http://www.danga.com/memcached。" target="_blank" rel="external">http://www.danga.com/memcached。</a></p>
-<p>##MemCache安装</p>
-<p>###1. 服务器端安装<br>在服务器上安装MemCache，一般在linux上。</p>
+<h2 id="MemCache_u5B89_u88C5"><a href="#MemCache_u5B89_u88C5" class="headerlink" title="MemCache安装"></a>MemCache安装</h2><p>###1. 服务器端安装<br>在服务器上安装MemCache，一般在linux上。</p>
 <p>###2. 客户端安装<br>在客户端安装MemCache支持,笔者主要关注了php的MemCache扩展安装。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/02/初学MemCache/" data-id="cilbp4f18002d8xua6t9wakpe" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/02/初学MemCache/" data-id="cilszr8mj001wxzuant27d2ej" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/02/初学MemCache/#ds-thread" class="article-comment-link">评论</a>
@@ -459,7 +395,42 @@
           <li>
             
             <div class="item-thumbnail">
-              <a href="/2016/03/03/word2vec/" class="thumbnail">
+              <a href="/2016/03/15/Java-Entity/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Java-Entity/" class="title">Java_Entity</a></p>
+              <p class="item-date"><time datetime="2016-03-15T05:02:21.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/rnn-structure.png
+)" alt="Deep-Learning-for-NLP-LSTM" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/03/15/Deep-Learning-for-NLP-LSTM/" class="title">Deep-Learning-for-NLP-LSTM</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:55:12.000Z" itemprop="datePublished">2016-03-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/15/了解word2vec/" class="thumbnail">
   
     <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/barneshutplot.jpg
 )" alt="了解word2vec" class="thumbnail-image"></span>
@@ -469,42 +440,8 @@
             
             <div class="item-inner">
               <p class="item-category"><a class="article-category-link" href="/categories/MLearning/">MLearning</a></p>
-              <p class="item-title"><a href="/2016/03/03/word2vec/" class="title">了解word2vec</a></p>
-              <p class="item-date"><time datetime="2016-03-03T02:53:02.000Z" itemprop="datePublished">2016-03-03</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/01/12/贝叶斯方法/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/Algorithm/">Algorithm</a></p>
-              <p class="item-title"><a href="/2016/01/12/贝叶斯方法/" class="title">贝叶斯方法</a></p>
-              <p class="item-date"><time datetime="2016-01-12T01:16:42.000Z" itemprop="datePublished">2016-01-12</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/11/23/Mechine-Learning-01/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"></p>
-              <p class="item-title"><a href="/2015/11/23/Mechine-Learning-01/" class="title">Mechine-Learning-01</a></p>
-              <p class="item-date"><time datetime="2015-11-23T05:50:17.000Z" itemprop="datePublished">2015-11-23</time></p>
+              <p class="item-title"><a href="/2016/03/15/了解word2vec/" class="title">了解word2vec</a></p>
+              <p class="item-date"><time datetime="2016-03-15T04:52:45.000Z" itemprop="datePublished">2016-03-15</time></p>
             </div>
           </li>
         
@@ -551,7 +488,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -560,7 +497,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 14.17px;">C++</a> <a href="/tags/DL/" style="font-size: 10px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/回溯/" style="font-size: 10px;">回溯</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 13.33px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/贝叶斯/" style="font-size: 10px;">贝叶斯</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 10.83px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 
