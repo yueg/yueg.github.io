@@ -146,11 +146,12 @@
 <p>首先，我们将其看做汉字线性序列，然后我们定义标签集合：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LabelSet=&#123;BA, MA, EA, BO, MO, EO, BP, MP, EP, O&#125;</span><br></pre></td></tr></table></figure></p>
 <p>其中，BA代表这个汉字是地址首字，MA代表这个汉字是地址中间字，EA代表这个汉字是地址的尾字；BO代表这个汉字是机构名的首字，MO代表这个汉字是机构名称的中间字，EO代表这个汉字是机构名的尾字；BP代表这个汉字是人名首字，MP代表这个汉字是人名中间字，EP代表这个汉字是人名尾字，而O代表这个汉字不属于命名实体。<br>有了输入序列和标签集合，我们只需要通过已有语料训练出ML模型，对于新的文本序列可以得到对应的标签，再通过后处理，把人名，地名，机构名都明确标记出来。如下图所示：<br><img src="http://7xptv4.com1.z0.glb.clouddn.com/20160223190831827.jpg" alt="NER"></p>
 <h3 id="RNN_u89E3_u51B3_u5E8F_u5217_u6807_u6CE8_u95EE_u9898"><a href="#RNN_u89E3_u51B3_u5E8F_u5217_u6807_u6CE8_u95EE_u9898" class="headerlink" title="RNN解决序列标注问题"></a>RNN解决序列标注问题</h3><p>首先用RNN解决序列标注问题，然后可以通过LSTM或者GRU来代替RNN中的隐藏单元，因为LSTM或GRU对于解决长距离依赖问题明显优于RNN本身。如果训练数据规模不大的情况下，很可能出现过拟合现象，所以使用LSTM的时候记得用上DropOut以及L1/L2正则来避免过拟合。至于GRU和LSTM两者相比，到底哪个更好目前并无定论，倾向于认为两者性能差不多，但是GRU是LSTM的简化模型，所以同样结构的神经网络其参数要少，在训练数据不太大情况下，优先考虑使用GRU。</p>
+<h3 id="u53C2_u8003_u6587_u732E"><a href="#u53C2_u8003_u6587_u732E" class="headerlink" title="参考文献"></a>参考文献</h3><p><a href="http://blog.csdn.net/malefactor/article/details/50725480" target="_blank" rel="external">使用RNN解决NLP中序列标注问题的通用优化思路</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2016/03/23/RNN-for-Sequence-Labeling/" data-id="cim4ii9h9003pszuazf2zy2b7" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2016/03/23/RNN-for-Sequence-Labeling/" data-id="cim4imive003ptruav0qk6i3h" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2016/03/23/RNN-for-Sequence-Labeling/#ds-thread" class="article-comment-link">评论</a>
@@ -201,7 +202,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2016/03/15/Java-Entity/" data-id="cim4ii9sw00ftszuac5vvmirw" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2016/03/15/Java-Entity/" data-id="cim4imj7400fttruad52yl8sa" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2016/03/15/Java-Entity/#ds-thread" class="article-comment-link">评论</a>
@@ -252,7 +253,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2016/03/15/Deep-Learning-for-NLP-LSTM/" data-id="cim4ii9t500g4szuawar9d7nd" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2016/03/15/Deep-Learning-for-NLP-LSTM/" data-id="cim4imj7f00g4truap9hfl9wv" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2016/03/15/Deep-Learning-for-NLP-LSTM/#ds-thread" class="article-comment-link">评论</a>
@@ -310,7 +311,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2016/03/15/了解word2vec/" data-id="cim4ii9fr0022szuaezwizqgb" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2016/03/15/了解word2vec/" data-id="cim4imitu0022truanldbff3x" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2016/03/15/了解word2vec/#ds-thread" class="article-comment-link">评论</a>
@@ -377,7 +378,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/06/07/百度面试题总结—03（操作系统）/" data-id="cim4ii9e7000fszua5bck2ok2" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/06/07/百度面试题总结—03（操作系统）/" data-id="cim4imis7000ftruaih1w8oz5" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/06/07/百度面试题总结—03（操作系统）/#ds-thread" class="article-comment-link">评论</a>
@@ -446,7 +447,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/06/07/百度面试题总结—02（语言知识）/" data-id="cim4ii9ec000mszuah95fh1vx" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/06/07/百度面试题总结—02（语言知识）/" data-id="cim4imisc000mtruaeb73g84n" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/06/07/百度面试题总结—02（语言知识）/#ds-thread" class="article-comment-link">评论</a>
