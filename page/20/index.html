@@ -80,7 +80,7 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        123
+        125
         <span>文章</span>
       </div>
       <div class="article-info-block">
@@ -108,6 +108,132 @@
   </div>
 </aside>
       <section id="main">
+  
+    <article id="post-数据库SQL语句——alter用法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/29/数据库SQL语句——alter用法/">SQL语句——alter用法</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2014/12/29/数据库SQL语句——alter用法/">
+    <time datetime="2014-12-29T07:43:56.000Z" itemprop="datePublished">2014-12-29</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/数据库/">数据库</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>文章来自<br><a href="http://www.cnblogs.com/perfy/archive/2013/04/09/3009528.html" target="_blank" rel="external">SQL语句中ALTER的用法</a></p>
+<p>The ALTER TABLE command allows you to add, modify, or drop a column from a existing table.</p>
+<h2 id="Adding_column_28s_29_to_a_table"><a href="#Adding_column_28s_29_to_a_table" class="headerlink" title="Adding column(s) to a table"></a>Adding column(s) to a table</h2><h3 id="Syntax__231"><a href="#Syntax__231" class="headerlink" title="Syntax #1"></a>Syntax #1</h3><p>To add a column to an existing table, the ALTER TABLE syntax is:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE table_name ADD column_name column_defination;</span><br></pre></td></tr></table></figure></p>
+<p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE supplier ADD supplier_name varchar(50);</span><br></pre></td></tr></table></figure></p>
+<p>This will add a column called supplier_name to the supplier table.</p>
+<h3 id="Syntax__232"><a href="#Syntax__232" class="headerlink" title="Syntax #2"></a>Syntax #2</h3><p>To add multiple columns to an existing table, the ALTER TABLE syntax is:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE table_name ADD(&#10;    column_1 column_1-defination,&#10;    column_2 column_2-defination&#10;);</span><br></pre></td></tr></table></figure></p>
+<p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE supplier ADD(&#10;    supplier_name varchar(50),&#10;    city varchar(50)&#10;);</span><br></pre></td></tr></table></figure></p>
+<p>This will add two columns(supplier_name, city) to the supplier table.</p>
+<h2 id="Modifying_column_28s_29_in_a_table"><a href="#Modifying_column_28s_29_in_a_table" class="headerlink" title="Modifying column(s) in a table"></a>Modifying column(s) in a table</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2014/12/29/数据库SQL语句——alter用法/" data-id="cin18szvw001m9sua5v7kicg6" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2014/12/29/数据库SQL语句——alter用法/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SQL/">SQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-数据库概念——数据模型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/28/数据库概念——数据模型/">数据库概念——数据模型</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2014/12/28/数据库概念——数据模型/">
+    <time datetime="2014-12-28T12:01:18.000Z" itemprop="datePublished">2014-12-28</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/数据库/">数据库</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="u6570_u636E_u6A21_u578B_u7684_u6982_u5FF5"><a href="#u6570_u636E_u6A21_u578B_u7684_u6982_u5FF5" class="headerlink" title="数据模型的概念"></a>数据模型的概念</h2><p>在数据库中用数据模型这个工具来抽象、表示和处理现实世界中的数据和信息。<br>通俗的讲数据模型就是<strong>现实世界的模拟</strong>。<br>数据模型应满足如下要求：</p>
+<ol>
+<li>能比较真实的模拟现实世界；</li>
+<li>容易为人所理解；</li>
+<li>便于在计算机上实现。</li>
+</ol>
+<h2 id="u6570_u636E_u6A21_u578B_u7684_u5206_u7C7B"><a href="#u6570_u636E_u6A21_u578B_u7684_u5206_u7C7B" class="headerlink" title="数据模型的分类"></a>数据模型的分类</h2><h3 id="1-_u6982_u5FF5_u6A21_u578B"><a href="#1-_u6982_u5FF5_u6A21_u578B" class="headerlink" title="1.概念模型"></a>1.概念模型</h3><p>概念模型也称为信息模型，是按用户的观点来对数据和信息建模，用于对数据库的设计。</p>
+<h3 id="2-_u903B_u8F91_u6A21_u578B"><a href="#2-_u903B_u8F91_u6A21_u578B" class="headerlink" title="2.逻辑模型"></a>2.逻辑模型</h3><p>逻辑模型主要包括网状模型、层次模型、关系模型、面向对象模型等，按计算机系统的观点对数据建模，用于DBMS实现。</p>
+<h3 id="3-_u7269_u7406_u6A21_u578B"><a href="#3-_u7269_u7406_u6A21_u578B" class="headerlink" title="3.物理模型"></a>3.物理模型</h3><p>物理模型是对数据最底层的抽象，描述数据在系统内部的表示方法和存取方法，在磁盘盒磁带上的存储方式和存取方式。</p>
+<h2 id="u5BA2_u89C2_u4E16_u754C_u4E2D_u7684_u62BD_u8C61_u8FC7_u7A0B"><a href="#u5BA2_u89C2_u4E16_u754C_u4E2D_u7684_u62BD_u8C61_u8FC7_u7A0B" class="headerlink" title="客观世界中的抽象过程"></a>客观世界中的抽象过程</h2><ol>
+<li>现实世界到概念模型</li>
+<li>概念模型到逻辑模型</li>
+</ol>
+<h2 id="u6570_u636E_u6A21_u578B_u7684_u7EC4_u6210_u6210_u5206"><a href="#u6570_u636E_u6A21_u578B_u7684_u7EC4_u6210_u6210_u5206" class="headerlink" title="数据模型的组成成分"></a>数据模型的组成成分</h2><ol>
+<li>数据结构：描述数据库的组成对象，以及对象之间的联系（建表、DDL），是对<strong>系统静态特性</strong>的描述；</li>
+<li>数据操作：对数据库中各种对象的实例允许执行的操作及有关的操作规则（DML），是对<strong>系统动态特性</strong>的描述；</li>
+<li>完整性约束：一套完整性规则的集合。</li>
+</ol>
+<h2 id="u5173_u7CFB_u6570_u636E_u6A21_u578B_u7684_u4F18_u7F3A_u70B9"><a href="#u5173_u7CFB_u6570_u636E_u6A21_u578B_u7684_u4F18_u7F3A_u70B9" class="headerlink" title="关系数据模型的优缺点"></a>关系数据模型的优缺点</h2><h3 id="1-_u4F18_u70B9"><a href="#1-_u4F18_u70B9" class="headerlink" title="1.优点"></a>1.优点</h3><p>建立在严格的数据概念的基础上；概念单一；关系模型的存取路径对用户透明。</p>
+<h3 id="2-_u7F3A_u70B9"><a href="#2-_u7F3A_u70B9" class="headerlink" title="2.缺点"></a>2.缺点</h3><p>存取路径对用户透明导致了查询效率往往不如非关系数据模型；<br>为提高性能，必须对查询优化，增加了开发DBMS的难度。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2014/12/28/数据库概念——数据模型/" data-id="cin18szvi00179sua0vehoffb" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2014/12/28/数据库概念——数据模型/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模型/">模型</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-数据库基本概念" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -178,7 +304,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/28/数据库基本概念/" data-id="cim4imit6001htruab4m5c9a0" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/28/数据库基本概念/" data-id="cin18szvr001h9sualcezciw3" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/28/数据库基本概念/#ds-thread" class="article-comment-link">评论</a>
@@ -258,7 +384,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/27/数据库并发控制/" data-id="cim4imit0001ctruar8644g3j" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/27/数据库并发控制/" data-id="cin18szvo001c9suayw05g6s7" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/27/数据库并发控制/#ds-thread" class="article-comment-link">评论</a>
@@ -311,7 +437,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/27/算法分析（动态规划）/" data-id="cim4imis2000atruaeh5ygtua" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/27/算法分析（动态规划）/" data-id="cin18szuo000a9suamin0ovdy" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/27/算法分析（动态规划）/#ds-thread" class="article-comment-link">评论</a>
@@ -395,185 +521,13 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/26/浅谈数据库优化/" data-id="cim4imisk000wtrua1uhs6bq0" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/26/浅谈数据库优化/" data-id="cin18szv7000w9suarx2tr0iq" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/26/浅谈数据库优化/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/优化/">优化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库/">数据库</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-C-vector" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/18/C-vector/">C++ vector</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2014/12/18/C-vector/">
-    <time datetime="2014-12-18T03:46:23.000Z" itemprop="datePublished">2014-12-18</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>大学学过C++,然而学过之后其实没有真正掌握C++这一语言。下面一起学习一下vector这一数据结构。</p>
-<h3 id="1-__u57FA_u672C_u64CD_u4F5C"><a href="#1-__u57FA_u672C_u64CD_u4F5C" class="headerlink" title="1. 基本操作"></a>1. 基本操作</h3><p>（1） 头文件#include<vector><br>（2） 创建vector对象：vector<int> vec;<br>（3） 尾部插入数字：vec.push_back(a);<br>（4） 使用下标访问元素：cout&lt;<vec[0]<<endl; 下标是从0开始的；="" （5）="" 使用迭代器访问元素="" <figure="" class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;int&gt;::iterator it;</span><br><span class="line"><span class="keyword">for</span>(it = vec.begin();it != vec.end(); it++)</span><br><span class="line">    cout &lt;&lt; *it &lt;&lt; endl;</span><br></pre></td></tr></table></vec[0]<<endl;></int></vector></p>
-<p>（6） 插入元素：vec.insert(vec.begin()+i, a);<br>（7） 删除元素：vec.erase(vec.begin()+2);<br>     vec.erase(vec.begin()+i, vec.end()+j);<br>（8） 向量大小访问：vec.size();<br>（9） 清空：vec.clear();</p>
-<h3 id="2-__u4ECB_u7ECD"><a href="#2-__u4ECB_u7ECD" class="headerlink" title="2. 介绍"></a>2. 介绍</h3><p>vector的元素不仅可以使int, double, string，还可以是结构体，但是要注意：结构体要定义是全局的，否则会出错。下面是一段简短的程序代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> rect</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">int</span> id;</span><br><span class="line">	<span class="keyword">int</span> length;</span><br><span class="line">	<span class="keyword">int</span> width;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">bool</span> <span class="keyword">operator</span>&lt; (<span class="keyword">const</span> rect &amp;a) <span class="keyword">const</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(id != a.id)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> id &lt; a.id;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(length != a.length)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> length &lt; a.length;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> width &lt; a.width;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;Rect;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;Rect&gt; vec;</span><br><span class="line">	Rect rect;</span><br><span class="line">	rect.id     = <span class="number">1</span>;</span><br><span class="line">	rect.length = <span class="number">2</span>;</span><br><span class="line">	rect.width  = <span class="number">3</span>;</span><br><span class="line">	vec.push_back(rect);</span><br><span class="line">	<span class="built_in">vector</span>&lt;Rect&gt;::iterator it = vec.begin();</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; (*it).id &lt;&lt; <span class="string">' '</span> &lt;&lt; (*it).length &lt;&lt; <span class="string">' '</span> &lt;&lt; (*it).width &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/18/C-vector/" data-id="cim4imj7i00g9trua3y2von4y" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2014/12/18/C-vector/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vector/">vector</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-LINUX：文件创建删除" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/04/LINUX：文件创建删除/">LINUX：文件创建删除</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2014/12/04/LINUX：文件创建删除/">
-    <time datetime="2014-12-03T16:21:11.000Z" itemprop="datePublished">2014-12-04</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天一起来复习LINUX文件处理命令，包括目录创建、文件创建、文件删除、文件复制黏贴、文件重命名等</p>
-<h2 id="u76EE_u5F55_u521B_u5EFA"><a href="#u76EE_u5F55_u521B_u5EFA" class="headerlink" title="目录创建"></a>目录创建</h2><ol>
-<li><p>命令格式</p>
-<p> mkdir [选项] 目录名称</p>
-</li>
-</ol>
-<ol>
-<li><p>命令功能</p>
-<p> 创建一个指定文件名的文件夹或者目录，注意要创建的目录，其父目录必须有些权限，目录不能与同目录下的其他文件或者文件夹同名。</p>
-</li>
-<li><p>命令参数</p>
-<p> -m, –mode   模式，设置文件夹权限；</p>
-<p> -p, –parents 创建全路径的所有目录；</p>
-<p> -v, –verbose 每次创建新目录都显示信息。</p>
-</li>
-<li><p>命令实例</p>
-</li>
-</ol>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir test&#10;$ mkdir -m 777 test&#10;$ mkdir -p test1/test2&#10;$ mkdir -v test</span><br></pre></td></tr></table></figure>
-<h2 id="u65B0_u5EFA_u6587_u4EF6"><a href="#u65B0_u5EFA_u6587_u4EF6" class="headerlink" title="新建文件"></a>新建文件</h2><ol>
-<li><p>命令格式</p>
-<p> touch [选项] 文件名</p>
-</li>
-<li><p>命令参数</p>
-<p> -a 更改存储时间</p>
-<p> -c 不建立任何文档</p>
-<p> -d 指定的日期时间，而非现在的时间</p>
-<p> -f 负责BSD版本的兼容问题</p>
-<p> -m 只改update时间</p>
-<p> -r 把指定文档的时间，设成参考文档的时间</p>
-<p> -t 使用指定的日期时间</p>
-</li>
-<li><p>命令实例</p>
-</li>
-</ol>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch log2013.log&#10;$ touch -c log2014.log&#10;&#10;$ touch -r log.log log2013.log&#10;$ touch -t 201211142234.50 log.log</span><br></pre></td></tr></table></figure>
-<h2 id="u590D_u5236_u6587_u4EF6"><a href="#u590D_u5236_u6587_u4EF6" class="headerlink" title="复制文件"></a>复制文件</h2><ol>
-<li><p>命令格式</p>
-<p> cp [选项] 源文件 目地</p>
-</li>
-<li><p>命令功能</p>
-<p> 将源文件复制到目标文件，批量复制源文件到目标文件。</p>
-</li>
-<li><p>命令参数</p>
-<p> -a 为每个已经存在的目标文件备份</p>
-<p> -b 在递归处理时复制特殊内容</p>
-<p> -f 如果目标文件不存在，则将其移除并重试</p>
-<p> -i 覆盖前询问</p>
-<p> -l 连接文件而不复制</p>
-<p> -n 不覆盖已有文件</p>
-<p> -L 跟随符号链接</p>
-<p> -P 不跟随符号链接</p>
-</li>
-</ol>
-<h2 id="u79FB_u52A8_u6587_u4EF6"><a href="#u79FB_u52A8_u6587_u4EF6" class="headerlink" title="移动文件"></a>移动文件</h2><ol>
-<li><p>命令格式</p>
-<p> mv [选项] 源文件 目地</p>
-</li>
-<li><p>命令功能</p>
-<p> 将源文件移动到指定的目标文件</p>
-</li>
-<li><p>命令参数</p>
-<p> -b 若需覆盖文件，覆盖前询问</p>
-<p> -f 强制覆盖文件</p>
-<p> -i 若目标文件存在，先询问</p>
-<p> -u 若目标文件存在，切souce比较新，才会更新</p>
-<p> -t 移动多个文件</p>
-</li>
-</ol>
-<h2 id="u6587_u4EF6_u91CD_u547D_u540D"><a href="#u6587_u4EF6_u91CD_u547D_u540D" class="headerlink" title="文件重命名"></a>文件重命名</h2><p>常用mv（如上文介绍）和 rename命令，下面介绍rename</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/04/LINUX：文件创建删除/" data-id="cim4imj7200fqtrua33zu1l0z" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2014/12/04/LINUX：文件创建删除/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LINUX/">LINUX</a></li></ul>
 
     </footer>
   </div>
@@ -596,6 +550,41 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/04/15/Java参数传递/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/Java.jpg
+)" alt="Java参数传递" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/04/15/Java参数传递/" class="title">Java参数传递</a></p>
+              <p class="item-date"><time datetime="2016-04-15T03:22:42.000Z" itemprop="datePublished">2016-04-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/23/LSTM-Neural-Networks-for-Chinese-Word-Segmentation/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/NLP/">NLP</a></p>
+              <p class="item-title"><a href="/2016/03/23/LSTM-Neural-Networks-for-Chinese-Word-Segmentation/" class="title">LSTM Neural Networks for Chinese Word Segmentation</a></p>
+              <p class="item-date"><time datetime="2016-03-23T07:32:21.000Z" itemprop="datePublished">2016-03-23</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -650,41 +639,6 @@
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/03/15/了解word2vec/" class="thumbnail">
-  
-    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/barneshutplot.jpg
-)" alt="了解word2vec" class="thumbnail-image"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/MLearning/">MLearning</a></p>
-              <p class="item-title"><a href="/2016/03/15/了解word2vec/" class="title">了解word2vec</a></p>
-              <p class="item-date"><time datetime="2016-03-15T04:52:45.000Z" itemprop="datePublished">2016-03-15</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/06/07/百度面试题总结—03（操作系统）/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/面试笔试/">面试笔试</a></p>
-              <p class="item-title"><a href="/2015/06/07/百度面试题总结—03（操作系统）/" class="title">百度面试题总结—03（操作系统）</a></p>
-              <p class="item-date"><time datetime="2015-06-07T07:31:58.000Z" itemprop="datePublished">2015-06-07</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -694,7 +648,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -703,7 +657,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 11.67px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10.83px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/NLP/" style="font-size: 10px;">NLP</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 12.5px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10.83px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 11.67px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/NLP/" style="font-size: 10.83px;">NLP</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 

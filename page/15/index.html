@@ -80,7 +80,7 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        123
+        125
         <span>文章</span>
       </div>
       <div class="article-info-block">
@@ -108,6 +108,117 @@
   </div>
 </aside>
       <section id="main">
+  
+    <article id="post-Docker与虚拟机的区别" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/30/Docker与虚拟机的区别/">Docker与虚拟机的区别</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/03/30/Docker与虚拟机的区别/">
+    <time datetime="2015-03-30T04:17:28.000Z" itemprop="datePublished">2015-03-30</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有一种夸张的说法是Docker将是现有虚拟技术的终结者，当然这种说法可能有些夸大其词了。Docker是面向应用的，旨在构建一个PaaS平台，而现有虚拟技术主要提供一个灵活的计算机资源池，构建一个IaaS平台。Docker有如下特性：</p>
+<h3 id="u9762_u5411_u5E94_u7528"><a href="#u9762_u5411_u5E94_u7528" class="headerlink" title="面向应用"></a>面向应用</h3><p>一个软件系统包含很多部分，包含二进制文件、库文件、配置文件和依赖性，这就导致了软件安装的复杂性，而Docker把这种互相的依赖集中在容器内部，而与宿主机在一定程度上相互隔离，使开发与维护相互分离，简化了产品的上线流程。这大概也是众多厂商热情拥抱这项新技术的原因。Google、Amazon、Microsoft、VMware都纷纷加入Docker和Container所掀起的新时代云端虚拟化行列。</p>
+<h3 id="Linux_Containers_uFF08LXU_uFF09_u6280_u672F"><a href="#Linux_Containers_uFF08LXU_uFF09_u6280_u672F" class="headerlink" title="Linux Containers（LXU）技术"></a>Linux Containers（LXU）技术</h3><p>Docker与虚拟机同属于虚拟化技术，现在市面上的虚拟机多数是对主机的硬件虚拟化，不管是安装在操作系统之上的workstation，还是直接安装在硬件上的ESX或者ESXI，这些产品基于vSphere或Hyper-V这些技术，目的构建一个与宿主机相互隔离的系统。而Docker技术是利用container技术，使应用直接安装到容器上，而容器相对于宿主机仅仅只是一个或几个进程，将容器与宿主机器的系统隔离，方便开发与运维。Container 技术是一种在 操作系统内的 Kernel 层所打造虚拟运行环境，所以 Container 彼此之间共享了 Host OS 的 Kernel，但通过namespace 区分来达到隔离每个容器的目的。现在Docker容器不仅支持Linux系统，而且得到了Windows和MAC OS的支持。</p>
+<h3 id="u9AD8_u6548_u6027"><a href="#u9AD8_u6548_u6027" class="headerlink" title="高效性"></a>高效性</h3><p>启动一个虚拟机可能会花费掉几分钟时间，而Docker的在1秒之内即可成功启动。这是因为启动一个虚拟机相当于启动一个完整的操作系统，而启动一个Docker相当于启动一个进程。同时也使简化了开发、运维流程，加快了开发人员开发速度。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/03/30/Docker与虚拟机的区别/" data-id="cin18t09h00g59suas8p99wtn" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/03/30/Docker与虚拟机的区别/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-LeetCode-num016" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/09/LeetCode-num016/">LeetCode num016</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/02/09/LeetCode-num016/">
+    <time datetime="2015-02-09T08:58:29.000Z" itemprop="datePublished">2015-02-09</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p><strong>3Sum Closest</strong><br>Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target. Return the sum of the three integers. You may assume that each input would have exactly one solution.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">For example, given array S = &#123;-<span class="number">1</span> <span class="number">2</span> <span class="number">1</span> -<span class="number">4</span>&#125;, and target = <span class="number">1</span>.</span><br><span class="line"></span><br><span class="line">The sum that is closest to the target is <span class="number">2</span>. (-<span class="number">1</span> + <span class="number">2</span> + <span class="number">1</span> = <span class="number">2</span>).</span><br></pre></td></tr></table></figure>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">threeSumClosest</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &amp;num, <span class="keyword">int</span> target)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		sort(num.begin(), num.end());</span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">0</span>, min, temp, first;</span><br><span class="line">		min = num[<span class="number">0</span>] + num[<span class="number">1</span>] + num[<span class="number">2</span>] - target;</span><br><span class="line">		<span class="keyword">while</span> (num.size() &gt;= <span class="number">3</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			first = num[<span class="number">0</span>];</span><br><span class="line">			num.erase(num.begin());</span><br><span class="line">			temp = twoSumClosest(num, target - first);</span><br><span class="line">			<span class="keyword">if</span> (<span class="built_in">abs</span>(temp + first - target) &lt; <span class="built_in">abs</span>(min))</span><br><span class="line">			&#123;</span><br><span class="line">				min = temp + first - target;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> min + target;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">twoSumClosest</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; num, <span class="keyword">int</span> target)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j, minBig, minSmall, markBig = <span class="number">0</span>, markSmall = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>, j = num.size() - <span class="number">1</span>; i &lt; j;)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (num[i] + num[j] == target)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> target;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (num[i] + num[j] &gt; target)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (markBig == <span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					minBig = num[i] + num[j];</span><br><span class="line">					markBig = <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					minBig = minBig &lt; (num[i] + num[j]) ? minBig : (num[i] + num[j]);</span><br><span class="line">				&#125;</span><br><span class="line">				j--;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (markSmall == <span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					minSmall = num[i] + num[j];</span><br><span class="line">					markSmall = <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					minSmall = minSmall &gt; (num[i] + num[j]) ? minSmall : (num[i] + num[j]);</span><br><span class="line">				&#125;</span><br><span class="line">				i++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (markSmall == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> minBig;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (markBig == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> minSmall;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> (target - minSmall) &lt; (minBig - target) ? minSmall : minBig;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><ol>
+<li>写代码要细致；</li>
+<li>不要迁就代码，尽量不要黏贴别的代码进行改；</li>
+<li>要有勇气放弃代码，从头写；</li>
+<li>本题时间复杂度为O(n^2)。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num016/" data-id="cin18t07300dy9suahtjbavma" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/02/09/LeetCode-num016/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Integer/">Integer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sum/">Sum</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-LeetCode-num015" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -151,7 +262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num015/" data-id="cim4imj5400e4trua3h0a6clz" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num015/" data-id="cin18t07700e49sua3zscmmdu" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/02/09/LeetCode-num015/#ds-thread" class="article-comment-link">评论</a>
@@ -206,7 +317,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num088/" data-id="cim4imj150099truaqjzzqsdj" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num088/" data-id="cin18t03c00999suan1hesnb0" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/02/09/LeetCode-num088/#ds-thread" class="article-comment-link">评论</a>
@@ -261,7 +372,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num067/" data-id="cim4imj2000ajtrua8bj13mra" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num067/" data-id="cin18t04400aj9sua7zh3k8ft" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/02/09/LeetCode-num067/#ds-thread" class="article-comment-link">评论</a>
@@ -318,125 +429,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num058/" data-id="cim4imj2s00bbtruag45tb8em" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num058/" data-id="cin18t04v00bb9sua9vw590j3" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/02/09/LeetCode-num058/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-LeetCode-num005" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/09/LeetCode-num005/">LeetCode num005</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/02/09/LeetCode-num005/">
-    <time datetime="2015-02-09T07:42:28.000Z" itemprop="datePublished">2015-02-09</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p><strong>Longest Palindromic Substring </strong><br>Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palindromic substring.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">longestPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j, gap = <span class="number">1</span>, mark = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> max = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (s.size() == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">string</span> pal;</span><br><span class="line">		pal = s.substr(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; s.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (mark != <span class="number">2</span> &amp;&amp; i - gap &gt;= <span class="number">0</span> &amp;&amp; s[i] == s[i - gap])</span><br><span class="line">			&#123;</span><br><span class="line">				gap += <span class="number">2</span>;</span><br><span class="line">				mark = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">if</span> (gap - <span class="number">1</span> &gt; max)</span><br><span class="line">				&#123;</span><br><span class="line">					max = gap - <span class="number">1</span>;</span><br><span class="line">					pal = s.substr(i - gap + <span class="number">2</span>, gap - <span class="number">1</span>);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			i = i - gap / <span class="number">2</span>;</span><br><span class="line">			gap = <span class="number">1</span>;</span><br><span class="line">			mark = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		gap = <span class="number">1</span>;</span><br><span class="line">		mark = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; s.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (mark != <span class="number">1</span> &amp;&amp; i - (gap + <span class="number">1</span>) &gt;= <span class="number">0</span> &amp;&amp; s[i] == s[i - (gap + <span class="number">1</span>)])</span><br><span class="line">			&#123;</span><br><span class="line">				gap += <span class="number">2</span>;</span><br><span class="line">				mark = <span class="number">2</span>;</span><br><span class="line">				<span class="keyword">if</span> (gap &gt; max)</span><br><span class="line">				&#123;</span><br><span class="line">					max = gap;</span><br><span class="line">					pal = s.substr(i - gap + <span class="number">1</span>, gap);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			i = i - gap / <span class="number">2</span>;</span><br><span class="line">			gap = <span class="number">1</span>;</span><br><span class="line">			mark = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> pal;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><ol>
-<li>不是最有算法；</li>
-<li>将两种情况分别迭代。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num005/" data-id="cim4imj5u00f0truahir3xuw0" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/02/09/LeetCode-num005/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-LeetCode-num076" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/06/LeetCode-num076/">LeetCode num076</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/02/06/LeetCode-num076/">
-    <time datetime="2015-02-06T13:59:13.000Z" itemprop="datePublished">2015-02-06</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Notice"><a href="#Notice" class="headerlink" title="Notice"></a>Notice</h3><p>超时</p>
-<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p><strong>Minimum Window Substring</strong><br>Given a string S and a string T, find the minimum window in S which will contain all the characters in T in complexity O(n).</p>
-<p>For example,<br>S = “ADOBECODEBANC”<br>T = “ABC”<br>Minimum window is “BANC”.</p>
-<p>Note:<br>If there is no such window in S that covers all characters in T, return the emtpy string “”.</p>
-<p>If there are multiple such windows, you are guaranteed that there will always be only one unique minimum window in S.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">minWindow</span><span class="params">(<span class="built_in">string</span> S, <span class="built_in">string</span> T)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (S.size() &lt; T.size())</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">char</span> compare;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vecNum;</span><br><span class="line">		<span class="keyword">int</span> i, j = <span class="number">1</span>, k, min, length, begin, second, end;</span><br><span class="line">		<span class="keyword">int</span> minBegin, minEnd;</span><br><span class="line">		<span class="built_in">map</span>&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; mapT = genMap(T), mapCount = mapT;</span><br><span class="line">		<span class="built_in">map</span>&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt;::iterator iter;</span><br><span class="line">		vecNum = firstWindow(S, T);</span><br><span class="line">		<span class="keyword">if</span> (vecNum[<span class="number">0</span>] == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		k = T.size();</span><br><span class="line">		begin = vecNum[j];</span><br><span class="line">		end = vecNum[k];</span><br><span class="line">		length = end - begin + <span class="number">1</span>;</span><br><span class="line">		min = length;</span><br><span class="line">		minBegin = begin;</span><br><span class="line">		minEnd = end;</span><br><span class="line">		<span class="keyword">for</span> (i = begin + <span class="number">1</span>; i &lt; S.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			compare = S[begin];</span><br><span class="line">			<span class="keyword">if</span> (compare == S[i])</span><br><span class="line">			&#123;</span><br><span class="line">				iter = mapCount.find(compare);</span><br><span class="line">				<span class="keyword">if</span> (iter-&gt;second == <span class="number">1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					vecNum.erase(vecNum.begin() + j);</span><br><span class="line">					vecNum = insertToSortVec(vecNum, i);</span><br><span class="line">					begin = vecNum[j];</span><br><span class="line">					end = vecNum[k];</span><br><span class="line">					length = end - begin + <span class="number">1</span>;</span><br><span class="line">					<span class="keyword">if</span> (length &lt; min)</span><br><span class="line">					&#123;</span><br><span class="line">						min = length;</span><br><span class="line">						minBegin = begin;</span><br><span class="line">						minEnd = end;</span><br><span class="line">						mapCount = mapT;</span><br><span class="line">					&#125;</span><br><span class="line">					i = begin;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					mapCount[compare] = iter-&gt;second - <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> S.substr(minBegin, min);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; firstWindow(<span class="built_in">string</span> S, <span class="built_in">string</span> T)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>, markBegin, markEnd, lengthT;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; result;</span><br><span class="line">		<span class="built_in">map</span>&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; mapT = genMap(T);</span><br><span class="line">		<span class="built_in">map</span>&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt;::iterator iter, iterCount;</span><br><span class="line">		lengthT = T.size();</span><br><span class="line">		result.push_back(<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; S.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			iter = mapT.find(S[i]);</span><br><span class="line">			<span class="keyword">if</span> (iter != mapT.end())</span><br><span class="line">			&#123;</span><br><span class="line">				count++;</span><br><span class="line">				result.push_back(i);</span><br><span class="line">				<span class="keyword">if</span> (mapT.empty())</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (iter-&gt;second == <span class="number">1</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					mapT.erase(iter);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					mapT[S[i]] = iter-&gt;second - <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (count &lt; lengthT)</span><br><span class="line">		&#123;</span><br><span class="line">			result[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">map</span>&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; genMap(<span class="built_in">string</span> T)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> i;</span><br><span class="line">		<span class="built_in">map</span>&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt; result;</span><br><span class="line">		<span class="built_in">map</span>&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt;::iterator iter;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; T.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			iter = result.find(T[i]);</span><br><span class="line">			<span class="keyword">if</span> (iter != result.end())</span><br><span class="line">			&#123;</span><br><span class="line">				result[T[i]] = iter-&gt;second + <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				result.insert(pair&lt;<span class="keyword">char</span>, <span class="keyword">int</span>&gt;(T[i], <span class="number">1</span>));</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> result;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; insertToSortVec(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec, <span class="keyword">int</span> n)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">int</span> position = findPositionFromSortVec(vec, n);</span><br><span class="line">		vec.insert(vec.begin() + position + <span class="number">1</span>, n);</span><br><span class="line">		<span class="keyword">return</span> vec;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">findPositionFromSortVec</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec, <span class="keyword">int</span> n)</span></span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> left = <span class="number">1</span>, right = vec.size() - <span class="number">1</span>, middle;</span><br><span class="line">		<span class="keyword">if</span> (vec.size() == <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (n &gt; vec[right])</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> right;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (n &lt; vec[left])</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> left - <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span> (right - left &gt; <span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			middle = (left + right) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (n &lt; vec[middle])</span><br><span class="line">			&#123;</span><br><span class="line">				right = middle;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				left = middle;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> left;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><ol>
-<li>超时，还未解决；</li>
-<li>感觉复杂度到了O(n)了，但还是不通过；</li>
-<li>使用map效率提高了。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/06/LeetCode-num076/" data-id="cim4imj1l00a0truad0j45see" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/02/06/LeetCode-num076/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li></ul>
@@ -462,6 +458,41 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/04/15/Java参数传递/" class="thumbnail">
+  
+    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/Java.jpg
+)" alt="Java参数传递" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
+              <p class="item-title"><a href="/2016/04/15/Java参数传递/" class="title">Java参数传递</a></p>
+              <p class="item-date"><time datetime="2016-04-15T03:22:42.000Z" itemprop="datePublished">2016-04-15</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/03/23/LSTM-Neural-Networks-for-Chinese-Word-Segmentation/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/NLP/">NLP</a></p>
+              <p class="item-title"><a href="/2016/03/23/LSTM-Neural-Networks-for-Chinese-Word-Segmentation/" class="title">LSTM Neural Networks for Chinese Word Segmentation</a></p>
+              <p class="item-date"><time datetime="2016-03-23T07:32:21.000Z" itemprop="datePublished">2016-03-23</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -516,41 +547,6 @@
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/03/15/了解word2vec/" class="thumbnail">
-  
-    <span style="background-image:url(http://7xptv4.com1.z0.glb.clouddn.com/barneshutplot.jpg
-)" alt="了解word2vec" class="thumbnail-image"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/MLearning/">MLearning</a></p>
-              <p class="item-title"><a href="/2016/03/15/了解word2vec/" class="title">了解word2vec</a></p>
-              <p class="item-date"><time datetime="2016-03-15T04:52:45.000Z" itemprop="datePublished">2016-03-15</time></p>
-            </div>
-          </li>
-        
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2015/06/07/百度面试题总结—03（操作系统）/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/面试笔试/">面试笔试</a></p>
-              <p class="item-title"><a href="/2015/06/07/百度面试题总结—03（操作系统）/" class="title">百度面试题总结—03（操作系统）</a></p>
-              <p class="item-date"><time datetime="2015-06-07T07:31:58.000Z" itemprop="datePublished">2015-06-07</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -560,7 +556,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -569,7 +565,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 11.67px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 10.83px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/NLP/" style="font-size: 10px;">NLP</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 12.5px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10.83px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 11.67px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/NLP/" style="font-size: 10.83px;">NLP</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 
