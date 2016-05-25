@@ -170,11 +170,19 @@
 </code></pre></li>
 </ul>
 <h3 id="u4EA4_u4E92_u7684_u65B9_u5F0F_u8FD0_u884C"><a href="#u4EA4_u4E92_u7684_u65B9_u5F0F_u8FD0_u884C" class="headerlink" title="交互的方式运行"></a>交互的方式运行</h3><p>“scala”这一命令可以开始一个交互式shell，以交互式运行Scala代码。<br><a href="http://7xptv4.com1.z0.glb.clouddn.com/Scala-HelloWorld.png" target="_blank" rel="external">!Scala-HelloWorld</a><br>“:q”是命令”:quit”的缩写，可以退出Scala shell环境。</p>
+<h3 id="u7F16_u8BD1_u6587_u4EF6"><a href="#u7F16_u8BD1_u6587_u4EF6" class="headerlink" title="编译文件"></a>编译文件</h3><p>“scalac”命令可以实现编译一个或多个Scala源文件，并且能生成标准的JVM可运行的Java二进制文件。Scala编译器的工作原理与Java SDK编译器”javac”类似。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; scalac HelloWorld.scala</span><br></pre></td></tr></table></figure></p>
+<p>通过默认的”scalac”在默认路径下生成类文件，你也可以通过”-d”这一参数制定一个不同的输出路径。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; scalac <span class="operator">-d</span> classes HelloWorld.scala</span><br></pre></td></tr></table></figure></p>
+<h3 id="u6267_u884C_u6587_u4EF6"><a href="#u6267_u884C_u6587_u4EF6" class="headerlink" title="执行文件"></a>执行文件</h3><p>“scala”命令可以通过正确的方法执行生成的二进制文件:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; scala HelloWorld</span><br></pre></td></tr></table></figure></p>
+<p>“scala”命令允许我们指定命令选项，比如：-classpath (-cp) 选项<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; scala -cp classes HelloWorld</span><br></pre></td></tr></table></figure></p>
+<p>“scala”命令的对象必须是最高级别的。如果对象继承了App特征，那么所有包含在这个对象中的语句都会被执行；否则你必须添加一个”main”方法，这一方法扮演着你的程序入口的角色。<br>下面是”Hello, world!”程序示例继承App特征的样子:<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">HelloWorld</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">App</span> &#123;</span></span><br><span class="line">  println(<span class="string">"Hello, world!"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="u4F7F_u7528_u811A_u672C_u8FD0_u884C"><a href="#u4F7F_u7528_u811A_u672C_u8FD0_u884C" class="headerlink" title="使用脚本运行"></a>使用脚本运行</h3><p>我们也可能使用shell脚本或者”batch”命令运行我们的例子。<br>使用”bash shell”脚本”script.sh”包含如下的Scala代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh&#10;exec scala &#34;$0&#34; &#34;$@&#34;&#10;!#&#10;object HelloWorld extends App &#123;&#10;  println(&#34;Hello, world!&#34;)&#10;&#125;&#10;HelloWorld.main(args)</span><br></pre></td></tr></table></figure></p>
+<p>可以直接被如下命令执行:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; ./script.sh</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意</strong>:我们假定script.sh文件中scala命令已经在PATH环境变量中声明。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2016/05/23/如何快速学习Scala/" data-id="ciomwjnto0024rauaps50h689" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2016/05/23/如何快速学习Scala/" data-id="cion0562l0024vwuant7pkb4i" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2016/05/23/如何快速学习Scala/#ds-thread" class="article-comment-link">评论</a>
@@ -227,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2016/04/19/机器学习实战-KNN/" data-id="ciomwjnsl0013rauaq0zhe0rv" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2016/04/19/机器学习实战-KNN/" data-id="cion0561h0013vwuaxgsxcxy5" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2016/04/19/机器学习实战-KNN/#ds-thread" class="article-comment-link">评论</a>
@@ -280,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2016/04/15/Java参数传递/" data-id="ciomwjo6t00g9raua13eg4whs" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2016/04/15/Java参数传递/" data-id="cion056g000g9vwuarwpvp6l4" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2016/04/15/Java参数传递/#ds-thread" class="article-comment-link">评论</a>
@@ -333,7 +341,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2016/03/23/LSTM-Neural-Networks-for-Chinese-Word-Segmentation/" data-id="ciomwjo6l00fxrauak6uzyjpx" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2016/03/23/LSTM-Neural-Networks-for-Chinese-Word-Segmentation/" data-id="cion056fs00fxvwuas6yv66kh" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2016/03/23/LSTM-Neural-Networks-for-Chinese-Word-Segmentation/#ds-thread" class="article-comment-link">评论</a>
@@ -392,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2016/03/23/RNN-for-Sequence-Labeling/" data-id="ciomwjnvl0040rauasoiwj17q" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2016/03/23/RNN-for-Sequence-Labeling/" data-id="cion0564m0040vwuacmtrg2yn" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2016/03/23/RNN-for-Sequence-Labeling/#ds-thread" class="article-comment-link">评论</a>
@@ -445,7 +453,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2016/03/15/Java-Entity/" data-id="ciomwjo6w00gdrauayq6jke0r" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2016/03/15/Java-Entity/" data-id="cion056g300gdvwua933yso1s" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2016/03/15/Java-Entity/#ds-thread" class="article-comment-link">评论</a>
