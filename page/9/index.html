@@ -80,11 +80,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        126
+        127
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        49
+        50
         <span>标签</span>
       </div>
     </div>
@@ -108,6 +108,68 @@
   </div>
 </aside>
       <section id="main">
+  
+    <article id="post-hihocoder-Week40-01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/05/hihocoder-Week40-01/">hihocoder-Week40-01</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/04/05/hihocoder-Week40-01/">
+    <time datetime="2015-04-05T05:26:10.000Z" itemprop="datePublished">2015-04-05</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/hihocoder/">hihocoder</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>三分·三分求极值</strong><br>时间限制:10000ms<br>单点时限:1000ms<br>内存限制:256MB</p>
+<h3 id="u63CF_u8FF0"><a href="#u63CF_u8FF0" class="headerlink" title="描述"></a>描述</h3><p>这一次我们就简单一点了，题目在此：<br><img src="/sanfen.png" alt="explain"><br>在直角坐标系中有一条抛物线y=ax^2+bx+c和一个点P(x,y)，求点P到抛物线的最短距离d。<br><a href="http://pkuyg.com/2015/04/05/%E4%B8%89%E5%88%86%E6%B3%95/index.html" target="_blank" rel="external">提示：三分法</a></p>
+<h3 id="u8F93_u5165"><a href="#u8F93_u5165" class="headerlink" title="输入"></a>输入</h3><p>第1行：5个整数a,b,c,x,y。前三个数构成抛物线的参数，后两个数x,y表示P点坐标。-200≤a,b,c,x,y≤200</p>
+<h3 id="u8F93_u51FA"><a href="#u8F93_u51FA" class="headerlink" title="输出"></a>输出</h3><p>第1行：1个实数d，保留3位小数(四舍五入)</p>
+<h3 id="u6837_u4F8B_u8F93_u5165"><a href="#u6837_u4F8B_u8F93_u5165" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span> <span class="number">8</span> <span class="number">2</span> -<span class="number">2</span> <span class="number">6</span></span><br></pre></td></tr></table></figure>
+<h3 id="u6837_u4F8B_u8F93_u51FA"><a href="#u6837_u4F8B_u8F93_u51FA" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2.437</span></span><br></pre></td></tr></table></figure>
+<h3 id="u7B54_u6848"><a href="#u7B54_u6848" class="headerlink" title="答案"></a>答案</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const double precision = 1E-6;</span><br><span class="line"></span><br><span class="line">class Ican</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">	float maxErea(float a, float b, float c, float x, float y)</span><br><span class="line">	&#123;</span><br><span class="line">		if (a == 0)</span><br><span class="line">		&#123;</span><br><span class="line">			return abs(b * x + c - y) / sqrt(b * b + 1.0);</span><br><span class="line">		&#125;</span><br><span class="line">		float left, right;</span><br><span class="line">		float judge = b * b - 4 * a * (c - y);</span><br><span class="line">		if (judge &gt; 0)</span><br><span class="line">		&#123;</span><br><span class="line">			left = (-b - sqrt(judge)) / (2. * a);</span><br><span class="line">			right = (-b + sqrt(judge)) / (2. * a);</span><br><span class="line">			if (abs(left - x) &lt; abs(right - x))</span><br><span class="line">			&#123;</span><br><span class="line">				if (left &lt;= x)</span><br><span class="line">				&#123;</span><br><span class="line">					right = x;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					right = left;</span><br><span class="line">					left = x;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			else</span><br><span class="line">			&#123;</span><br><span class="line">				if (right &gt;= x)</span><br><span class="line">				&#123;</span><br><span class="line">					left = x;</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					left = right;</span><br><span class="line">					right = x;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			float temp = -b / (2 * a);</span><br><span class="line">			left = x &lt; temp ? x : temp;</span><br><span class="line">			right = x &gt; temp ? x : temp;</span><br><span class="line">		&#125;</span><br><span class="line">		return threeSearch(a, b, c, x, y, left, right);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	float distance(float a, float b, float c, float x, float y, float x0)</span><br><span class="line">	&#123;</span><br><span class="line">		float ret = sqrt(pow(x0 - x, 2) + pow(a * pow(x0, 2) + b * x0 + c - y, 2));</span><br><span class="line">		return ret;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	double threeSearch(float a, float b, float c, float x, float y, float left, float right)</span><br><span class="line">	&#123;</span><br><span class="line">		float lm, rm;</span><br><span class="line">		float lData, rData;</span><br><span class="line">		while (abs(distance(a, b, c, x, y, right) - distance(a, b, c, x, y, left)) &gt; precision)</span><br><span class="line">		&#123;</span><br><span class="line">			lm = left + (right - left) / 3.;</span><br><span class="line">			rm = left + 2. * (right - left) / 3.;</span><br><span class="line">			lData = distance(a, b, c, x, y, lm);</span><br><span class="line">			rData = distance(a, b, c, x, y, rm);</span><br><span class="line">			if (lData &lt; rData)</span><br><span class="line">			&#123;</span><br><span class="line">				right = rm;</span><br><span class="line">			&#125;</span><br><span class="line">			else</span><br><span class="line">			&#123;</span><br><span class="line">				left = lm;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		return min(distance(a, b, c, x, y, left), distance(a, b, c, x, y, right));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	float a, b, c, x, y;</span><br><span class="line">	cin &gt;&gt; a &gt;&gt; b &gt;&gt; c &gt;&gt; x &gt;&gt; y;</span><br><span class="line">	Ican I;</span><br><span class="line">	double ret = I.maxErea(a, b, c, x, y);</span><br><span class="line">	printf("%.3f", ret);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="u6536_u83B7_u4E0E_u4F53_u4F1A"><a href="#u6536_u83B7_u4E0E_u4F53_u4F1A" class="headerlink" title="收获与体会"></a>收获与体会</h3><ol>
+<li>第一次接触三分法，感觉以后可以应用到其他求解中</li>
+<li>感觉也可以使用二分法</li>
+<li>第一次接触hihocoder，没有错误反馈，对程序员要求更高</li>
+<li>这种查找方法不一定局限于整数，放开眼界</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/04/05/hihocoder-Week40-01/" data-id="ciomv7ld60037j2uad0dq5kyd" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/04/05/hihocoder-Week40-01/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Find/">Find</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hihocoder/">hihocoder</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-LeetCode-num020" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -150,7 +212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/02/LeetCode-num020/" data-id="cin7ejpzh00e0kzuauved1cwr" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/02/LeetCode-num020/" data-id="ciomv7ln100e5j2uakz6sd77u" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/02/LeetCode-num020/#ds-thread" class="article-comment-link">评论</a>
@@ -208,7 +270,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/02/LeetCode-num038/" data-id="cin7ejpy700ctkzuawu363rrc" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/02/LeetCode-num038/" data-id="ciomv7lly00cyj2uagc17pieb" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/02/LeetCode-num038/#ds-thread" class="article-comment-link">评论</a>
@@ -267,7 +329,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/04/02/LeetCode-num165/" data-id="cin7ejps5005hkzuaazjbp61r" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/04/02/LeetCode-num165/" data-id="ciomv7lft005mj2uawq3oxnfc" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/04/02/LeetCode-num165/#ds-thread" class="article-comment-link">评论</a>
@@ -324,7 +386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num191/" data-id="cin7ejpqz004mkzuashqy1z97" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num191/" data-id="ciomv7ler004rj2uah4fy4jfd" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num191/#ds-thread" class="article-comment-link">评论</a>
@@ -381,7 +443,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num190/" data-id="cin7ejpra004tkzua2i32968c" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num190/" data-id="ciomv7ley004yj2uaazxb8tdg" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num190/#ds-thread" class="article-comment-link">评论</a>
@@ -396,66 +458,9 @@
 
 
   
-    <article id="post-LeetCode-num189" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/03/31/LeetCode-num189/">LeetCode num189</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2015/03/31/LeetCode-num189/">
-    <time datetime="2015-03-31T13:46:07.000Z" itemprop="datePublished">2015-03-31</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/LeetCode/">LeetCode</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Rotate Array</strong></p>
-<h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p>Rotate an array of n elements to the right by k steps.</p>
-<p>For example, with n = 7 and k = 3, the array [1,2,3,4,5,6,7] is rotated to [5,6,7,1,2,3,4].</p>
-<p>Note:<br>Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span> nums[], <span class="keyword">int</span> n, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (n != <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			k = k % n;</span><br><span class="line">			<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; remember;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - k; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				remember.push_back(nums[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				nums[i] = nums[i + n - k];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - k; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				nums[i + k] = remember[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><ol>
-<li>题目较简单</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/03/31/LeetCode-num189/" data-id="cin7ejprp004ykzua0wrjpf7h" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2015/03/31/LeetCode-num189/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Array/">Array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Interger/">Interger</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/8/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><a class="extend next" rel="next" href="/page/10/">下一页 &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/8/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="extend next" rel="next" href="/page/10/">下一页 &raquo;</a>
     </nav>
   
 </section>
@@ -467,6 +472,23 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/05/23/如何快速学习Scala/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Scala/">Scala</a></p>
+              <p class="item-title"><a href="/2016/05/23/如何快速学习Scala/" class="title">如何快速学习Scala</a></p>
+              <p class="item-date"><time datetime="2016-05-23T03:00:29.000Z" itemprop="datePublished">2016-05-23</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -539,23 +561,6 @@
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/03/15/Java-Entity/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
-              <p class="item-title"><a href="/2016/03/15/Java-Entity/" class="title">Java_Entity</a></p>
-              <p class="item-date"><time datetime="2016-03-15T05:02:21.000Z" itemprop="datePublished">2016-03-15</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -565,7 +570,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Scala/">Scala</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -574,7 +579,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 12.5px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10.83px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/KNN/" style="font-size: 10px;">KNN</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 12.5px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/NLP/" style="font-size: 10.83px;">NLP</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 12.5px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10.83px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/KNN/" style="font-size: 10px;">KNN</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 12.5px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/NLP/" style="font-size: 10.83px;">NLP</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/Scala/" style="font-size: 10px;">Scala</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 

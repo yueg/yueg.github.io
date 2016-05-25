@@ -69,7 +69,7 @@
   
   <div id="header-sub" class="header-sub header-inner">
     <div class="outer">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Scala/">Scala</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
   
@@ -86,11 +86,11 @@
   	</div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        126
+        127
         <span>文章</span>
       </div>
       <div class="article-info-block">
-        49
+        50
         <span>标签</span>
       </div>
     </div>
@@ -115,6 +115,100 @@
 </aside>
       <section id="main">
   
+  
+    
+    
+      
+        <div class="archive-year-wrap">
+          <i class="fa fa-calendar"></i>
+          <a href="/archives/2015" class="archive-year">2015</a>
+        </div>
+    
+    <article id="post-Shell脚本基本语法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/11/Shell脚本基本语法/">Shell脚本基本语法</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          <div class="article-date">
+  <i class="fa fa-calendar"></i>
+  <a href="/2015/01/11/Shell脚本基本语法/">
+    <time datetime="2015-01-11T14:07:20.000Z" itemprop="datePublished">2015-01-11</time>
+  </a>
+</div>
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/程序员基础/">程序员基础</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近闲来无事拿起了一本shell编程的书，翻了翻感觉应该是不会太难，果断地安装了虚拟机，安装了linux系统，开始了shell脚本语言的学习。</p>
+<h2 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h2><p>shell脚本与Windows/Dos下的批处理相似，也就是各类命令预先放入到一个文件中，方便一次性执行一个程序文件，但是他比Windows下的批处理更强大，比用其他程序编程的效率更高，因为他使用的是linux/unix命令。</p>
+<h2 id="u57FA_u672C_u8BED_u6CD5"><a href="#u57FA_u672C_u8BED_u6CD5" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="1-_u8F93_u51FA"><a href="#1-_u8F93_u51FA" class="headerlink" title="1.输出"></a>1.输出</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> Hello,World!</span><br><span class="line"><span class="built_in">printf</span> Hello,World!</span><br></pre></td></tr></table></figure>
+<h3 id="2-_u8D4B_u503C"><a href="#2-_u8D4B_u503C" class="headerlink" title="2.赋值"></a>2.赋值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">name=yueg</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$name</span></span><br><span class="line">x=<span class="number">1</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$x</span></span><br><span class="line">names=(yueg jingjing)</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$names</span></span><br><span class="line">names[<span class="number">0</span>]=yuegang</span><br><span class="line">names[<span class="number">1</span>]=jingjing</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$names</span></span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<ol>
+<li>以上是多种赋值方式的例子，特别说明的是赋值的“=”前后不能留有空格，否则系统会识别为多个错误命令；</li>
+<li>给数组赋值可以用（）的形式将每个分量用空格隔开，还可以单独分别赋值。</li>
+</ol>
+<h3 id="3-_u63A7_u5236_u6D41_uFF08_u6761_u4EF6_u5224_u65AD_uFF09"><a href="#3-_u63A7_u5236_u6D41_uFF08_u6761_u4EF6_u5224_u65AD_uFF09" class="headerlink" title="3.控制流（条件判断）"></a>3.控制流（条件判断）</h3><ol>
+<li>if语句</li>
+<li>case语句</li>
+</ol>
+<p><strong>if语句：</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="keyword">if</span> [<span class="number">1</span> <span class="operator">-lt</span> <span class="number">2</span>]</span><br><span class="line">    <span class="built_in">echo</span> yes</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="built_in">echo</span> no</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></p>
+<p>控制流的条件判断语句中条件判断分为多种：</p>
+<ol>
+<li>数值判断</li>
+</ol>
+<p>等于：-eq<br>不等于：-ne<br>大于：-gt<br>大于等于：-ge<br>小于：-lt<br>小于等于：-le</p>
+<ol>
+<li>文件类别判断（不一一列出）</li>
+<li>字符串判断</li>
+</ol>
+<p>-z string 长度为0，结果为真<br>-n string 长度不为0，结果为真<br>string1 = string2 相等为真<br>string1 != string2 不相等为真</p>
+<p><strong>case语句</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line"><span class="keyword">case</span> word <span class="keyword">in</span></span><br><span class="line">    pattern1)</span><br><span class="line">        list1</span><br><span class="line">        ;;</span><br><span class="line">    pattern2)</span><br><span class="line">        list2</span><br><span class="line">        ;;</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure></p>
+<p>注意：</p>
+<ol>
+<li>case语句中pattern可以用通配符“*”进行模糊匹配；</li>
+<li>注意每次匹配后的语法要求要有“;;”两个分号。</li>
+</ol>
+<h3 id="4-_u5FAA_u73AF"><a href="#4-_u5FAA_u73AF" class="headerlink" title="4.循环"></a>4.循环</h3><ol>
+<li>while</li>
+<li>until</li>
+<li>for</li>
+<li>select</li>
+<li>循环控制</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.pkuyg.com/2015/01/11/Shell脚本基本语法/" data-id="ciomv7ld9003cj2uagjtj80y4" class="article-share-link">分享到</a>
+      
+      
+        <a href="http://www.pkuyg.com/2015/01/11/Shell脚本基本语法/#ds-thread" class="article-comment-link">评论</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     
     
@@ -173,7 +267,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/31/最大子段和（不同解法）/" data-id="cin7ejpnp001bkzuajgsbgecw" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/31/最大子段和（不同解法）/" data-id="ciomv7lbd001bj2uaihkoh1n1" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/31/最大子段和（不同解法）/#ds-thread" class="article-comment-link">评论</a>
@@ -232,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/29/数据库SQL语句——alter用法/" data-id="cin7ejpod001ukzuai7aoefjg" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/29/数据库SQL语句——alter用法/" data-id="ciomv7lbz001uj2uabgs4paet" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/29/数据库SQL语句——alter用法/#ds-thread" class="article-comment-link">评论</a>
@@ -303,7 +397,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/28/数据库概念——数据模型/" data-id="cin7ejpnv001fkzuai9ilf52k" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/28/数据库概念——数据模型/" data-id="ciomv7lbi001fj2uas8sxrw9z" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/28/数据库概念——数据模型/#ds-thread" class="article-comment-link">评论</a>
@@ -389,7 +483,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/28/数据库基本概念/" data-id="cin7ejpo6001pkzuaoc7xvvye" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/28/数据库基本概念/" data-id="ciomv7lbr001pj2uace2s1shp" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/28/数据库基本概念/#ds-thread" class="article-comment-link">评论</a>
@@ -471,7 +565,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/27/数据库并发控制/" data-id="cin7ejpo0001kkzuae0h8d2xe" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2014/12/27/数据库并发控制/" data-id="ciomv7lbm001kj2uavqifo3uw" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2014/12/27/数据库并发控制/#ds-thread" class="article-comment-link">评论</a>
@@ -486,64 +580,9 @@
 
 
   
-    
-    
-    <article id="post-算法分析（动态规划）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/27/算法分析（动态规划）/">算法分析（动态规划）</a>
-    </h1>
-  
-
-        <div class="article-meta">
-          <div class="article-date">
-  <i class="fa fa-calendar"></i>
-  <a href="/2014/12/27/算法分析（动态规划）/">
-    <time datetime="2014-12-27T01:18:42.000Z" itemprop="datePublished">2014-12-27</time>
-  </a>
-</div>
-          
-  <div class="article-category">
-  	<i class="fa fa-folder"></i>
-    <a class="article-category-link" href="/categories/算法/">算法</a>
-  </div>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u57FA_u672C_u6982_u5FF5"><a href="#u57FA_u672C_u6982_u5FF5" class="headerlink" title="基本概念"></a>基本概念</h2><p>动态规划的过程：每次决策依赖于当前状态，又随即引起状态的转移。一个决策序列就是在变化的状态中产生的。所以，这种多阶段最优化决策解决问题的过程就称为动态规划。</p>
-<h2 id="u4F7F_u7528_u52A8_u6001_u89C4_u5212_u6280_u672F_u7684_u5FC5_u8981_u6761_u4EF6"><a href="#u4F7F_u7528_u52A8_u6001_u89C4_u5212_u6280_u672F_u7684_u5FC5_u8981_u6761_u4EF6" class="headerlink" title="使用动态规划技术的必要条件"></a>使用动态规划技术的必要条件</h2><p>一个最优决策序列的任何子序列本身一定是相对于子序列的初始和结束状态的最优决策序列。</p>
-<h2 id="u7ECF_u5178_u4F8B_u5B50_u5206_u6790"><a href="#u7ECF_u5178_u4F8B_u5B50_u5206_u6790" class="headerlink" title="经典例子分析"></a>经典例子分析</h2><h3 id="u6700_u957F_u516C_u5171_u5B50_u5E8F_u5217"><a href="#u6700_u957F_u516C_u5171_u5B50_u5E8F_u5217" class="headerlink" title="最长公共子序列"></a>最长公共子序列</h3><p>题目：设X和Y是两个序列，其中<br>X=<x1, x2,...,="" xm=""><br>Z=<z1, z2,...,="" zk=""><br>如果Z中元素所有元素都在X中存在，且先后顺序不变，那么Z是X的子序列。Z含有的元素个数，称为子序列长度。<br>那么给定序列<br>X=<x1, x2,...,="" xm=""><br>Y=<y1, y2,...,="" yn=""><br>求X和Y的最长公共子序列。<br>下面是用C++实现的代码<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt; vec1;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt; vec2;</span><br><span class="line">	<span class="keyword">char</span> ch1, ch2;</span><br><span class="line">	<span class="keyword">int</span> c[<span class="number">100</span>][<span class="number">100</span>], b[<span class="number">100</span>][<span class="number">100</span>], i, j;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; ch1;</span><br><span class="line">		<span class="keyword">if</span>(ch1 == <span class="string">'0'</span>) <span class="keyword">break</span>;</span><br><span class="line">		vec1.push_back(ch1);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; ch2;</span><br><span class="line">		<span class="keyword">if</span>(ch2 == <span class="string">'0'</span>) <span class="keyword">break</span>;</span><br><span class="line">		vec2.push_back(ch2);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;::iterator it1 = vec1.begin();</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt;::iterator it2 = vec2.begin();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt;= vec1.size(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		c[i][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>; i &lt;= vec2.size(); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		c[<span class="number">0</span>][i] = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">1</span>, it1 = vec1.begin(); it1 != vec1.end(); it1++, i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j = <span class="number">1</span>, it2 = vec2.begin(); it2 != vec2.end(); it2++, j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(*it1 == *it2)</span><br><span class="line">			&#123;</span><br><span class="line">				c[i][j] = c[i-<span class="number">1</span>][j-<span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">				b[i][j] = <span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span>(c[i-<span class="number">1</span>][j] &gt;= c[i][j-<span class="number">1</span>])</span><br><span class="line">			&#123;</span><br><span class="line">				c[i][j] = c[i-<span class="number">1</span>][j];</span><br><span class="line">				b[i][j] = <span class="number">2</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				c[i][j] = c[i][j-<span class="number">1</span>];</span><br><span class="line">				b[i][j] = <span class="number">3</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; c[vec1.size()][vec2.size()] &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></y1,></x1,></z1,></x1,></p>
-<h3 id="u80CC_u5305_u95EE_u9898"><a href="#u80CC_u5305_u95EE_u9898" class="headerlink" title="背包问题"></a>背包问题</h3><p>背包问题（Knapsack Problem）是一个著名的NP难问题。<br>题目：一个旅行者准备随身携带一个背包。可以放入背包的物品有n种，物品j的重量和价值分别为wj，vj，j=1,2，…，n。如果背包的最大重量限制为b，怎样选择放入背包的物品以使得背包的价值最大？<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt; weight;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">float</span>&gt; value;</span><br><span class="line">	<span class="keyword">float</span> w, v;</span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; w &gt;&gt; v;</span><br><span class="line">		<span class="keyword">if</span>(w == <span class="number">0</span> &amp;&amp; v == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		weight.push_back(w);</span><br><span class="line">		value.push_back(v);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2014/12/27/算法分析（动态规划）/" data-id="cin7ejpmx000akzuay4i813az" class="article-share-link">分享到</a>
-      
-      
-        <a href="http://www.pkuyg.com/2014/12/27/算法分析（动态规划）/#ds-thread" class="article-comment-link">评论</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/动态规划/">动态规划</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/19/">&laquo; 上一页</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/18/">18</a><a class="page-number" href="/archives/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/archives/page/21/">21</a><a class="extend next" rel="next" href="/archives/page/21/">下一页 &raquo;</a>
+      <a class="extend prev" rel="prev" href="/archives/page/19/">&laquo; 上一页</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/18/">18</a><a class="page-number" href="/archives/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/archives/page/21/">21</a><a class="page-number" href="/archives/page/22/">22</a><a class="extend next" rel="next" href="/archives/page/21/">下一页 &raquo;</a>
     </nav>
   
 </section>
@@ -555,6 +594,23 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2016/05/23/如何快速学习Scala/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Scala/">Scala</a></p>
+              <p class="item-title"><a href="/2016/05/23/如何快速学习Scala/" class="title">如何快速学习Scala</a></p>
+              <p class="item-date"><time datetime="2016-05-23T03:00:29.000Z" itemprop="datePublished">2016-05-23</time></p>
+            </div>
+          </li>
         
           <li>
             
@@ -627,23 +683,6 @@
             </div>
           </li>
         
-          <li>
-            
-            <div class="item-thumbnail">
-              <a href="/2016/03/15/Java-Entity/" class="thumbnail">
-  
-    <span class="thumbnail-image thumbnail-none"></span>
-  
-</a>
-            </div>
-            
-            <div class="item-inner">
-              <p class="item-category"><a class="article-category-link" href="/categories/程序员基础/">程序员基础</a></p>
-              <p class="item-title"><a href="/2016/03/15/Java-Entity/" class="title">Java_Entity</a></p>
-              <p class="item-date"><time datetime="2016-03-15T05:02:21.000Z" itemprop="datePublished">2016-03-15</time></p>
-            </div>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -653,7 +692,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">87</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MLearning/">MLearning</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/NLP/">NLP</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Scala/">Scala</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hihocoder/">hihocoder</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/lucene/">lucene</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/数据库/">数据库</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/程序员基础/">程序员基础</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/算法/">算法</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试笔试/">面试笔试</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -662,7 +701,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 12.5px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10.83px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/KNN/" style="font-size: 10px;">KNN</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 12.5px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/NLP/" style="font-size: 10.83px;">NLP</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
+      <a href="/tags/Algorithm/" style="font-size: 10.83px;">Algorithm</a> <a href="/tags/Array/" style="font-size: 19.17px;">Array</a> <a href="/tags/C/" style="font-size: 13.33px;">C++</a> <a href="/tags/DL/" style="font-size: 12.5px;">DL</a> <a href="/tags/Docker/" style="font-size: 10.83px;">Docker</a> <a href="/tags/Find/" style="font-size: 10px;">Find</a> <a href="/tags/Integer/" style="font-size: 16.67px;">Integer</a> <a href="/tags/Interger/" style="font-size: 18.33px;">Interger</a> <a href="/tags/Java/" style="font-size: 10.83px;">Java</a> <a href="/tags/KMP/" style="font-size: 10px;">KMP</a> <a href="/tags/KNN/" style="font-size: 10px;">KNN</a> <a href="/tags/LINUX/" style="font-size: 10.83px;">LINUX</a> <a href="/tags/LSTM/" style="font-size: 10px;">LSTM</a> <a href="/tags/LeetCode/" style="font-size: 20px;">LeetCode</a> <a href="/tags/ML/" style="font-size: 12.5px;">ML</a> <a href="/tags/MemCache/" style="font-size: 10px;">MemCache</a> <a href="/tags/NLP/" style="font-size: 10.83px;">NLP</a> <a href="/tags/Pointer/" style="font-size: 10px;">Pointer</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/STL/" style="font-size: 11.67px;">STL</a> <a href="/tags/Scala/" style="font-size: 10px;">Scala</a> <a href="/tags/String/" style="font-size: 15.83px;">String</a> <a href="/tags/Strint/" style="font-size: 12.5px;">Strint</a> <a href="/tags/Sum/" style="font-size: 10.83px;">Sum</a> <a href="/tags/Traversal/" style="font-size: 15px;">Traversal</a> <a href="/tags/Tree/" style="font-size: 17.5px;">Tree</a> <a href="/tags/Trie/" style="font-size: 10px;">Trie</a> <a href="/tags/TwoSum/" style="font-size: 10.83px;">TwoSum</a> <a href="/tags/Vector/" style="font-size: 10.83px;">Vector</a> <a href="/tags/hihocoder/" style="font-size: 11.67px;">hihocoder</a> <a href="/tags/lucene/" style="font-size: 10px;">lucene</a> <a href="/tags/median/" style="font-size: 10px;">median</a> <a href="/tags/shell/" style="font-size: 11.67px;">shell</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/word2vec/" style="font-size: 10px;">word2vec</a> <a href="/tags/优化/" style="font-size: 10px;">优化</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/单例/" style="font-size: 10px;">单例</a> <a href="/tags/并发/" style="font-size: 10px;">并发</a> <a href="/tags/操作系统/" style="font-size: 10px;">操作系统</a> <a href="/tags/数据库/" style="font-size: 14.17px;">数据库</a> <a href="/tags/最大子段和/" style="font-size: 10px;">最大子段和</a> <a href="/tags/概念/" style="font-size: 10px;">概念</a> <a href="/tags/模型/" style="font-size: 10px;">模型</a> <a href="/tags/积累/" style="font-size: 10.83px;">积累</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/编程/" style="font-size: 12.5px;">编程</a> <a href="/tags/聚类/" style="font-size: 10px;">聚类</a> <a href="/tags/设计模式/" style="font-size: 10px;">设计模式</a> <a href="/tags/面试笔试/" style="font-size: 11.67px;">面试笔试</a>
     </div>
   </div>
 
