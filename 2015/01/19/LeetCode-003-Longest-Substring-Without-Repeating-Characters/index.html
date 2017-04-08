@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>LeetCode num006 | Encoding Myself</title>
+  <title>LeetCode 003 [Longest Substring Without Repeating Characters] | Encoding Myself</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ProblemZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)123P">
+  <meta name="description" content="ProblemLongest Substring Without Repeating CharactersGiven a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode num006">
-<meta property="og:url" content="http://www.pkuyg.com/2015/01/23/LeetCode-num006/index.html">
+<meta property="og:title" content="LeetCode 003 [Longest Substring Without Repeating Characters]">
+<meta property="og:url" content="http://www.pkuyg.com/2015/01/19/LeetCode-003-Longest-Substring-Without-Repeating-Characters/index.html">
 <meta property="og:site_name" content="Encoding Myself">
-<meta property="og:description" content="ProblemZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)123P">
-<meta property="og:updated_time" content="2016-03-15T05:04:56.289Z">
+<meta property="og:description" content="ProblemLongest Substring Without Repeating CharactersGiven a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters">
+<meta property="og:updated_time" content="2017-04-08T10:21:18.597Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode num006">
-<meta name="twitter:description" content="ProblemZigZag ConversionThe string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)123P">
+<meta name="twitter:title" content="LeetCode 003 [Longest Substring Without Repeating Characters]">
+<meta name="twitter:description" content="ProblemLongest Substring Without Repeating CharactersGiven a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters">
   
   
     <link rel="icon" href="/favicon.png">
@@ -108,7 +108,7 @@
     </div>
   </div>
 </aside>
-      <section id="main"><article id="post-LeetCode-num006" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-LeetCode-003-Longest-Substring-Without-Repeating-Characters" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -116,15 +116,15 @@
         
   
     <h1 class="article-title" itemprop="name">
-      LeetCode num006
+      LeetCode 003 [Longest Substring Without Repeating Characters]
     </h1>
   
 
         <div class="article-meta">
           <div class="article-date">
   <i class="fa fa-calendar"></i>
-  <a href="/2015/01/23/LeetCode-num006/">
-    <time datetime="2015-01-23T05:57:08.000Z" itemprop="datePublished">2015-01-23</time>
+  <a href="/2015/01/19/LeetCode-003-Longest-Substring-Without-Repeating-Characters/">
+    <time datetime="2015-01-19T12:42:19.000Z" itemprop="datePublished">2015-01-19</time>
   </a>
 </div>
           
@@ -138,18 +138,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p><strong>ZigZag Conversion</strong><br>The string “PAYPALISHIRING” is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">P   A   H   N</span><br><span class="line">A P L S I I G</span><br><span class="line">Y   I   R</span><br></pre></td></tr></table></figure></p>
-<p>And then read line by line: “PAHNAPLSIIGYIR”<br>Write the code that will take a string and make this conversion given a number of rows:<br>onvert(“PAYPALISHIRING”, 3) should return “PAHNAPLSIIGYIR”.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">convert</span><span class="params">(<span class="built_in">string</span> s, <span class="keyword">int</span> nRows)</span> </span><br><span class="line">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (nRows == <span class="number">1</span>) <span class="keyword">return</span> s;</span><br><span class="line">		<span class="built_in">string</span> conv_s = s;</span><br><span class="line">		<span class="keyword">int</span> i, j = <span class="number">0</span>, k;</span><br><span class="line">		<span class="keyword">int</span> jump = <span class="number">2</span> * (nRows - <span class="number">1</span>), temp;</span><br><span class="line">		<span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; nRows; k++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (i = k; i &lt; s.size();)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (k == <span class="number">0</span> || k == (nRows - <span class="number">1</span>))</span><br><span class="line">				&#123;</span><br><span class="line">					conv_s[j] = s[i];</span><br><span class="line">					i += jump;</span><br><span class="line">					j++;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					conv_s[j] = s[i];</span><br><span class="line">					temp = i + jump - <span class="number">2</span> * (i % jump);</span><br><span class="line">					<span class="keyword">if</span> (temp &lt; s.size())</span><br><span class="line">					&#123;</span><br><span class="line">						conv_s[++j] = s[i + jump - <span class="number">2</span> * (i % jump)];</span><br><span class="line">					&#125;</span><br><span class="line">					i += jump;</span><br><span class="line">					j++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		conv_s[j] = <span class="string">'\0'</span>;</span><br><span class="line">		<span class="keyword">return</span> conv_s;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p><strong>Longest Substring Without Repeating Characters</strong><br>Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for “abcabcbb” is “abc”, which the length is 3. For “bbbbb” the longest substring is “b”, with the length of 1.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt; vec;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>, i, j;</span><br><span class="line">        vec.push_back(s[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; s.size(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; vec.size(); j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (s[i] == vec[j])</span><br><span class="line">                &#123;</span><br><span class="line">                    vec.erase(vec.begin(), vec.begin() + j + <span class="number">1</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            max = max &gt; (j + <span class="number">1</span>) ? max : (j + <span class="number">1</span>);</span><br><span class="line">            vec.push_back(s[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><ol>
-<li>开始时理解题意有误；</li>
-<li>出错原因：少了很多特殊情况判断。</li>
+<li>vector类型操作不熟</li>
+<li>核心思想，记录字符，复杂度为O(n)</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num006/" data-id="cj00qd01r00f7bwuazorrwfer" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/19/LeetCode-003-Longest-Substring-Without-Repeating-Characters/" data-id="cj1949w8100fktvuajxcgqr56" class="article-share-link">分享到</a>
       
         <div class="share">
 	<!-- JiaThis Button BEGIN -->
@@ -167,7 +166,7 @@
 </div>
       
       
-        <a href="http://www.pkuyg.com/2015/01/23/LeetCode-num006/#ds-thread" class="article-comment-link">评论</a>
+        <a href="http://www.pkuyg.com/2015/01/19/LeetCode-003-Longest-Substring-Without-Repeating-Characters/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li></ul>
@@ -178,19 +177,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/01/23/LeetCode-num007/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/01/21/LeetCode-004-Median-of-Two-Sorted-Arrays/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          LeetCode num007
+          LeetCode 004 [Median of Two Sorted Arrays]
         
       </div>
     </a>
   
   
-    <a href="/2015/01/21/LeetCode-num004/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/01/19/LeetCode-002-Add-Two-Numbers/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">LeetCode num004</div>
+      <div class="article-nav-title">LeetCode 002 [Add Two Numbers]</div>
     </a>
   
 </nav>
@@ -200,7 +199,7 @@
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="http://www.pkuyg.com/2015/01/23/LeetCode-num006/" data-title="LeetCode num006" data-url="http://www.pkuyg.com/2015/01/23/LeetCode-num006/">
+    <div id="ds-thread" class="ds-thread" data-thread-key="http://www.pkuyg.com/2015/01/19/LeetCode-003-Longest-Substring-Without-Repeating-Characters/" data-title="LeetCode 003 [Longest Substring Without Repeating Characters]" data-url="http://www.pkuyg.com/2015/01/19/LeetCode-003-Longest-Substring-Without-Repeating-Characters/">
       <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by DuoShuo.</a></noscript>
       </div>
   </section>

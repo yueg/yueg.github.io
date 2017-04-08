@@ -166,7 +166,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num058/" data-id="cj00qczyl00bmbwuavl3jd5sb" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num058/" data-id="cj1949w3w00bmtvuaps25g7w3" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/02/09/LeetCode-num058/#ds-thread" class="article-comment-link">评论</a>
@@ -183,7 +183,7 @@
   
     
     
-    <article id="post-LeetCode-num005" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-LeetCode-005-Longest-Palindromic-Substring" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -191,14 +191,14 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/09/LeetCode-num005/">LeetCode num005</a>
+      <a class="article-title" href="/2015/02/09/LeetCode-005-Longest-Palindromic-Substring/">LeetCode 005 [Longest Palindromic Substring]</a>
     </h1>
   
 
         <div class="article-meta">
           <div class="article-date">
   <i class="fa fa-calendar"></i>
-  <a href="/2015/02/09/LeetCode-num005/">
+  <a href="/2015/02/09/LeetCode-005-Longest-Palindromic-Substring/">
     <time datetime="2015-02-09T07:42:28.000Z" itemprop="datePublished">2015-02-09</time>
   </a>
 </div>
@@ -213,8 +213,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p><strong>Longest Palindromic Substring </strong><br>Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palindromic substring.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="built_in">string</span> <span class="title">longestPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> i, j, gap = <span class="number">1</span>, mark = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> max = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">if</span> (s.size() == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">string</span> pal;</span><br><span class="line">		pal = s.substr(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; s.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (mark != <span class="number">2</span> &amp;&amp; i - gap &gt;= <span class="number">0</span> &amp;&amp; s[i] == s[i - gap])</span><br><span class="line">			&#123;</span><br><span class="line">				gap += <span class="number">2</span>;</span><br><span class="line">				mark = <span class="number">1</span>;</span><br><span class="line">				<span class="keyword">if</span> (gap - <span class="number">1</span> &gt; max)</span><br><span class="line">				&#123;</span><br><span class="line">					max = gap - <span class="number">1</span>;</span><br><span class="line">					pal = s.substr(i - gap + <span class="number">2</span>, gap - <span class="number">1</span>);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			i = i - gap / <span class="number">2</span>;</span><br><span class="line">			gap = <span class="number">1</span>;</span><br><span class="line">			mark = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		gap = <span class="number">1</span>;</span><br><span class="line">		mark = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; s.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (mark != <span class="number">1</span> &amp;&amp; i - (gap + <span class="number">1</span>) &gt;= <span class="number">0</span> &amp;&amp; s[i] == s[i - (gap + <span class="number">1</span>)])</span><br><span class="line">			&#123;</span><br><span class="line">				gap += <span class="number">2</span>;</span><br><span class="line">				mark = <span class="number">2</span>;</span><br><span class="line">				<span class="keyword">if</span> (gap &gt; max)</span><br><span class="line">				&#123;</span><br><span class="line">					max = gap;</span><br><span class="line">					pal = s.substr(i - gap + <span class="number">1</span>, gap);</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">continue</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			i = i - gap / <span class="number">2</span>;</span><br><span class="line">			gap = <span class="number">1</span>;</span><br><span class="line">			mark = <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> pal;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p><strong>Longest Palindromic Substring</strong><br>Given a string S, find the longest palindromic substring in S. You may assume that the maximum length of S is 1000, and there exists one unique longest palindromic substring.</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">longestPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i, j, gap = <span class="number">1</span>, mark = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (s.size() == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">string</span> pal;</span><br><span class="line">        pal = s.substr(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; s.size(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (mark != <span class="number">2</span> &amp;&amp; i - gap &gt;= <span class="number">0</span> &amp;&amp; s[i] == s[i - gap])</span><br><span class="line">            &#123;</span><br><span class="line">                gap += <span class="number">2</span>;</span><br><span class="line">                mark = <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (gap - <span class="number">1</span> &gt; max)</span><br><span class="line">                &#123;</span><br><span class="line">                    max = gap - <span class="number">1</span>;</span><br><span class="line">                    pal = s.substr(i - gap + <span class="number">2</span>, gap - <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            i = i - gap / <span class="number">2</span>;</span><br><span class="line">            gap = <span class="number">1</span>;</span><br><span class="line">            mark = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        gap = <span class="number">1</span>;</span><br><span class="line">        mark = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; s.size(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (mark != <span class="number">1</span> &amp;&amp; i - (gap + <span class="number">1</span>) &gt;= <span class="number">0</span> &amp;&amp; s[i] == s[i - (gap + <span class="number">1</span>)])</span><br><span class="line">            &#123;</span><br><span class="line">                gap += <span class="number">2</span>;</span><br><span class="line">                mark = <span class="number">2</span>;</span><br><span class="line">                <span class="keyword">if</span> (gap &gt; max)</span><br><span class="line">                &#123;</span><br><span class="line">                    max = gap;</span><br><span class="line">                    pal = s.substr(i - gap + <span class="number">1</span>, gap);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            i = i - gap / <span class="number">2</span>;</span><br><span class="line">            gap = <span class="number">1</span>;</span><br><span class="line">            mark = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> pal;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><ol>
 <li>不是最有算法；</li>
 <li>将两种情况分别迭代。</li>
@@ -223,10 +223,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-num005/" data-id="cj00qd02e00fbbwua64x9k1pf" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/09/LeetCode-005-Longest-Palindromic-Substring/" data-id="cj1949w7q00fbtvuapfeu5mah" class="article-share-link">分享到</a>
       
       
-        <a href="http://www.pkuyg.com/2015/02/09/LeetCode-num005/#ds-thread" class="article-comment-link">评论</a>
+        <a href="http://www.pkuyg.com/2015/02/09/LeetCode-005-Longest-Palindromic-Substring/#ds-thread" class="article-comment-link">评论</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li></ul>
@@ -285,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/06/LeetCode-num076/" data-id="cj00qczxf00abbwuaunx91jjb" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/06/LeetCode-num076/" data-id="cj1949w2r00abtvua3u3o7xju" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/02/06/LeetCode-num076/#ds-thread" class="article-comment-link">评论</a>
@@ -344,7 +344,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/06/LeetCode-num080/" data-id="cj00qczx5009vbwuabsk1cthi" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/06/LeetCode-num080/" data-id="cj1949w2h009vtvuaax15rv2o" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/02/06/LeetCode-num080/#ds-thread" class="article-comment-link">评论</a>
@@ -403,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/06/LeetCode-num078/" data-id="cj00qczx800a0bwua9gao7rzw" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/06/LeetCode-num078/" data-id="cj1949w2k00a0tvuababuvwm3" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/02/06/LeetCode-num078/#ds-thread" class="article-comment-link">评论</a>
@@ -460,7 +460,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/02/06/LeetCode-num077/" data-id="cj00qczxb00a6bwua61ogglde" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/02/06/LeetCode-num077/" data-id="cj1949w2o00a6tvualgydfqdc" class="article-share-link">分享到</a>
       
       
         <a href="http://www.pkuyg.com/2015/02/06/LeetCode-num077/#ds-thread" class="article-comment-link">评论</a>

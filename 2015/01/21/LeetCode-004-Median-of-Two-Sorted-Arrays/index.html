@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>LeetCode num003 | Encoding Myself</title>
+  <title>LeetCode 004 [Median of Two Sorted Arrays] | Encoding Myself</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ProblemLongest Substring Without Repeating CharactersGiven a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters">
+  <meta name="description" content="ProblemMedian of Two Sorted ArraysThere are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+So">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode num003">
-<meta property="og:url" content="http://www.pkuyg.com/2015/01/19/LeetCode-num003/index.html">
+<meta property="og:title" content="LeetCode 004 [Median of Two Sorted Arrays]">
+<meta property="og:url" content="http://www.pkuyg.com/2015/01/21/LeetCode-004-Median-of-Two-Sorted-Arrays/index.html">
 <meta property="og:site_name" content="Encoding Myself">
-<meta property="og:description" content="ProblemLongest Substring Without Repeating CharactersGiven a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters">
-<meta property="og:updated_time" content="2016-03-15T05:04:07.000Z">
+<meta property="og:description" content="ProblemMedian of Two Sorted ArraysThere are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+So">
+<meta property="og:updated_time" content="2017-04-08T10:22:53.531Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode num003">
-<meta name="twitter:description" content="ProblemLongest Substring Without Repeating CharactersGiven a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters">
+<meta name="twitter:title" content="LeetCode 004 [Median of Two Sorted Arrays]">
+<meta name="twitter:description" content="ProblemMedian of Two Sorted ArraysThere are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+So">
   
   
     <link rel="icon" href="/favicon.png">
@@ -108,7 +111,7 @@
     </div>
   </div>
 </aside>
-      <section id="main"><article id="post-LeetCode-num003" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-LeetCode-004-Median-of-Two-Sorted-Arrays" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -116,15 +119,15 @@
         
   
     <h1 class="article-title" itemprop="name">
-      LeetCode num003
+      LeetCode 004 [Median of Two Sorted Arrays]
     </h1>
   
 
         <div class="article-meta">
           <div class="article-date">
   <i class="fa fa-calendar"></i>
-  <a href="/2015/01/19/LeetCode-num003/">
-    <time datetime="2015-01-19T12:42:19.000Z" itemprop="datePublished">2015-01-19</time>
+  <a href="/2015/01/21/LeetCode-004-Median-of-Two-Sorted-Arrays/">
+    <time datetime="2015-01-20T16:07:31.000Z" itemprop="datePublished">2015-01-21</time>
   </a>
 </div>
           
@@ -138,17 +141,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p><strong>Longest Substring Without Repeating Characters</strong><br>Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for “abcabcbb” is “abc”, which the length is 3. For “bbbbb” the longest substring is “b”, with the length of 1.</p>
-<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">vector</span>&lt;<span class="keyword">char</span>&gt; vec;</span><br><span class="line">		<span class="keyword">int</span> max = <span class="number">0</span>, i, j;</span><br><span class="line">		vec.push_back(s[<span class="number">0</span>]);</span><br><span class="line">		<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; s.size(); i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; vec.size(); j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (s[i] == vec[j])</span><br><span class="line">				&#123;</span><br><span class="line">					vec.erase(vec.begin(), vec.begin() + j + <span class="number">1</span>);</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			max = max &gt; (j + <span class="number">1</span>) ? max : (j + <span class="number">1</span>);</span><br><span class="line">			vec.push_back(s[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> max;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h3 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h3><p><strong>Median of Two Sorted Arrays</strong><br>There are two sorted arrays A and B of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
+<h3 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> m, <span class="keyword">int</span> B[], <span class="keyword">int</span> n)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> beginA = <span class="number">0</span>, endA = m - <span class="number">1</span>, beginB = <span class="number">0</span>, endB = n - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> findMedian(A, beginA, endA, B, beginB, endB);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">findMedian</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> beginA, <span class="keyword">int</span> endA, <span class="keyword">int</span> B[], <span class="keyword">int</span> beginB, <span class="keyword">int</span> endB)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> ((endA - beginA + <span class="number">1</span>) &lt;= <span class="number">2</span> &amp;&amp; (endB - beginB + <span class="number">1</span>) &lt;= <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> finalfindMedian(A, beginA, endA, B, beginB, endB);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> middleA = (beginA + endA) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> middleB = (beginB + endB) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span> ((endA - beginA + <span class="number">1</span>) &lt;= <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> ((endB - beginB + <span class="number">1</span>) % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                beginB = middleB - <span class="number">1</span>;</span><br><span class="line">                endB = middleB + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                beginB = middleB - <span class="number">1</span>;</span><br><span class="line">                endB = middleB + <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> finalfindMedian(A, beginA, endA, B, beginB, endB);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> ((endB - beginB + <span class="number">1</span>) &lt;= <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> ((endA - beginA + <span class="number">1</span>) % <span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                beginA = middleA - <span class="number">1</span>;</span><br><span class="line">                endA = middleA + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                beginA = middleA - <span class="number">1</span>;</span><br><span class="line">                endA = middleA + <span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> finalfindMedian(B, beginB, endB, A, beginA, endA);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> medianA, medianB;</span><br><span class="line">        <span class="keyword">int</span> length;</span><br><span class="line">        medianA = A[middleA];</span><br><span class="line">        medianB = B[middleB];</span><br><span class="line">        <span class="keyword">if</span> (medianA &gt;= medianB)</span><br><span class="line">        &#123;</span><br><span class="line">            length = (endA - middleA) &lt; (middleB - beginB) ? (endA - middleA) : (middleB - beginB);</span><br><span class="line">            length = length &lt; (middleA - beginA) ? length : (middleA - beginA);</span><br><span class="line">            <span class="keyword">return</span> findMedian(A, beginA, endA - length, B, beginB + length, endB);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            length = (endB - middleB) &lt; (middleA - beginA) ? (endB - middleB) : (middleA - beginA);</span><br><span class="line">            length = length &lt; (middleB - beginB) ? length : (middleB - beginB);</span><br><span class="line">            <span class="keyword">return</span> findMedian(A, beginA + length, endA, B, beginB, endB - length);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">finalfindMedian</span><span class="params">(<span class="keyword">int</span> A[], <span class="keyword">int</span> beginA, <span class="keyword">int</span> endA, <span class="keyword">int</span> B[], <span class="keyword">int</span> beginB, <span class="keyword">int</span> endB)</span></span><br><span class="line">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i, j, k = <span class="number">0</span>, temp;</span><br><span class="line">        <span class="keyword">int</span> num[<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">int</span> count = endA - beginA + <span class="number">1</span> + endB - beginB + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (i = beginA; i &lt;= endA; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            num[k] = A[i];</span><br><span class="line">            k++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (i = beginB; i &lt;= endB; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            num[k] = B[i];</span><br><span class="line">            k++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (count == <span class="number">1</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">double</span>)num[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; count; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (j = i; j &lt; count; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (num[j] &lt; num[i])</span><br><span class="line">                &#123;</span><br><span class="line">                    temp = num[j];</span><br><span class="line">                    num[j] = num[i];</span><br><span class="line">                    num[i] = temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (count % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">double</span>)(((<span class="keyword">double</span>)num[count / <span class="number">2</span> - <span class="number">1</span>] + (<span class="keyword">double</span>)num[count / <span class="number">2</span>]) / <span class="number">2</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> (<span class="keyword">double</span>)num[count / <span class="number">2</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3 id="Comment"><a href="#Comment" class="headerlink" title="Comment"></a>Comment</h3><ol>
-<li>vector类型操作不熟</li>
-<li>核心思想，记录字符，复杂度为O(n)</li>
+<li>代码有冗余</li>
+<li>复杂度达到要求</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.pkuyg.com/2015/01/19/LeetCode-num003/" data-id="cj00qd02s00fkbwuaxh0k7ep7" class="article-share-link">分享到</a>
+      <a data-url="http://www.pkuyg.com/2015/01/21/LeetCode-004-Median-of-Two-Sorted-Arrays/" data-id="cj1949w7t00fftvuazgeba9do" class="article-share-link">分享到</a>
       
         <div class="share">
 	<!-- JiaThis Button BEGIN -->
@@ -166,10 +169,10 @@
 </div>
       
       
-        <a href="http://www.pkuyg.com/2015/01/19/LeetCode-num003/#ds-thread" class="article-comment-link">评论</a>
+        <a href="http://www.pkuyg.com/2015/01/21/LeetCode-004-Median-of-Two-Sorted-Arrays/#ds-thread" class="article-comment-link">评论</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/String/">String</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/median/">median</a></li></ul>
 
     </footer>
   </div>
@@ -177,19 +180,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/01/21/LeetCode-num004/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/01/23/LeetCode-006-ZigZag-Conversion/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          LeetCode num004
+          LeetCode 006 [ZigZag Conversion]
         
       </div>
     </a>
   
   
-    <a href="/2015/01/19/LeetCode-num002/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/01/19/LeetCode-003-Longest-Substring-Without-Repeating-Characters/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">LeetCode num002</div>
+      <div class="article-nav-title">LeetCode 003 [Longest Substring Without Repeating Characters]</div>
     </a>
   
 </nav>
@@ -199,7 +202,7 @@
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="http://www.pkuyg.com/2015/01/19/LeetCode-num003/" data-title="LeetCode num003" data-url="http://www.pkuyg.com/2015/01/19/LeetCode-num003/">
+    <div id="ds-thread" class="ds-thread" data-thread-key="http://www.pkuyg.com/2015/01/21/LeetCode-004-Median-of-Two-Sorted-Arrays/" data-title="LeetCode 004 [Median of Two Sorted Arrays]" data-url="http://www.pkuyg.com/2015/01/21/LeetCode-004-Median-of-Two-Sorted-Arrays/">
       <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by DuoShuo.</a></noscript>
       </div>
   </section>
